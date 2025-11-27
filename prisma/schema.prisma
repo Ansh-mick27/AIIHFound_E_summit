@@ -1,0 +1,158 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+enum EventStatus {
+  OPEN
+  CLOSED
+}
+
+enum ApplicationStatus {
+  APPLIED
+  SHORTLISTED
+  REJECTED
+  SELECTED
+}
+
+enum InternshipStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password_hash String
+  role          Role      @default(STUDENT)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  student       Student?
+}
+
+model Student {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id])
+  
+  // Personal Details
+  name            String
+  rollNo          String    @unique
+  phone           String
+  
+  // Academic Details
+  tenthMarks      Float
+  twelfthMarks    Float
+  diplomaMarks    Float?
+  currentCGPA     Float
+  backlogs        Int       @default(0)
+  
+  // CAF Locking
+  isCafLocked     Boolean   @default(false)
+
+  // Uploads
+  profilePhoto    String?
+  resumeUrl       String?
+  
+  cafApplication  CafApplication?
+  applications    CompanyEventApplication[]
+  internships     Internship[]
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model CafApplication {
+  id              String    @id @default(cuid())
+  studentId       String    @unique
+  student         Student   @relation(fields: [studentId], references: [id])
+  
+  // Snapshot of data at time of locking/submission if needed, 
+  // or just linking to Student profile if that's the source of truth.
+  // For now, we'll assume the Student model holds the live data 
+  // and this table might track submission metadata.
+  submittedAt     DateTime  @default(now())
+}
+
+model CompanyEvent {
+  id              String    @id @default(cuid())
+  title           String
+  companyName     String
+  description     String    @db.Text
+  date            DateTime
+  location        String?
+  status          EventStatus @default(OPEN)
+  
+  applications    CompanyEventApplication[]
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model CompanyEventApplication {
+  id              String    @id @default(cuid())
+  eventId         String
+  event           CompanyEvent @relation(fields: [eventId], references: [id])
+  studentId       String
+  student         Student   @relation(fields: [studentId], references: [id])
+  
+  status          ApplicationStatus @default(APPLIED)
+  appliedAt       DateTime  @default(now())
+  
+  @@unique([eventId, studentId])
+}
+
+model MockInterview {
+  id              String    @id @default(cuid())
+  title           String
+  date            DateTime
+  
+  results         MockInterviewResult[]
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model MockInterviewResult {
+  id              String    @id @default(cuid())
+  interviewId     String
+  interview       MockInterview @relation(fields: [interviewId], references: [id])
+  studentRollNo   String    // Linking by Roll No for easier bulk upload
+  
+  score           Float?
+  grade           String?
+  feedback        String?
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Internship {
+  id              String    @id @default(cuid())
+  studentId       String
+  student         Student   @relation(fields: [studentId], references: [id])
+  
+  companyName     String
+  role            String
+  duration        String
+  stipend         String?
+  startDate       DateTime
+  endDate         DateTime?
+  
+  status          InternshipStatus @default(PENDING)
+  rejectionReason String?
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
