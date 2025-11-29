@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "cmiiqxjd70000xpgxe6168rsw",
+      "email": "admin@example.com",
+      "password_hash": "$2b$10$iDOOVyJAraO/dhuBCj3vSOqXJqZIKew8cujwl1K06ycEMKNIaVcTu",
+      "role": "ADMIN",
+      "createdAt": "2025-11-28T10:55:18.092Z",
+      "updatedAt": "2025-11-28T10:55:18.092Z"
+    },
+    {
+      "id": "cmiiqxjdc0001xpgx4ugr1ued",
+      "email": "student@example.com",
+      "password_hash": "$2b$10$iDOOVyJAraO/dhuBCj3vSOqXJqZIKew8cujwl1K06ycEMKNIaVcTu",
+      "role": "STUDENT",
+      "createdAt": "2025-11-28T10:55:18.097Z",
+      "updatedAt": "2025-11-28T10:55:18.097Z"
+    }
+  ],
+  "students": [
+    {
+      "id": "cmiiqxjde0003xpgx2rlvzdnp",
+      "userId": "cmiiqxjdc0001xpgx4ugr1ued",
+      "name": "John Doe",
+      "rollNo": "123456",
+      "phone": "9876543210",
+      "tenthMarks": 85.5,
+      "twelfthMarks": 88,
+      "diplomaMarks": 0,
+      "currentCGPA": 8.2,
+      "backlogs": 0,
+      "isCafLocked": true,
+      "profilePhoto": null,
+      "resumeUrl": null,
+      "createdAt": "2025-11-28T10:55:18.098Z",
+      "updatedAt": "2025-11-29T08:27:52.537Z"
+    }
+  ],
+  "events": [],
+  "applications": [],
+  "interviews": [],
+  "interviewResults": [],
+  "internships": []
+}

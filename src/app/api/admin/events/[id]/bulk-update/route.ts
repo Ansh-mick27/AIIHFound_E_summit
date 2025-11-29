@@ -52,6 +52,25 @@ export async function POST(
                 },
             });
             updates.push(update);
+
+            // Send email notification
+            const user = await db.user.findUnique({
+                where: { id: student.userId },
+                select: { email: true },
+            });
+
+            if (user?.email) {
+                const event = await db.companyEvent.findUnique({
+                    where: { id: params.id },
+                    select: { title: true },
+                });
+
+                if (event) {
+                    import("@/lib/email").then(({ sendStatusUpdateEmail }) => {
+                        sendStatusUpdateEmail(user.email!, event.title, status.toUpperCase());
+                    });
+                }
+            }
         } catch (e) {
             errors.push(`Failed to update ${rollNo}`);
         }

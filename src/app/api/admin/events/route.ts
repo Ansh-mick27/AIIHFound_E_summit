@@ -31,5 +31,20 @@ export async function POST(req: Request) {
         },
     });
 
+    // Notify all students
+    const students = await db.user.findMany({
+        where: { role: "STUDENT" },
+        select: { email: true },
+    });
+
+    // Send emails in background (don't await loop)
+    students.forEach((student) => {
+        if (student.email) {
+            import("@/lib/email").then(({ sendNewDriveEmail }) => {
+                sendNewDriveEmail(student.email, event);
+            });
+        }
+    });
+
     return NextResponse.json(event);
 }
