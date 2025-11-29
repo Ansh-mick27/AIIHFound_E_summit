@@ -8,6 +8,7 @@ export default function LoginPage() {
     const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [role, setRole] = useState("STUDENT");
     const [error, setError] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -17,6 +18,7 @@ export default function LoginPage() {
         const result = await signIn("credentials", {
             email,
             password,
+            role,
             redirect: false,
         });
 
@@ -38,6 +40,30 @@ export default function LoginPage() {
                     </div>
                 )}
                 <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Role Selection */}
+                    <div className="flex justify-center space-x-6">
+                        <label className="flex items-center space-x-2 cursor-pointer">
+                            <input
+                                type="radio"
+                                value="STUDENT"
+                                checked={role === "STUDENT"}
+                                onChange={(e) => setRole(e.target.value)}
+                                className="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <span className="text-gray-700 font-medium">Student</span>
+                        </label>
+                        <label className="flex items-center space-x-2 cursor-pointer">
+                            <input
+                                type="radio"
+                                value="ADMIN"
+                                checked={role === "ADMIN"}
+                                onChange={(e) => setRole(e.target.value)}
+                                className="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <span className="text-gray-700 font-medium">Admin</span>
+                        </label>
+                    </div>
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Email</label>
                         <input
@@ -62,7 +88,7 @@ export default function LoginPage() {
                         type="submit"
                         className="w-full rounded-md bg-blue-600 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
-                        Sign In
+                        Sign In as {role === "ADMIN" ? "Admin" : "Student"}
                     </button>
                 </form>
             </div>
