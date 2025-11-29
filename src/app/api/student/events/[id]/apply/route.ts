@@ -5,8 +5,9 @@ import { NextResponse } from "next/server";
 
 export async function POST(
     req: Request,
-    { params }: { params: { id: string } }
+    props: { params: Promise<{ id: string }> }
 ) {
+    const params = await props.params;
     const session = await getServerSession(authOptions);
 
     if (!session || session.user.role !== "STUDENT") {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import * as XLSX from "xlsx";
 
 interface Result {
@@ -18,19 +18,20 @@ interface InterviewDetails {
     results: Result[];
 }
 
-export default function InterviewDetailsPage({ params }: { params: { id: string } }) {
+export default function InterviewDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params);
     const [interview, setInterview] = useState<InterviewDetails | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [uploading, setUploading] = useState(false);
 
     useEffect(() => {
-        fetch(`/api/admin/mock-interviews/${params.id}`)
+        fetch(`/api/admin/mock-interviews/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setInterview(data);
                 setIsLoading(false);
             });
-    }, [params.id]);
+    }, [id]);
 
     const handleExport = () => {
         if (!interview) return;
@@ -63,7 +64,7 @@ export default function InterviewDetailsPage({ params }: { params: { id: string 
             const data = XLSX.utils.sheet_to_json(ws);
 
             try {
-                const res = await fetch(`/api/admin/mock-interviews/${params.id}/results`, {
+                const res = await fetch(`/api/admin/mock-interviews/${id}/results`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ data }),

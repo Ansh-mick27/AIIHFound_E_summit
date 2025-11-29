@@ -16,6 +16,9 @@ export default function NewEventPage() {
         formState: { errors },
     } = useForm<EventFormData>({
         resolver: zodResolver(eventSchema),
+        defaultValues: {
+            status: "OPEN",
+        },
     });
 
     const onSubmit = async (data: EventFormData) => {

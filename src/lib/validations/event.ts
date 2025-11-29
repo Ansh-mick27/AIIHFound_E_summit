@@ -8,7 +8,7 @@ export const eventSchema = z.object({
         message: "Invalid date",
     }),
     location: z.string().optional(),
-    status: z.enum(["OPEN", "CLOSED"]).default("OPEN"),
+    status: z.enum(["OPEN", "CLOSED"]),
 });
 
 export type EventFormData = z.infer<typeof eventSchema>;
