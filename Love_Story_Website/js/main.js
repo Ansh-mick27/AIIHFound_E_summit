@@ -361,6 +361,11 @@ const musicToggle = document.getElementById('musicToggle');
 const bgMusic = document.getElementById('bgMusic');
 
 if (musicToggle && bgMusic) {
+    // Set starting position to 1 minute (60 seconds)
+    bgMusic.addEventListener('loadedmetadata', () => {
+        bgMusic.currentTime = 60; // Start from 1 minute
+    });
+
     musicToggle.addEventListener('click', () => {
         if (isPlaying) {
             bgMusic.pause();
@@ -368,6 +373,10 @@ if (musicToggle && bgMusic) {
             musicToggle.classList.remove('playing');
             musicToggle.title = 'Play Music';
         } else {
+            // Set start time before playing (in case metadata already loaded)
+            if (bgMusic.currentTime < 60) {
+                bgMusic.currentTime = 60;
+            }
             bgMusic.play().catch(e => {
                 console.log('Music autoplay prevented. User interaction required.');
             });
