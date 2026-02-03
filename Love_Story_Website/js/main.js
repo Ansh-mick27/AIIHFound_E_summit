@@ -355,6 +355,37 @@ sparkleStyle.textContent += `
 `;
 document.head.appendChild(sparkleStyle);
 
+// ===== Music Player Controls =====
+let isPlaying = false;
+const musicToggle = document.getElementById('musicToggle');
+const bgMusic = document.getElementById('bgMusic');
+
+if (musicToggle && bgMusic) {
+    musicToggle.addEventListener('click', () => {
+        if (isPlaying) {
+            bgMusic.pause();
+            musicToggle.textContent = '🎵';
+            musicToggle.classList.remove('playing');
+            musicToggle.title = 'Play Music';
+        } else {
+            bgMusic.play().catch(e => {
+                console.log('Music autoplay prevented. User interaction required.');
+            });
+            musicToggle.textContent = '🎶';
+            musicToggle.classList.add('playing');
+            musicToggle.title = 'Pause Music';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    // Update button if music ends (though it's looped)
+    bgMusic.addEventListener('ended', () => {
+        isPlaying = false;
+        musicToggle.textContent = '🎵';
+        musicToggle.classList.remove('playing');
+    });
+}
+
 // ===== Initialize All Functions =====
 document.addEventListener('DOMContentLoaded', () => {
     createFloatingHearts();
