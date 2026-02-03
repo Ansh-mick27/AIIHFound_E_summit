@@ -19,6 +19,29 @@ function createFloatingHearts() {
     }, 800);
 }
 
+// ===== Falling Stars Animation =====
+function createFallingStars() {
+    const starsContainer = document.getElementById('stars');
+    const starSymbols = ['⭐', '✨', '🌟', '💫', '✦', '★'];
+
+    setInterval(() => {
+        const star = document.createElement('div');
+        star.className = 'falling-star';
+        star.innerHTML = starSymbols[Math.floor(Math.random() * starSymbols.length)];
+        star.style.left = Math.random() * 100 + '%';
+        star.style.fontSize = (Math.random() * 10 + 12) + 'px';
+        star.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        star.style.animationDelay = Math.random() * 0.5 + 's';
+
+        starsContainer.appendChild(star);
+
+        // Remove star after animation completes
+        setTimeout(() => {
+            star.remove();
+        }, 6000);
+    }, 400); // Create a new star every 400ms
+}
+
 // ===== Scroll Reveal Animation =====
 function revealOnScroll() {
     const reveals = document.querySelectorAll('.reveal');
@@ -335,6 +358,7 @@ document.head.appendChild(sparkleStyle);
 // ===== Initialize All Functions =====
 document.addEventListener('DOMContentLoaded', () => {
     createFloatingHearts();
+    createFallingStars();
     revealOnScroll();
     animateChatBubbles();
     lazyLoadImages();
