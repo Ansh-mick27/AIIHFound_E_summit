@@ -1,5 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
+import { Mail, Users, IndianRupee, Trophy } from "lucide-react";
 
 export default function SolveX() {
   return (
@@ -97,9 +98,34 @@ export default function SolveX() {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-12 flex flex-col md:flex-row justify-between items-center text-sm text-muted border-t border-foreground/10 pt-8">
-          <p>Support: CampusFund, Incubation, Mentorship</p>
-          <p className="mt-2 md:mt-0">Contact: solvex.edc@acropolis.in</p>
+        {/* Footer Info */}
+        <div className="mt-16 grid md:grid-cols-2 gap-8 border-t border-foreground/10 pt-12">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-card-theme p-6 rounded-2xl border border-foreground/5 flex items-center gap-6 group hover:border-blue-500/30 transition-colors"
+          >
+            <div className="p-4 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 text-blue-500 transition-colors">
+              <Users className="w-8 h-8" />
+            </div>
+            <div>
+              <h4 className="text-lg font-bold text-foreground">Support & Incubation</h4>
+              <p className="text-muted text-sm">CampusFund, Mentorship, Networking</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-card-theme p-6 rounded-2xl border border-foreground/5 flex items-center gap-6 group hover:border-red-500/30 transition-colors"
+          >
+            <div className="p-4 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 text-red-500 transition-colors">
+              <Mail className="w-8 h-8" />
+            </div>
+            <div>
+              <h4 className="text-lg font-bold text-foreground">Contact Team</h4>
+              <p className="text-muted text-sm">solvex.edc@acropolis.in</p>
+              <p className="text-muted text-xs mt-1">+91 99887 76655</p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

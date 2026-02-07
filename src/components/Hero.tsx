@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import MagneticButton from "./MagneticButton";
 import Countdown from "./Countdown";
+import { Mouse } from "lucide-react";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -95,9 +96,10 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-muted text-sm"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted flex flex-col items-center gap-2"
       >
-        Scroll to Explore
+        <span className="text-[10px] uppercase tracking-widest opacity-50">Scroll</span>
+        <Mouse className="w-6 h-6" />
       </motion.div>
     </section >
   );

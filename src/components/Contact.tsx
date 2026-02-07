@@ -1,6 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Instagram, Linkedin, Globe } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Linkedin, Globe, Smartphone } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -21,9 +21,12 @@ export default function Contact() {
 
                         <div className="space-y-8">
                             <div className="flex items-start gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl group-hover:bg-blue-600/20 group-hover:text-blue-500 transition">
+                                <motion.div
+                                    whileHover={{ scale: 1.1, rotate: 10 }}
+                                    className="p-3 bg-white/5 rounded-xl group-hover:bg-blue-600/20 group-hover:text-blue-500 transition cursor-pointer"
+                                >
                                     <MapPin className="w-6 h-6" />
-                                </div>
+                                </motion.div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Visit Us</h3>
                                     <p className="text-neutral-400">
@@ -34,9 +37,12 @@ export default function Contact() {
                             </div>
 
                             <div className="flex items-start gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl group-hover:bg-green-600/20 group-hover:text-green-500 transition">
+                                <motion.div
+                                    whileHover={{ scale: 1.1, rotate: -10 }}
+                                    className="p-3 bg-white/5 rounded-xl group-hover:bg-green-600/20 group-hover:text-green-500 transition cursor-pointer"
+                                >
                                     <Mail className="w-6 h-6" />
-                                </div>
+                                </motion.div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Email</h3>
                                     <p className="text-neutral-400">ecell@acropolis.in</p>
@@ -45,21 +51,36 @@ export default function Contact() {
                             </div>
 
                             <div className="flex items-start gap-4 group">
-                                <div className="p-3 bg-white/5 rounded-xl group-hover:bg-purple-600/20 group-hover:text-purple-500 transition">
-                                    <Phone className="w-6 h-6" />
-                                </div>
+                                <motion.div
+                                    whileHover={{ scale: 1.1, rotate: 10 }}
+                                    className="p-3 bg-white/5 rounded-xl group-hover:bg-purple-600/20 group-hover:text-purple-500 transition cursor-pointer"
+                                >
+                                    <Smartphone className="w-6 h-6" />
+                                </motion.div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-2">Call</h3>
+                                    <h3 className="text-xl font-bold mb-2">Mobile</h3>
                                     <p className="text-neutral-400">+91 98765 43210 (Student Head)</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4 group">
+                                <motion.div
+                                    whileHover={{ scale: 1.1, rotate: -10 }}
+                                    className="p-3 bg-white/5 rounded-xl group-hover:bg-orange-600/20 group-hover:text-orange-500 transition cursor-pointer"
+                                >
+                                    <Phone className="w-6 h-6" />
+                                </motion.div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2">Landline</h3>
                                     <p className="text-neutral-400">0731 4730000 (Campus)</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="flex gap-4 mt-12">
-                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition"><Instagram className="w-5 h-5" /></a>
-                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition"><Linkedin className="w-5 h-5" /></a>
-                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition"><Globe className="w-5 h-5" /></a>
+                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition flex justify-center items-center"><Instagram className="w-5 h-5" /></a>
+                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition flex justify-center items-center"><Linkedin className="w-5 h-5" /></a>
+                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition flex justify-center items-center"><Globe className="w-5 h-5" /></a>
                         </div>
                     </motion.div>
 
