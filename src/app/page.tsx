@@ -1,248 +1,155 @@
 'use client';
 
+import Button from "@/components/ui/Button";
 import CountdownTimer from "@/components/CountdownTimer";
+import Navigation from "@/components/Navigation";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-slate-950 pb-20">
+      <Navigation />
 
-      {/* Hero Section - Full Screen Centered */}
-      <section className="min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-5xl w-full mx-auto text-center space-y-16">
+      {/* Main Grid Container */}
+      <main className="bento-grid pt-24">
 
-          {/* Main Title */}
-          <div className="space-y-8">
-            <div className="text-sm md:text-base text-purple-300 uppercase tracking-[0.3em] font-light">
-              Acropolis Indore Presents
-            </div>
-
-            <h1 className="text-8xl md:text-9xl font-black tracking-tighter">
-              E-SUMMIT
-              <span className="block text-7xl md:text-8xl bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                2026
-              </span>
-            </h1>
-
-            <p className="text-2xl md:text-3xl text-gray-300 font-light max-w-2xl mx-auto">
-              Innovation · Execution · Excellence
-            </p>
-          </div>
-
-          {/* Date Card */}
-          <div className="inline-block">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-12 shadow-2xl">
-              <div className="text-5xl font-bold mb-6">March 19-20, 2026</div>
-              <div className="text-lg text-gray-400">Acropolis, Indore</div>
-            </div>
-          </div>
-
-          {/* Countdown */}
-          <div className="pt-8">
-            <CountdownTimer />
-          </div>
-
-          {/* Scroll Hint */}
-          <div className="pt-16 animate-bounce">
-            <div className="text-5xl text-purple-400">↓</div>
-          </div>
-        </div>
-      </section>
-
-      {/* SolveX Section */}
-      <section className="min-h-screen flex items-center justify-center p-8 bg-black/20">
-        <div className="max-w-6xl w-full mx-auto text-center space-y-20">
-
-          <div className="space-y-6">
-            <h2 className="text-7xl md:text-8xl font-black">
-              SOLVE<span className="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent">X</span>
-            </h2>
-            <p className="text-2xl text-gray-300 max-w-2xl mx-auto">
-              National Innovation Competition
-            </p>
-          </div>
-
-          {/* Prize */}
-          <div className="inline-block">
-            <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-3xl p-16 shadow-2xl transform hover:scale-105 transition">
-              <div className="text-xl text-orange-100 mb-4">Prize Pool</div>
-              <div className="text-8xl md:text-9xl font-black">₹1.2L</div>
-              <div className="text-lg text-orange-100 mt-4">+ FICCI FLO Awards</div>
-            </div>
-          </div>
-
-          {/* Tracks */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-12 hover:bg-white/20 transition">
-              <div className="text-6xl mb-6">💡</div>
-              <div className="text-3xl font-bold mb-4">Innovation</div>
-              <div className="text-gray-400">Proof of Concept</div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-12 hover:bg-white/20 transition">
-              <div className="text-6xl mb-6">📊</div>
-              <div className="text-3xl font-bold mb-4">Business</div>
-              <div className="text-gray-400">MVP & Product</div>
-            </div>
-          </div>
-
-          {/* Dates */}
-          <div className="flex flex-wrap justify-center gap-6 text-center">
-            <div className="bg-white/5 rounded-2xl p-8 min-w-[160px]">
-              <div className="text-4xl mb-3">📅</div>
-              <div className="text-3xl font-bold text-orange-400">Jan 20</div>
-              <div className="text-sm text-gray-500 mt-2">Early Bird</div>
-            </div>
-            <div className="bg-white/5 rounded-2xl p-8 min-w-[160px]">
-              <div className="text-4xl mb-3">⏰</div>
-              <div className="text-3xl font-bold text-red-400">Feb 05</div>
-              <div className="text-sm text-gray-500 mt-2">Final Date</div>
-            </div>
-            <div className="bg-white/5 rounded-2xl p-8 min-w-[160px]">
-              <div className="text-4xl mb-3">🎤</div>
-              <div className="text-3xl font-bold">Mar 19-20</div>
-              <div className="text-sm text-gray-500 mt-2">Finals</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PitchBiz Section */}
-      <section className="min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-6xl w-full mx-auto text-center space-y-20">
-
-          <div className="space-y-6">
-            <h2 className="text-7xl md:text-8xl font-black">
-              PITCH<span className="bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">BIZ</span>
-            </h2>
-            <p className="text-2xl text-gray-300 max-w-2xl mx-auto">
-              Startup-Investor Platform
-            </p>
-          </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10">
-              <div className="text-6xl font-black bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">162</div>
-              <div className="text-sm text-gray-400 mt-3">Startups</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10">
-              <div className="text-6xl font-black bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">18</div>
-              <div className="text-sm text-gray-400 mt-3">Investors</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10">
-              <div className="text-6xl font-black bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">25+</div>
-              <div className="text-sm text-gray-400 mt-3">Cities</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10">
-              <div className="text-6xl font-black bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">15+</div>
-              <div className="text-sm text-gray-400 mt-3">Sectors</div>
-            </div>
-          </div>
-
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Connecting startups with investors through live pitch sessions
+        {/* 1. Hero Title - Large Block */}
+        <div className="bento-card col-span-4 md:col-span-2 row-span-2 justify-center py-12 px-8 bg-gradient-to-br from-indigo-900 to-slate-900 border-indigo-500/30">
+          <p className="text-indigo-400 font-medium tracking-wider mb-2">MARCH 19-20, 2026</p>
+          <h1 className="text-6xl md:text-7xl font-black tracking-tight text-white mb-4">
+            E-SUMMIT<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">2026</span>
+          </h1>
+          <p className="text-slate-300 text-lg mb-8 max-w-md">
+            The largest entrepreneurship summit in Central India. Where ideas collide with execution.
           </p>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="min-h-screen flex items-center justify-center p-8 bg-black/20">
-        <div className="max-w-7xl w-full mx-auto text-center space-y-20">
-
-          <h2 className="text-7xl font-black">
-            What You <span className="bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent">Get</span>
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/5 rounded-3xl p-12 hover:bg-white/10 transition">
-              <div className="text-7xl mb-6">💰</div>
-              <div className="text-2xl font-bold mb-3">Funding</div>
-              <div className="text-gray-400">CampusFund & Investors</div>
-            </div>
-
-            <div className="bg-white/5 rounded-3xl p-12 hover:bg-white/10 transition">
-              <div className="text-7xl mb-6">🚀</div>
-              <div className="text-2xl font-bold mb-3">Incubation</div>
-              <div className="text-gray-400">AIIH Support</div>
-            </div>
-
-            <div className="bg-white/5 rounded-3xl p-12 hover:bg-white/10 transition">
-              <div className="text-7xl mb-6">👨‍🏫</div>
-              <div className="text-2xl font-bold mb-3">Mentorship</div>
-              <div className="text-gray-400">Industry Experts</div>
-            </div>
-
-            <div className="bg-white/5 rounded-3xl p-12 hover:bg-white/10 transition">
-              <div className="text-7xl mb-6">🔧</div>
-              <div className="text-2xl font-bold mb-3">Makerspace</div>
-              <div className="text-gray-400">Premium Facilities</div>
-            </div>
-
-            <div className="bg-white/5 rounded-3xl p-12 hover:bg-white/10 transition">
-              <div className="text-7xl mb-6">🌐</div>
-              <div className="text-2xl font-bold mb-3">Visibility</div>
-              <div className="text-gray-400">National Platform</div>
-            </div>
-
-            <div className="bg-white/5 rounded-3xl p-12 hover:bg-white/10 transition">
-              <div className="text-7xl mb-6">🤝</div>
-              <div className="text-2xl font-bold mb-3">Network</div>
-              <div className="text-gray-400">Founders & Investors</div>
-            </div>
+          <div className="flex gap-4">
+            <Link href="/solvex" className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold transition">
+              Explore SolveX
+            </Link>
+            <Link href="/pitchbiz" className="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-xl font-bold transition">
+              Pitch Your Idea
+            </Link>
           </div>
         </div>
-      </section>
 
-      {/* Contact Section */}
-      <section className="min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-5xl w-full mx-auto text-center space-y-20">
+        {/* 2. Countdown Timer */}
+        <div className="bento-card col-span-4 md:col-span-2 justify-center items-center bg-slate-900">
+          <p className="text-slate-400 text-sm uppercase tracking-widest mb-4">Time Remaining</p>
+          <CountdownTimer />
+        </div>
 
-          <h2 className="text-7xl font-black">Connect</h2>
+        {/* 3. Stats Block 1 */}
+        <div className="bento-card col-span-2 md:col-span-1 justify-center items-center bg-slate-900 hover:border-orange-500/50">
+          <p className="text-4xl font-black text-orange-500">₹1.2L</p>
+          <p className="text-slate-400 text-sm mt-1">Prize Pool</p>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-lg border border-orange-500/30 rounded-3xl p-14">
-              <div className="text-6xl mb-6">🏆</div>
-              <div className="text-4xl font-bold mb-6 text-orange-400">SolveX</div>
-              <div className="space-y-3 text-gray-300">
-                <div className="text-lg">solvex.edc@acropolis.in</div>
-                <div className="text-sm opacity-75">Aaditya: +91 7899015942</div>
-                <div className="text-sm opacity-75">Abhas: +91 7828959204</div>
-              </div>
+        {/* 4. Stats Block 2 */}
+        <div className="bento-card col-span-2 md:col-span-1 justify-center items-center bg-slate-900 hover:border-cyan-500/50">
+          <p className="text-4xl font-black text-cyan-500">25+</p>
+          <p className="text-slate-400 text-sm mt-1">Cities</p>
+        </div>
+
+        {/* 5. SolveX Feature */}
+        <Link href="/solvex" className="bento-card col-span-4 md:col-span-2 row-span-2 group relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 to-slate-900 transition group-hover:from-orange-900/40"></div>
+          <div className="relative z-10 p-4">
+            <div className="flex justify-between items-start mb-8">
+              <div className="bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">COMPETITION</div>
+              <span className="text-2xl group-hover:translate-x-1 transition">→</span>
             </div>
+            <h3 className="text-3xl font-bold text-white mb-2">SOLVEX 2026</h3>
+            <p className="text-slate-300 text-sm mb-6">National Innovation & Business Model Competition</p>
 
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-600/20 backdrop-blur-lg border border-blue-500/30 rounded-3xl p-14">
-              <div className="text-6xl mb-6">🎤</div>
-              <div className="text-4xl font-bold mb-6 text-blue-400">PitchBiz</div>
-              <div className="space-y-3 text-gray-300">
-                <div className="text-lg">pitchbiz@acropolis.in</div>
-                <div className="text-sm opacity-75 mt-4">Startup & Investor Queries</div>
+            <div className="grid grid-cols-2 gap-4 mt-auto">
+              <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
+                <p className="text-orange-400 font-bold">Innovation Track</p>
+                <p className="text-slate-400 text-xs">For Prototypes</p>
+              </div>
+              <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
+                <p className="text-orange-400 font-bold">Business Track</p>
+                <p className="text-slate-400 text-xs">For MVPs</p>
               </div>
             </div>
           </div>
+        </Link>
 
-          <div className="bg-white/5 rounded-3xl p-10 max-w-2xl mx-auto">
-            <div className="text-sm text-gray-500 mb-3">General Inquiries</div>
-            <div className="text-3xl font-bold">esummit@acropolis.in</div>
+        {/* 6. PitchBiz Feature */}
+        <Link href="/pitchbiz" className="bento-card col-span-4 md:col-span-2 lg:col-span-2 group relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-slate-900 transition group-hover:from-blue-900/40"></div>
+          <div className="relative z-10 p-4">
+            <div className="flex justify-between items-start mb-6">
+              <div className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">INVESTMENT</div>
+              <span className="text-2xl group-hover:translate-x-1 transition">→</span>
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-2">PITCHBIZ 5.0</h3>
+            <p className="text-slate-300 text-sm">Investor & Startup Discovery Platform</p>
+            <div className="flex gap-4 mt-6">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-white">162</p>
+                <p className="text-xs text-slate-400">Startups</p>
+              </div>
+              <div className="w-px bg-slate-700"></div>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-white">18</p>
+                <p className="text-xs text-slate-400">Investors</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* 7. Benefits Grid (Compact) */}
+        <div className="bento-card col-span-4 justify-between bg-slate-900">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center w-full">
+            <div className="p-2 hover:bg-slate-800 rounded-lg transition">
+              <div className="text-2xl mb-1">💰</div>
+              <div className="text-xs font-bold text-slate-300">Funding</div>
+            </div>
+            <div className="p-2 hover:bg-slate-800 rounded-lg transition">
+              <div className="text-2xl mb-1">🚀</div>
+              <div className="text-xs font-bold text-slate-300">Incubation</div>
+            </div>
+            <div className="p-2 hover:bg-slate-800 rounded-lg transition">
+              <div className="text-2xl mb-1">👨‍🏫</div>
+              <div className="text-xs font-bold text-slate-300">Mentorship</div>
+            </div>
+            <div className="p-2 hover:bg-slate-800 rounded-lg transition">
+              <div className="text-2xl mb-1">🔧</div>
+              <div className="text-xs font-bold text-slate-300">Makerspace</div>
+            </div>
+            <div className="p-2 hover:bg-slate-800 rounded-lg transition">
+              <div className="text-2xl mb-1">🌐</div>
+              <div className="text-xs font-bold text-slate-300">Network</div>
+            </div>
+            <div className="p-2 hover:bg-slate-800 rounded-lg transition">
+              <div className="text-2xl mb-1">🏆</div>
+              <div className="text-xs font-bold text-slate-300">Awards</div>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Footer */}
-      <footer className="py-20 px-8 border-t border-white/10 bg-black/40">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="text-4xl font-black">
-            E-SUMMIT <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">2026</span>
-          </div>
-          <div className="text-gray-400 space-y-2">
-            <div>Acropolis • AIIH • EDC</div>
-            <div className="text-sm text-gray-600">FICCI FLO • Indian Steps • ION • StartLabs</div>
-          </div>
-          <div className="text-sm text-gray-600 pt-8">
-            © 2026 E-Summit Acropolis
+        {/* 8. Venue & Contact Info */}
+        <div className="bento-card col-span-4 md:col-span-2 bg-gradient-to-r from-slate-800 to-slate-900">
+          <h4 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-4">Venue</h4>
+          <p className="text-white font-medium text-lg">Acropolis Group of Institutions</p>
+          <p className="text-slate-400 text-sm">Indore, Madhya Pradesh</p>
+          <div className="mt-4 pt-4 border-t border-slate-700">
+            <p className="text-xs text-slate-500">Contact: esummit@acropolis.in</p>
           </div>
         </div>
-      </footer>
 
-    </main>
+        {/* 9. Footer Links */}
+        <div className="bento-card col-span-4 md:col-span-2 items-center justify-center bg-slate-900">
+          <div className="flex gap-6 text-sm font-medium text-slate-400">
+            <Link href="/about" className="hover:text-white transition">About Us</Link>
+            <Link href="/contact" className="hover:text-white transition">Contact</Link>
+            <Link href="/solvex" className="hover:text-white transition">SolveX</Link>
+            <Link href="/pitchbiz" className="hover:text-white transition">PitchBiz</Link>
+          </div>
+        </div>
+
+      </main>
+    </div>
   );
 }
