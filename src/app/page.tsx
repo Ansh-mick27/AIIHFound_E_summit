@@ -4,22 +4,21 @@ import Hero from "@/components/Hero";
 import AboutEvents from "@/components/AboutEvents";
 import SolveX from "@/components/SolveX";
 import PitchBiz from "@/components/PitchBiz";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#030014] text-white selection:bg-purple-500/30">
-      {/* Noise Overlay */}
+    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 relative">
       <div className="bg-noise"></div>
 
-      {/* Components */}
       <Hero />
       <AboutEvents />
       <SolveX />
       <PitchBiz />
+      <ThemeToggle />
 
-      {/* Footer */}
-      <footer className="py-12 text-center text-gray-600 text-sm relative z-10 border-t border-white/5 bg-black">
-        <div className="mb-4 text-xs font-mono text-gray-700">E-SUMMIT ACROPOLIS INDORE</div>
+      <footer className="py-12 text-center text-muted text-sm relative z-10 border-t border-white/5 dark:border-white/5 border-black/5">
+        <div className="mb-4 text-xs font-mono opacity-50">E-SUMMIT ACROPOLIS INDORE</div>
         <p>© 2026 E-Summit Acropolis. All rights reserved.</p>
         <p className="mt-2">Organized by AIIH & EDC</p>
       </footer>
