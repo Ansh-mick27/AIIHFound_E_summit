@@ -14,7 +14,7 @@
   --noise-opacity: 0.03;
 }
 
-[data-theme='dark'] {
+.dark {
   /* Dark Mode (Cyber-Physical) */
   --background: #030014;
   --foreground: #ffffff;
