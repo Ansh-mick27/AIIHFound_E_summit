@@ -8,6 +8,9 @@ import BrochureColumn from "@/components/BrochureColumn";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import FloatingShapes from "@/components/FloatingShapes";
 import CustomCursor from "@/components/CustomCursor";
+import VelocityScroll from "@/components/VelocityScroll";
+import AboutUs from "@/components/AboutUs";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -17,17 +20,14 @@ export default function Home() {
       <CustomCursor />
 
       <Hero />
+      <VelocityScroll />
+      <AboutUs />
       <AboutEvents />
       <SolveX />
       <PitchBiz />
       <BrochureColumn />
+      <Contact />
       <ThemeToggle />
-
-      <footer className="py-12 text-center text-muted text-sm relative z-10 border-t border-white/5 dark:border-white/5 border-black/5">
-        <div className="mb-4 text-xs font-mono opacity-50">E-SUMMIT ACROPOLIS INDORE</div>
-        <p>© 2026 E-Summit Acropolis. All rights reserved.</p>
-        <p className="mt-2">Organized by AIIH & EDC</p>
-      </footer>
     </main>
   );
 }
