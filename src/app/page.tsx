@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import AboutEvents from "@/components/AboutEvents";
 import SolveX from "@/components/SolveX";
 import PitchBiz from "@/components/PitchBiz";
+import BrochureColumn from "@/components/BrochureColumn";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutEvents />
       <SolveX />
       <PitchBiz />
+      <BrochureColumn />
       <ThemeToggle />
 
       <footer className="py-12 text-center text-muted text-sm relative z-10 border-t border-white/5 dark:border-white/5 border-black/5">
