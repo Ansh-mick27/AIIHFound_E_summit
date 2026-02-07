@@ -6,11 +6,15 @@ import SolveX from "@/components/SolveX";
 import PitchBiz from "@/components/PitchBiz";
 import BrochureColumn from "@/components/BrochureColumn";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import FloatingShapes from "@/components/FloatingShapes";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground transition-colors duration-300 relative">
       <div className="bg-noise"></div>
+      <FloatingShapes />
+      <CustomCursor />
 
       <Hero />
       <AboutEvents />

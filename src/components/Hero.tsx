@@ -32,14 +32,31 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-7xl md:text-9xl font-black tracking-tighter text-foreground dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-gray-200 dark:to-gray-500 pb-2"
+          initial="hidden"
+          animate="visible"
+          className="text-7xl md:text-9xl font-black tracking-tighter text-foreground dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-gray-200 dark:to-gray-500 pb-2 flex overflow-hidden justify-center"
         >
-          E-SUMMIT
-          <br />
-          <span className="text-accent-primary">2026</span>
+          {Array.from("E-SUMMIT").map((char, i) => (
+            <motion.span
+              key={i}
+              variants={{
+                hidden: { y: 100, opacity: 0 },
+                visible: { y: 0, opacity: 1 }
+              }}
+              transition={{ duration: 0.5, delay: i * 0.05 + 0.2, ease: [0.33, 1, 0.68, 1] }}
+            >
+              {char}
+            </motion.span>
+          ))}
+          <br className="sr-only" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="absolute md:static block text-accent-primary text-4xl md:text-9xl ml-4"
+          >
+            2026
+          </motion.div>
         </motion.h1>
 
         <motion.p
