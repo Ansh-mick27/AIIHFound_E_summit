@@ -98,7 +98,6 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-widest opacity-50">Scroll</span>
         <Mouse className="w-6 h-6" />
       </motion.div>
     </section >
