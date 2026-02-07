@@ -35,11 +35,11 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-foreground via-foreground/80 to-foreground/40"
+          className="text-7xl md:text-9xl font-black tracking-tighter text-foreground dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:via-gray-200 dark:to-gray-500 pb-2"
         >
           E-SUMMIT
           <br />
-          <span className="text-accent">2026</span>
+          <span className="text-accent-primary">2026</span>
         </motion.h1>
 
         <motion.p
