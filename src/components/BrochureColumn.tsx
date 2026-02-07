@@ -1,16 +1,20 @@
 'use client';
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const brochures = [
-    "/assets/brochures/brochure-1.jpg",
-    "/assets/brochures/brochure-2.jpg",
-    "/assets/brochures/brochure-3.png",
-    "/assets/brochures/brochure-4.jpg",
-    "/assets/brochures/brochure-5.png",
-];
+import { useEffect, useState } from "react";
 
 export default function BrochureColumn() {
+    const [brochures, setBrochures] = useState<string[]>([]);
+
+    useEffect(() => {
+        fetch('/api/posters')
+            .then(res => res.json())
+            .then(data => setBrochures(data))
+            .catch(err => console.error("Failed to load posters", err));
+    }, []);
+
+    if (brochures.length === 0) return null;
+
     return (
         <section className="py-24 px-6 bg-background relative transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
