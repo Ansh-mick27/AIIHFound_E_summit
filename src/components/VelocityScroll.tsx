@@ -38,8 +38,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     });
 
     return (
-        <div className="overflow-hidden m-0 whitespace-nowrap flex flex-nowrap py-4">
-            <motion.div className="font-black text-6xl md:text-8xl uppercase flex whitespace-nowrap flex-nowrap items-center gap-8 text-transparent bg-clip-text bg-gradient-to-r from-foreground/20 to-foreground/5" style={{ x }}>
+        <div className="overflow-hidden m-0 whitespace-nowrap flex flex-nowrap py-2">
+            <motion.div className="font-black text-6xl md:text-8xl uppercase flex whitespace-nowrap flex-nowrap items-center gap-8 text-transparent bg-clip-text bg-gradient-to-r from-foreground/80 to-foreground/20" style={{ x }}>
                 <span>{children} </span>
                 <span>{children} </span>
                 <span>{children} </span>
@@ -51,7 +51,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function VelocityScroll() {
     return (
-        <section className="py-12 bg-background border-y border-foreground/5 relative z-10 overflow-hidden">
+        <section className="py-2 bg-background relative z-10 overflow-hidden">
             <ParallaxText baseVelocity={5}>INNOVATE • EXECUTE • DISRUPT •</ParallaxText>
             <ParallaxText baseVelocity={-5}>BUILD • SCALE • TRANSFORM •</ParallaxText>
         </section>

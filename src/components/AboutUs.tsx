@@ -14,7 +14,7 @@ function SpotlightCard({ children, className = "" }: { children: React.ReactNode
 
     return (
         <div
-            className={`group relative border border-neutral-800 bg-neutral-900 overflow-hidden ${className}`}
+            className={`group relative border border-foreground/10 bg-card-theme overflow-hidden ${className}`}
             onMouseMove={handleMouseMove}
         >
             <motion.div
@@ -23,10 +23,11 @@ function SpotlightCard({ children, className = "" }: { children: React.ReactNode
                     background: useMotionTemplate`
             radial-gradient(
               650px circle at ${mouseX}px ${mouseY}px,
-              rgba(255,255,255,0.1),
+              var(--accent-primary),
               transparent 80%
             )
           `,
+                    opacity: 0.15
                 }}
             />
             <div className="relative h-full">{children}</div>
@@ -36,7 +37,7 @@ function SpotlightCard({ children, className = "" }: { children: React.ReactNode
 
 export default function AboutUs() {
     return (
-        <section className="py-24 px-6 bg-background relative z-10">
+        <section className="py-8 px-6 bg-background relative z-10">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

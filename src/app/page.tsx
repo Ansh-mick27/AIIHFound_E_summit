@@ -11,10 +11,12 @@ import CustomCursor from "@/components/CustomCursor";
 import VelocityScroll from "@/components/VelocityScroll";
 import AboutUs from "@/components/AboutUs";
 import Contact from "@/components/Contact";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground transition-colors duration-300 relative">
+      <ScrollProgress />
       <div className="bg-noise"></div>
       <FloatingShapes />
       <CustomCursor />

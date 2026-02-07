@@ -1,6 +1,8 @@
 'use client';
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import MagneticButton from "./MagneticButton";
+import Countdown from "./Countdown";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -68,30 +70,29 @@ export default function Hero() {
           Where <span className="text-blue-500 font-semibold dark:text-blue-400">Innovation</span> Meets <span className="text-purple-500 font-semibold dark:text-purple-400">Execution</span>
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col md:flex-row gap-8 justify-center items-center pt-8"
-        >
-          <div className="text-center px-8 py-4 bg-card-theme rounded-2xl backdrop-blur-sm hover:translate-y-[-2px] transition-transform shadow-lg shadow-black/5 dark:shadow-none">
-            <div className="text-sm text-muted uppercase tracking-widest">Date</div>
-            <div className="text-2xl font-bold text-foreground">Mar 19-20</div>
-          </div>
-          <div className="text-center px-8 py-4 bg-card-theme rounded-2xl backdrop-blur-sm hover:translate-y-[-2px] transition-transform shadow-lg shadow-black/5 dark:shadow-none">
-            <div className="text-sm text-muted uppercase tracking-widest">Venue</div>
-            <div className="text-2xl font-bold text-foreground">Indore</div>
-          </div>
+          <MagneticButton className="cursor-pointer">
+            <div className="text-center px-8 py-4 bg-card-theme rounded-2xl backdrop-blur-sm shadow-lg shadow-black/5 dark:shadow-none hover:border-accent-primary/50 transition-colors border border-transparent min-w-[200px]">
+              <div className="text-sm text-muted uppercase tracking-widest mb-2">Countdown</div>
+              <Countdown />
+            </div>
+          </MagneticButton>
+
+          <MagneticButton className="cursor-pointer">
+            <div className="text-center px-8 py-4 bg-card-theme rounded-2xl backdrop-blur-sm shadow-lg shadow-black/5 dark:shadow-none hover:border-accent-secondary/50 transition-colors border border-transparent min-w-[200px]">
+              <div className="text-sm text-muted uppercase tracking-widest mb-2">Venue</div>
+              <div className="text-lg font-bold text-foreground leading-tight">Acropolis Institute,<br/>Indore</div>
+            </div>
+          </MagneticButton>
         </motion.div>
       </motion.div>
 
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-muted text-sm"
       >
         Scroll to Explore
       </motion.div>
-    </section>
+    </section >
   );
 }
