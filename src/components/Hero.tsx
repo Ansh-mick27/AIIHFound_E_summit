@@ -70,6 +70,12 @@ export default function Hero() {
           Where <span className="text-blue-500 font-semibold dark:text-blue-400">Innovation</span> Meets <span className="text-purple-500 font-semibold dark:text-purple-400">Execution</span>
         </motion.p>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex flex-col md:flex-row gap-8 justify-center items-center pt-8"
+        >
           <MagneticButton className="cursor-pointer">
             <div className="text-center px-8 py-4 bg-card-theme rounded-2xl backdrop-blur-sm shadow-lg shadow-black/5 dark:shadow-none hover:border-accent-primary/50 transition-colors border border-transparent min-w-[200px]">
               <div className="text-sm text-muted uppercase tracking-widest mb-2">Countdown</div>
@@ -80,7 +86,7 @@ export default function Hero() {
           <MagneticButton className="cursor-pointer">
             <div className="text-center px-8 py-4 bg-card-theme rounded-2xl backdrop-blur-sm shadow-lg shadow-black/5 dark:shadow-none hover:border-accent-secondary/50 transition-colors border border-transparent min-w-[200px]">
               <div className="text-sm text-muted uppercase tracking-widest mb-2">Venue</div>
-              <div className="text-lg font-bold text-foreground leading-tight">Acropolis Institute,<br/>Indore</div>
+              <div className="text-lg font-bold text-foreground leading-tight">Acropolis Institute,<br />Indore</div>
             </div>
           </MagneticButton>
         </motion.div>
