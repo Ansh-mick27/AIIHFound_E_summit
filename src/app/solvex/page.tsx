@@ -1,9 +1,11 @@
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
+import Navigation from "@/components/Navigation";
 
 export default function SolveXPage() {
     return (
         <div className="relative min-h-screen">
+            <Navigation />
             {/* Hero Section */}
             <section className="relative py-20 px-6 bg-gradient-to-b from-primary-blue-dark via-primary-blue to-primary-blue-light">
                 <div className="max-w-5xl mx-auto text-center space-y-6">

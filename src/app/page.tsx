@@ -47,12 +47,16 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="min-w-[200px]">
-              Learn More
-            </Button>
-            <Button size="lg" variant="outline" className="min-w-[200px]">
-              View Schedule
-            </Button>
+            <Link href="/about">
+              <Button size="lg" className="min-w-[200px]">
+                Learn More
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="min-w-[200px]">
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Partners */}
@@ -234,8 +238,12 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="min-w-[200px]">Contact Us</Button>
-            <Button size="lg" variant="outline" className="min-w-[200px]">Event Details</Button>
+            <Link href="/contact">
+              <Button size="lg" className="min-w-[200px]">Contact Us</Button>
+            </Link>
+            <Link href="/about">
+              <Button size="lg" variant="outline" className="min-w-[200px]">Event Details</Button>
+            </Link>
           </div>
         </div>
       </section>
