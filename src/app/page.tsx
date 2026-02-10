@@ -13,6 +13,7 @@ import AboutUs from "@/components/AboutUs";
 import Contact from "@/components/Contact";
 import ScrollProgress from "@/components/ScrollProgress";
 import PartnerLogos from "@/components/PartnerLogos";
+import TripleHelixAnimation from "@/components/TripleHelixAnimation";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <VelocityScroll />
       <AboutUs />
+      <TripleHelixAnimation />
       <AboutEvents />
       <SolveX />
       <PitchBiz />
@@ -33,5 +35,10 @@ export default function Home() {
       <Contact />
       <ThemeToggle />
     </main>
+  );
+}
+      <Contact />
+      <ThemeToggle />
+    </main >
   );
 }
