@@ -37,8 +37,3 @@ export default function Home() {
     </main>
   );
 }
-      <Contact />
-      <ThemeToggle />
-    </main >
-  );
-}
