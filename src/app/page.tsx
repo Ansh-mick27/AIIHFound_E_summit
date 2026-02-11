@@ -9,12 +9,10 @@ import PoweredBySection from "@/components/PoweredBySection";
 import LegacyAllies from "@/components/LegacyAllies";
 import OfficialPartners from "@/components/OfficialPartners";
 import EnhancedFooter from "@/components/EnhancedFooter";
-import VerticalShaderBackground from "@/components/VerticalShaderBackground";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-bg-primary text-white relative">
-      <VerticalShaderBackground />
       <CyberpunkNav />
       <CyberpunkHero />
       <EventsGrid />
