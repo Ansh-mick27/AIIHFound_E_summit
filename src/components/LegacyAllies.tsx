@@ -2,15 +2,16 @@
 import { motion } from "framer-motion";
 
 export default function LegacyAllies() {
-    const allies = [
-        "Starbucks", "SBI", "SIDBI", "Bank of Baroda", "PVR", "Chromepet",
-        "JioSaavn", "CoinGape", "The Print", "ICCT", "Hyundai", "Unstop",
-        "Wadhwani", "Rightships", "Seekbook", "Utho", "Interview Buddy",
-        "GreenSaja", "Fashor", "The Product Folks", "SOS"
-    ];
+    // Split allies into 3 rows
+    const row1 = ["Starbucks", "SBI", "SIDBI", "Bank of Baroda", "PVR", "Chromepet", "JioSaavn"];
+    const row2 = ["CoinGape", "The Print", "ICCT", "Hyundai", "Unstop", "Wadhwani", "Rightships"];
+    const row3 = ["Seekbook", "Utho", "Interview Buddy", "GreenSaja", "Fashor", "The Product Folks", "SOS"];
+
+    // Duplicate items for infinite scroll effect
+    const createInfiniteArray = (arr: string[]) => [...arr, ...arr, ...arr];
 
     return (
-        <section className="py-24 px-6 bg-bg-secondary border-t border-white/10">
+        <section className="py-24 px-6 bg-bg-secondary border-t border-white/10 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -27,22 +28,97 @@ export default function LegacyAllies() {
                     </p>
                 </motion.div>
 
-                {/* Allies Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                    {allies.map((ally, index) => (
+                {/* Scrolling Rows */}
+                <div className="space-y-4">
+                    {/* Row 1 - Scroll Left */}
+                    <div className="relative overflow-hidden">
                         <motion.div
-                            key={ally}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.05 }}
-                            className="glass-card border border-white/10 p-4 rounded-lg hover-scale aspect-square flex items-center justify-center text-center"
+                            className="flex gap-4"
+                            animate={{
+                                x: [0, -1920]
+                            }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 20,
+                                    ease: "linear"
+                                }
+                            }}
                         >
-                            <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
-                                <span className="text-xs font-bold text-gray-800">{ally}</span>
-                            </div>
+                            {createInfiniteArray(row1).map((ally, index) => (
+                                <div
+                                    key={`row1-${index}`}
+                                    className="glass-card border border-white/10 p-4 rounded-lg hover-scale flex-shrink-0"
+                                    style={{ width: '160px', height: '120px' }}
+                                >
+                                    <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
+                                        <span className="text-xs font-bold text-gray-800">{ally}</span>
+                                    </div>
+                                </div>
+                            ))}
                         </motion.div>
-                    ))}
+                    </div>
+
+                    {/* Row 2 - Scroll Right */}
+                    <div className="relative overflow-hidden">
+                        <motion.div
+                            className="flex gap-4"
+                            animate={{
+                                x: [-1920, 0]
+                            }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 20,
+                                    ease: "linear"
+                                }
+                            }}
+                        >
+                            {createInfiniteArray(row2).map((ally, index) => (
+                                <div
+                                    key={`row2-${index}`}
+                                    className="glass-card border border-white/10 p-4 rounded-lg hover-scale flex-shrink-0"
+                                    style={{ width: '160px', height: '120px' }}
+                                >
+                                    <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
+                                        <span className="text-xs font-bold text-gray-800">{ally}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
+
+                    {/* Row 3 - Scroll Left */}
+                    <div className="relative overflow-hidden">
+                        <motion.div
+                            className="flex gap-4"
+                            animate={{
+                                x: [0, -1920]
+                            }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 20,
+                                    ease: "linear"
+                                }
+                            }}
+                        >
+                            {createInfiniteArray(row3).map((ally, index) => (
+                                <div
+                                    key={`row3-${index}`}
+                                    className="glass-card border border-white/10 p-4 rounded-lg hover-scale flex-shrink-0"
+                                    style={{ width: '160px', height: '120px' }}
+                                >
+                                    <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
+                                        <span className="text-xs font-bold text-gray-800">{ally}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
