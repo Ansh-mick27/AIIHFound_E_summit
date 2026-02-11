@@ -1,11 +1,17 @@
 'use client';
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function LegacyAllies() {
     // Split allies into 3 rows
     const row1 = ["Starbucks", "SBI", "SIDBI", "Bank of Baroda", "PVR", "Chromepet", "JioSaavn"];
     const row2 = ["CoinGape", "The Print", "ICCT", "Hyundai", "Unstop", "Wadhwani", "Rightships"];
     const row3 = ["Seekbook", "Utho", "Interview Buddy", "GreenSaja", "Fashor", "The Product Folks", "SOS"];
+
+    // Hover states for each row
+    const [isRow1Hovered, setIsRow1Hovered] = useState(false);
+    const [isRow2Hovered, setIsRow2Hovered] = useState(false);
+    const [isRow3Hovered, setIsRow3Hovered] = useState(false);
 
     // Duplicate items for infinite scroll effect
     const createInfiniteArray = (arr: string[]) => [...arr, ...arr, ...arr];
@@ -31,11 +37,15 @@ export default function LegacyAllies() {
                 {/* Scrolling Rows */}
                 <div className="space-y-4">
                     {/* Row 1 - Scroll Left */}
-                    <div className="relative overflow-hidden">
+                    <div
+                        className="relative overflow-hidden"
+                        onMouseEnter={() => setIsRow1Hovered(true)}
+                        onMouseLeave={() => setIsRow1Hovered(false)}
+                    >
                         <motion.div
                             className="flex gap-4"
                             animate={{
-                                x: [0, -1920]
+                                x: isRow1Hovered ? undefined : [0, -1920]
                             }}
                             transition={{
                                 x: {
@@ -61,11 +71,15 @@ export default function LegacyAllies() {
                     </div>
 
                     {/* Row 2 - Scroll Right */}
-                    <div className="relative overflow-hidden">
+                    <div
+                        className="relative overflow-hidden"
+                        onMouseEnter={() => setIsRow2Hovered(true)}
+                        onMouseLeave={() => setIsRow2Hovered(false)}
+                    >
                         <motion.div
                             className="flex gap-4"
                             animate={{
-                                x: [-1920, 0]
+                                x: isRow2Hovered ? undefined : [-1920, 0]
                             }}
                             transition={{
                                 x: {
@@ -91,11 +105,15 @@ export default function LegacyAllies() {
                     </div>
 
                     {/* Row 3 - Scroll Left */}
-                    <div className="relative overflow-hidden">
+                    <div
+                        className="relative overflow-hidden"
+                        onMouseEnter={() => setIsRow3Hovered(true)}
+                        onMouseLeave={() => setIsRow3Hovered(false)}
+                    >
                         <motion.div
                             className="flex gap-4"
                             animate={{
-                                x: [0, -1920]
+                                x: isRow3Hovered ? undefined : [0, -1920]
                             }}
                             transition={{
                                 x: {
