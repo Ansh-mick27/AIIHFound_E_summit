@@ -7,7 +7,7 @@ export default function SpiralBackground() {
                 backgroundRepeat: 'repeat-y',
                 backgroundPosition: 'right center',
                 backgroundSize: 'contain',
-                opacity: 0.15
+                opacity: 0.5
             }}
         />
     );
