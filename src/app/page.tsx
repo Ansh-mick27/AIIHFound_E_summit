@@ -3,8 +3,6 @@
 import CyberpunkNav from "@/components/CyberpunkNav";
 import CyberpunkHero from "@/components/CyberpunkHero";
 import EventsGrid from "@/components/EventsGrid";
-import SolveX from "@/components/SolveX";
-import PitchBiz from "@/components/PitchBiz";
 import PoweredBySection from "@/components/PoweredBySection";
 import LegacyAllies from "@/components/LegacyAllies";
 import OfficialPartners from "@/components/OfficialPartners";
@@ -18,8 +16,6 @@ export default function Home() {
       <CyberpunkNav />
       <CyberpunkHero />
       <EventsGrid />
-      <SolveX />
-      <PitchBiz />
       <PoweredBySection />
       <LegacyAllies />
       <OfficialPartners />
