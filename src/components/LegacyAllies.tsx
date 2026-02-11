@@ -35,7 +35,7 @@ export default function LegacyAllies() {
                 </motion.div>
 
                 {/* Scrolling Rows */}
-                <div className="space-y-24">
+                <div className="space-y-40">
                     {/* Row 1 - Scroll Left */}
                     <div
                         className="relative overflow-hidden"
