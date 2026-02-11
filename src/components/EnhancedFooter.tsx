@@ -27,26 +27,25 @@ export default function EnhancedFooter() {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-3xl font-black uppercase mb-6">
-                            E-CELL <span className="text-glow-purple">MANIT</span>
+                            E-CELL <span className="text-glow-purple">ACROPOLIS</span>
                         </h3>
                         <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
-                            <p className="text-accent-secondary">// Central India's Hub for entrepreneurial</p>
-                            <p className="text-accent-secondary">   excellence. Equipping founders and changemakers</p>
-                            <p className="text-accent-secondary">   with the dream to redefine the rules of the</p>
-                            <p className="text-accent-secondary">   arena.</p>
+                            <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
+                            <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
+                            <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
                         </div>
                         <div className="space-y-3 font-mono-terminal text-sm">
                             <div>
                                 <span className="text-accent-primary">LOC:</span>
-                                <span className="text-white ml-2">MANIT Bhopal, 462003</span>
+                                <span className="text-white ml-2">Acropolis Institute, Indore (M.P.)</span>
                             </div>
                             <div>
                                 <span className="text-accent-primary">MAIL:</span>
-                                <span className="text-white ml-2">contact@ecell.com</span>
+                                <span className="text-white ml-2">ecell@acropolis.in</span>
                             </div>
                             <div>
                                 <span className="text-accent-primary">PH:</span>
-                                <span className="text-white ml-2">+91 7000616813</span>
+                                <span className="text-white ml-2">+91 731 4303900</span>
                             </div>
                         </div>
                     </motion.div>
@@ -174,7 +173,7 @@ export default function EnhancedFooter() {
                         <span className="text-green-500">SYSTEM ONLINE</span>
                     </div>
                     <p className="text-text-muted text-xs font-mono-terminal text-center">
-                        © 2026 E-Cell MANIT • All Rights Reserved
+                        © 2026 E-Cell ACROPOLIS • All Rights Reserved
                     </p>
                     <button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
