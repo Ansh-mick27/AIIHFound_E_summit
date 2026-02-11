@@ -5,19 +5,23 @@ import CyberpunkHero from "@/components/CyberpunkHero";
 import EventsGrid from "@/components/EventsGrid";
 import SolveX from "@/components/SolveX";
 import PitchBiz from "@/components/PitchBiz";
-import Contact from "@/components/Contact";
+import PoweredBySection from "@/components/PoweredBySection";
+import LegacyAllies from "@/components/LegacyAllies";
+import OfficialPartners from "@/components/OfficialPartners";
+import EnhancedFooter from "@/components/EnhancedFooter";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-bg-primary text-white relative">
-      <div className="bg-noise"></div>
-
       <CyberpunkNav />
       <CyberpunkHero />
       <EventsGrid />
       <SolveX />
       <PitchBiz />
-      <Contact />
+      <PoweredBySection />
+      <LegacyAllies />
+      <OfficialPartners />
+      <EnhancedFooter />
     </main>
   );
 }
