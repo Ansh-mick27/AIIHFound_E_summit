@@ -17,7 +17,9 @@ export default function VerticalShaderBackground() {
             antialias: true,
             alpha: true
         });
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        const width = window.innerWidth * 0.3; // 30% of viewport width
+        const height = window.innerHeight;
+        renderer.setSize(width, height);
         renderer.setPixelRatio(window.devicePixelRatio);
         containerRef.current.appendChild(renderer.domElement);
 
@@ -25,7 +27,7 @@ export default function VerticalShaderBackground() {
         const shaderMaterial = new THREE.ShaderMaterial({
             uniforms: {
                 time: { value: 0 },
-                resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+                resolution: { value: new THREE.Vector2(window.innerWidth * 0.3, window.innerHeight) },
                 distortion: { value: 0.3 },
                 colorSplit: { value: 0.15 },
                 // Cyberpunk color palette - Purple and Cyan
@@ -98,7 +100,7 @@ export default function VerticalShaderBackground() {
 
         // Handle window resize
         const handleResize = () => {
-            const width = window.innerWidth;
+            const width = window.innerWidth * 0.3; // 30% of viewport width
             const height = window.innerHeight;
 
             renderer.setSize(width, height);
@@ -124,8 +126,11 @@ export default function VerticalShaderBackground() {
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 -z-10 pointer-events-none"
-            style={{ opacity: 0.4 }}
+            className="fixed top-0 right-0 bottom-0 -z-10 pointer-events-none"
+            style={{
+                opacity: 0.6,
+                width: '30vw'
+            }}
         />
     );
 }
