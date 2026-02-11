@@ -1,39 +1,66 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Mode (Paper-Glass) */
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card-bg: #f8fafc;
-  --card-border: #e2e8f0;
-  --accent-primary: #4f46e5;
-  /* Indigo */
-  --accent-secondary: #ec4899;
-  /* Pink */
-  --text-muted: #64748b;
-  --noise-opacity: 0.03;
+  /* Cyberpunk Color Palette */
+  --bg-primary: #000000;
+  /* Pure black */
+  --bg-secondary: #0a0a0a;
+  /* Slightly lighter black */
+  --bg-card: #111111;
+  /* Card background */
+
+  --accent-primary: #BD34FE;
+  /* Vibrant purple/magenta */
+  --accent-secondary: #06b6d4;
+  /* Cyan/teal */
+  --accent-tertiary: #10b981;
+  /* Green */
+
+  --text-primary: #ffffff;
+  /* White */
+  --text-secondary: #9ca3af;
+  /* Gray */
+  --text-muted: #6b7280;
+  /* Darker gray */
+
+  --border-primary: #1e293b;
+  /* Subtle border */
+  --border-glow: rgba(189, 52, 254, 0.5);
+  /* Purple glow */
+  --border-glow-cyan: rgba(6, 182, 212, 0.5);
+  /* Cyan glow */
+
+  --noise-opacity: 0.02;
+
+  /* Background (always dark) */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card-bg: var(--bg-card);
+  --card-border: var(--border-primary);
+  --text-muted-var: var(--text-muted);
 }
 
+/* Override dark mode (always stay dark) */
 .dark {
-  /* Dark Mode (Cyber-Physical) */
-  --background: #030014;
-  --foreground: #ffffff;
-  --card-bg: #0f172a;
-  --card-border: #1e293b;
-  --accent-primary: #818cf8;
-  /* Indigo-400 */
-  --accent-secondary: #f472b6;
-  /* Pink-400 */
-  --text-muted: #94a3b8;
-  --noise-opacity: 0.05;
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card-bg: var(--bg-card);
+  --card-border: var(--border-primary);
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Grid Background Pattern */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(189, 52, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(189, 52, 254, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 /* Noise Texture */
@@ -49,14 +76,59 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Utility Classes for Theming */
+/* Glowing Border Utilities */
+.glow-border-purple {
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 0 20px var(--border-glow);
+  transition: all 0.3s ease;
+}
+
+.glow-border-purple:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 30px var(--border-glow), 0 0 60px var(--border-glow);
+}
+
+.glow-border-cyan {
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 0 20px var(--border-glow-cyan);
+  transition: all 0.3s ease;
+}
+
+.glow-border-cyan:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 30px var(--border-glow-cyan), 0 0 60px var(--border-glow-cyan);
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-primary);
+}
+
+/* Terminal/Monospace Text */
+.font-mono-terminal {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Card Theme */
+.bg-card-theme {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+/* Text Utilities */
 .text-accent {
   color: var(--accent-primary);
 }
 
-.bg-card-theme {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
+.text-cyber-cyan {
+  color: var(--accent-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted-var);
 }
 
 /* Custom Scrollbar */
@@ -65,14 +137,34 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--card-border);
+  background: var(--accent-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: #d946ef;
+}
+
+/* Hover Scale Animation */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Glow Text Effect */
+.text-glow-purple {
+  color: var(--accent-primary);
+  text-shadow: 0 0 20px var(--border-glow);
+}
+
+.text-glow-cyan {
+  color: var(--accent-secondary);
+  text-shadow: 0 0 20px var(--border-glow-cyan);
 }

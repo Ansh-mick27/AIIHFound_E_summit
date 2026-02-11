@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function PitchBiz() {
     return (
-        <section className="py-32 bg-blue-500/5 dark:bg-blue-950/20 relative transition-colors duration-300">
-            {/* Background Decor */}
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px]" />
+        <section id="pitchbiz" className="py-32 bg-bg-primary relative">
+            {/* Background Glow */}
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-secondary/10 rounded-full blur-[150px]" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <motion.div
@@ -14,23 +14,24 @@ export default function PitchBiz() {
                     viewport={{ once: true }}
                     className="text-center mb-20 space-y-4"
                 >
-                    <div className="inline-block px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-500 dark:text-blue-400 text-sm font-medium mb-4">
-                        INVESTMENT PLATFORM
+                    <div className="inline-block px-4 py-2 rounded-full border border-accent-secondary bg-accent-secondary/10 text-accent-secondary text-sm font-mono-terminal uppercase mb-4">
+                        [INVESTMENT_PLATFORM]
                     </div>
-                    <h2 className="text-6xl md:text-8xl font-black text-foreground">
-                        PITCH<span className="text-blue-500">BIZ</span> 5.0
+                    <h2 className="text-6xl md:text-8xl font-black uppercase">
+                        PITCH<span className="text-glow-cyan">BIZ</span> <span className="text-5xl md:text-7xl">5.0</span>
                     </h2>
-                    <p className="text-xl text-muted max-w-2xl mx-auto">
+                    <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Connecting 162+ Startups with 18+ Investors across 25+ Cities.
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-4 gap-4 mb-12">
+                {/* Stats Grid */}
+                <div className="grid md:grid-cols-4 gap-4 mb-16">
                     {[
-                        { label: "Startups", val: "162" },
-                        { label: "Investors", val: "18" },
-                        { label: "Cities", val: "25+" },
-                        { label: "Live Pitches", val: "12" },
+                        { label: "STARTUPS", val: "162" },
+                        { label: "INVESTORS", val: "18" },
+                        { label: "CITIES", val: "25+" },
+                        { label: "LIVE_PITCHES", val: "12" },
                     ].map((stat, i) => (
                         <motion.div
                             key={i}
@@ -38,41 +39,57 @@ export default function PitchBiz() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="bg-card-theme p-8 rounded-2xl text-center hover:bg-black/5 dark:hover:bg-white/5 transition group cursor-default shadow-lg shadow-black/5 dark:shadow-none"
+                            className="glass-card glow-border-cyan p-8 rounded-lg text-center hover-scale group"
                         >
-                            <div className="text-4xl font-black text-foreground mb-2 group-hover:scale-110 transition duration-300">{stat.val}</div>
-                            <div className="text-sm text-muted uppercase tracking-widest">{stat.label}</div>
+                            <div className="text-4xl font-black text-glow-cyan mb-2 font-mono-terminal group-hover:scale-110 transition duration-300">
+                                {stat.val}
+                            </div>
+                            <div className="text-sm text-text-muted uppercase tracking-widest font-mono-terminal">
+                                {stat.label}
+                            </div>
                         </motion.div>
                     ))}
                 </div>
 
+                {/* Deadlines Card */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-3xl p-12 text-center backdrop-blur-md"
+                    className="glass-card glow-border-cyan rounded-xl p-12 text-center"
                 >
-                    <h3 className="text-3xl font-bold text-foreground mb-8">Registration Deadlines</h3>
+                    <h3 className="text-3xl font-bold uppercase mb-8 text-accent-secondary">
+                        REGISTRATION DEADLINES
+                    </h3>
                     <div className="flex flex-col md:flex-row justify-center gap-12">
                         <div className="space-y-2">
-                            <p className="text-sm text-muted uppercase tracking-wider">Startups Apply By</p>
-                            <p className="text-4xl font-black text-foreground">10 FEB</p>
+                            <p className="text-sm text-text-muted uppercase tracking-wider font-mono-terminal">
+                                // STARTUPS_APPLY_BY
+                            </p>
+                            <p className="text-5xl font-black text-glow-cyan font-mono-terminal">10 FEB</p>
                         </div>
-                        <div className="hidden md:block w-px bg-blue-500/30"></div>
+                        <div className="hidden md:block w-px bg-accent-secondary/30"></div>
                         <div className="space-y-2">
-                            <p className="text-sm text-muted uppercase tracking-wider">Investors Join By</p>
-                            <p className="text-4xl font-black text-foreground">25 JAN</p>
+                            <p className="text-sm text-text-muted uppercase tracking-wider font-mono-terminal">
+                                // INVESTORS_JOIN_BY
+                            </p>
+                            <p className="text-5xl font-black text-glow-cyan font-mono-terminal">25 JAN</p>
                         </div>
                     </div>
-                    <div className="mt-10 pt-10 border-t border-foreground/10 mx-auto max-w-3xl">
-                        <p className="text-sm text-muted mb-4">Supported By</p>
-                        <div className="flex flex-wrap justify-center gap-6 opacity-60 grayscale hover:grayscale-0 transition duration-500 text-sm text-foreground">
-                            {/* Partners from brochure */}
-                            <span className="hover:text-blue-500 transition">Indian Steps</span> •
-                            <span className="hover:text-blue-500 transition">ISBA</span> •
-                            <span className="hover:text-blue-500 transition">Open Network</span> •
-                            <span className="hover:text-blue-500 transition">Iam Startup</span> •
-                            <span className="hover:text-blue-500 transition">StartLabs</span>
+
+                    {/* Partners */}
+                    <div className="mt-10 pt-10 border-t border-white/10 mx-auto max-w-3xl">
+                        <p className="text-sm text-text-muted mb-4 uppercase font-mono-terminal">// SUPPORTED_BY</p>
+                        <div className="flex flex-wrap justify-center gap-4 text-sm text-text-secondary font-mono-terminal">
+                            <span className="hover:text-accent-secondary transition">IndianSteps</span>
+                            <span className="text-accent-primary">▸</span>
+                            <span className="hover:text-accent-secondary transition">ISBA</span>
+                            <span className="text-accent-primary">▸</span>
+                            <span className="hover:text-accent-secondary transition">OpenNetwork</span>
+                            <span className="text-accent-primary">▸</span>
+                            <span className="hover:text-accent-secondary transition">IamStartup</span>
+                            <span className="text-accent-primary">▸</span>
+                            <span className="hover:text-accent-secondary transition">StartLabs</span>
                         </div>
                     </div>
                 </motion.div>
