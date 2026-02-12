@@ -39,20 +39,23 @@ export default function CyberpunkHero() {
             `}</style>
 
             <div className="relative z-10 text-center max-w-6xl">
-                {/* E-SUMMIT Title */}
-                <motion.h1
+                {/* E-SUMMIT Logo */}
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="font-black uppercase leading-none mb-1"
-                    style={{
-                        fontSize: '8rem',
-                        letterSpacing: '0.05em',
-                        fontFamily: 'var(--font-montserrat)'
-                    }}
+                    className="flex justify-center mb-1"
                 >
-                    E-SUMMIT
-                </motion.h1>
+                    <img
+                        src="/images/esummit-logo.png"
+                        alt="E-Summit 2026"
+                        style={{
+                            height: '8rem',
+                            width: 'auto',
+                            filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
+                        }}
+                    />
+                </motion.div>
 
                 {/* 2026 in Blue with Glow Background */}
                 <div className="relative inline-block mb-0" style={{ marginTop: '-3rem' }}>
