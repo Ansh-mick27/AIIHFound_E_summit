@@ -54,7 +54,7 @@ export default function CyberpunkHero() {
                 </motion.h1>
 
                 {/* 2026 in Blue with Glow Background */}
-                <div className="relative inline-block mb-8">
+                <div className="relative inline-block mb-2">
                     {/* Bluish Glow Background Behind 2026 - More Prominent */}
                     <div
                         className="absolute inset-0 blur-3xl -z-10"
