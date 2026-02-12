@@ -24,8 +24,8 @@ export default function CyberpunkNav() {
                         />
                     </Link>
 
-                    {/* Nav Links */}
-                    <div className="hidden md:flex items-center gap-8">
+                    {/* Nav Links - Positioned to align About with 2 in 2026 */}
+                    <div className="hidden md:flex items-center gap-8" style={{ marginLeft: 'auto', marginRight: 'auto', paddingLeft: '12rem' }}>
                         <Link href="#about" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             About
                         </Link>
@@ -40,15 +40,12 @@ export default function CyberpunkNav() {
                         </Link>
                     </div>
 
-                    {/* CTA Button */}
-                    <button className="px-4 py-2 rounded-lg glow-border-cyan text-sm uppercase font-semibold hover:bg-accent-secondary/10 transition-all">
-                        <span className="flex items-center gap-2">
-                            JOIN EVENTS
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                        </span>
-                    </button>
+                    {/* Register Button */}
+                    <Link href="#register">
+                        <button className="hidden md:block px-6 py-2 bg-accent text-white rounded hover:scale-105 transition-transform">
+                            Register
+                        </button>
+                    </Link>
                 </div>
             </div>
         </motion.nav>
