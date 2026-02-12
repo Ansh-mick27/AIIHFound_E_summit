@@ -86,7 +86,7 @@ export default function CyberpunkHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-xl md:text-2xl lg:text-3xl font-bold uppercase mb-8"
+                    className="text-xl md:text-2xl lg:text-3xl font-bold uppercase mb-2"
                     style={{
                         letterSpacing: '0.1em',
                         fontFamily: 'var(--font-montserrat)'
@@ -103,10 +103,10 @@ export default function CyberpunkHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-lg md:text-xl lg:text-2xl font-medium mb-12"
+                    className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
-                    18th - 20th March 2025
+                    18th - 20th March 2026
                 </motion.div>
 
                 {/* Action Buttons */}
