@@ -138,9 +138,9 @@ export default function CyberpunkHero() {
                         <button
                             className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
                             style={{
-                                backgroundColor: '#FF4500',
+                                backgroundColor: '#c61a0b',
                                 color: '#FFF',
-                                boxShadow: '0 0 30px rgba(255, 69, 0, 0.5)',
+                                boxShadow: '0 0 30px rgba(198, 26, 11, 0.5)',
                                 minWidth: '150px'
                             }}
                         >
