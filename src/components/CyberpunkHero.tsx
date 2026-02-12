@@ -49,10 +49,9 @@ export default function CyberpunkHero() {
                         fontSize: '8rem',
                         letterSpacing: '0.05em',
                         fontFamily: 'var(--font-montserrat)',
-                        background: 'linear-gradient(to right, #0066FF, #00BFFF)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
+
+
+
                     }}
                 >
                     <span style={{ color: '#ffffff' }}>FROM WHAT IF TO </span>
