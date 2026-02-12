@@ -44,7 +44,10 @@ export default function CyberpunkHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none mb-4"
-                    style={{ letterSpacing: '0.05em' }}
+                    style={{
+                        letterSpacing: '0.05em',
+                        fontFamily: 'var(--font-montserrat)'
+                    }}
                 >
                     E-SUMMIT
                 </motion.h1>
@@ -68,7 +71,8 @@ export default function CyberpunkHero() {
                         style={{
                             color: '#0066FF',
                             textShadow: '0 0 40px rgba(0, 102, 255, 0.8), 0 0 80px rgba(0, 102, 255, 0.5)',
-                            letterSpacing: '0.1em'
+                            letterSpacing: '0.1em',
+                            fontFamily: 'var(--font-montserrat)'
                         }}
                     >
                         2026
@@ -81,7 +85,10 @@ export default function CyberpunkHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-xl md:text-2xl lg:text-3xl font-bold uppercase mb-8"
-                    style={{ letterSpacing: '0.1em' }}
+                    style={{
+                        letterSpacing: '0.1em',
+                        fontFamily: 'var(--font-montserrat)'
+                    }}
                 >
                     FROM WHAT IF TO <span style={{
                         color: '#FF0040',
@@ -95,6 +102,7 @@ export default function CyberpunkHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-lg md:text-xl lg:text-2xl font-medium mb-12"
+                    style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
                     18th - 20th March 2025
                 </motion.div>
