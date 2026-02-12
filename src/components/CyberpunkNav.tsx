@@ -34,7 +34,7 @@ export default function CyberpunkNav() {
                         <Link href="#partners" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Partners
                         </Link>
-                        <Link href="#register" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                        <Link href="https://forms.gle/nqHj9CqaVEudivcdA" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Register
                         </Link>
                     </div>

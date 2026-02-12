@@ -143,7 +143,7 @@ export default function CyberpunkHero() {
                             AGENDA
                         </button>
                     </Link>
-                    <Link href="#register">
+                    <Link href="https://forms.gle/nqHj9CqaVEudivcdA" target="_blank" rel="noopener noreferrer">
                         <button
                             className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
                             style={{
