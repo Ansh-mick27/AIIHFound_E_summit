@@ -95,7 +95,18 @@ export default function CyberpunkHero() {
                     />
                 </motion.div>
 
-                {/* Starting Line Text - Smaller */}
+                {/* Date */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
+                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                >
+                    18th - 20th March 2026
+                </motion.div>
+
+                {/* Starting Line Text - Red */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -103,9 +114,9 @@ export default function CyberpunkHero() {
                     className="font-medium mb-8"
                     style={{
                         fontSize: '1.5rem',
-                        color: '#00BFFF',
+                        color: '#c61a0b',
                         fontFamily: 'var(--font-montserrat)',
-                        textShadow: '0 0 10px rgba(0, 191, 255, 0.5)'
+                        textShadow: '0 0 10px rgba(198, 26, 11, 0.5)'
                     }}
                 >
                     This could be your starting line
