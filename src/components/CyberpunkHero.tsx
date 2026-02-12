@@ -46,7 +46,7 @@ export default function CyberpunkHero() {
                     transition={{ duration: 0.6 }}
                     className="font-black uppercase leading-none mb-6"
                     style={{
-                        fontSize: '8rem',
+                        fontSize: '7rem',
                         letterSpacing: '0.05em',
                         fontFamily: 'var(--font-montserrat)',
 
