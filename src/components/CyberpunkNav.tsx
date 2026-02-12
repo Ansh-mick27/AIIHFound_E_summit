@@ -11,21 +11,11 @@ export default function CyberpunkNav() {
         >
             <div className="px-6 py-3">
                 <div className="flex items-center justify-between">
-                    {/* Logos on Left */}
-                    <Link href="/" className="flex items-center gap-3">
+                    {/* All Logos Combined */}
+                    <Link href="/" className="flex items-center">
                         <img
-                            src="/images/ACRO-LOGO.png"
-                            alt="ACRO Logo"
-                            className="h-12 w-auto hover:scale-105 transition-transform duration-300"
-                        />
-                        <img
-                            src="/images/AIIH-LOGO.png"
-                            alt="AIIH Logo"
-                            className="h-12 w-auto hover:scale-105 transition-transform duration-300"
-                        />
-                        <img
-                            src="/images/EDC-LOGO.png"
-                            alt="EDC Logo"
+                            src="/images/ALL-LOGO.png"
+                            alt="All Logos"
                             className="h-12 w-auto hover:scale-105 transition-transform duration-300"
                         />
                     </Link>

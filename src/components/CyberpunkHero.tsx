@@ -55,7 +55,8 @@ export default function CyberpunkHero() {
                         backgroundClip: 'text',
                     }}
                 >
-                    FROM WHAT IF TO WHY NOT
+                    <span style={{ color: '#ffffff' }}>FROM WHAT IF TO </span>
+                    <span style={{ color: '#c61a0b', textShadow: '0 0 20px rgba(198, 26, 11, 0.5)' }}>WHY NOT</span>
                 </motion.h1>
 
                 {/* Secondary Text - Medium Size */}
