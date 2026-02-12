@@ -111,16 +111,6 @@ export default function CyberpunkHero() {
                     This could be your starting line
                 </motion.div>
 
-                {/* Date */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                >
-                    18th - 20th March 2026
-                </motion.div>
 
                 {/* Action Buttons */}
                 <motion.div
