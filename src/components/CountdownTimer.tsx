@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect } from 'react';
 
 interface TimeLeft {
     days: number;
@@ -8,105 +8,6 @@ interface TimeLeft {
     minutes: number;
     seconds: number;
 }
-
-// 3x5 grid patterns for digits 0-9
-const digitPatterns: { [key: string]: boolean[] } = {
-    '0': [
-        true, true, true,
-        true, false, true,
-        true, false, true,
-        true, false, true,
-        true, true, true
-    ],
-    '1': [
-        false, true, false,
-        true, true, false,
-        false, true, false,
-        false, true, false,
-        true, true, true
-    ],
-    '2': [
-        true, true, true,
-        false, false, true,
-        true, true, true,
-        true, false, false,
-        true, true, true
-    ],
-    '3': [
-        true, true, true,
-        false, false, true,
-        true, true, true,
-        false, false, true,
-        true, true, true
-    ],
-    '4': [
-        true, false, true,
-        true, false, true,
-        true, true, true,
-        false, false, true,
-        false, false, true
-    ],
-    '5': [
-        true, true, true,
-        true, false, false,
-        true, true, true,
-        false, false, true,
-        true, true, true
-    ],
-    '6': [
-        true, true, true,
-        true, false, false,
-        true, true, true,
-        true, false, true,
-        true, true, true
-    ],
-    '7': [
-        true, true, true,
-        false, false, true,
-        false, true, false,
-        false, true, false,
-        false, true, false
-    ],
-    '8': [
-        true, true, true,
-        true, false, true,
-        true, true, true,
-        true, false, true,
-        true, true, true
-    ],
-    '9': [
-        true, true, true,
-        true, false, true,
-        true, true, true,
-        false, false, true,
-        true, true, true
-    ],
-};
-
-// Memoized component - only re-renders when digit changes
-const DotMatrixDigit = memo(({ digit }: { digit: string }) => {
-    const pattern = digitPatterns[digit] || digitPatterns['0'];
-
-    return (
-        <div className="grid grid-cols-3 gap-1.5">
-            {pattern.map((isActive, index) => (
-                <div
-                    key={index}
-                    className="w-3 h-3 sm:w-4 sm:h-4 rounded-sm transition-all duration-300"
-                    style={{
-                        backgroundColor: isActive ? '#0066FF' : 'transparent',
-                        boxShadow: isActive
-                            ? '0 0 10px rgba(0, 102, 255, 0.8), 0 0 20px rgba(0, 102, 255, 0.4)'
-                            : 'none',
-                        opacity: isActive ? 1 : 0.1,
-                    }}
-                />
-            ))}
-        </div>
-    );
-});
-
-DotMatrixDigit.displayName = 'DotMatrixDigit';
 
 export default function CountdownTimer() {
     const targetDate = new Date('2026-03-19T00:00:00').getTime();
@@ -139,45 +40,43 @@ export default function CountdownTimer() {
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    const TimeUnit = memo(({ value, label }: { value: number; label: string }) => {
-        const digits = value.toString().padStart(2, '0').split('');
-
+    const TimeUnit = ({ value, label }: { value: number; label: string }) => {
         return (
-            <div className="flex flex-col items-center gap-3">
-                {/* Digits Container */}
+            <div className="flex flex-col items-center">
                 <div
-                    className="relative px-4 py-5 rounded-lg flex gap-3"
+                    className="px-6 py-4 min-w-[80px] sm:min-w-[100px] rounded-lg"
                     style={{
-                        background: 'rgba(0, 102, 255, 0.05)',
-                        border: '1px solid rgba(0, 102, 255, 0.2)',
+                        background: 'rgba(0, 102, 255, 0.1)',
+                        border: '1px solid rgba(0, 102, 255, 0.3)',
                         backdropFilter: 'blur(10px)',
-                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.15)',
+                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)',
                     }}
                 >
-                    {digits.map((digit, index) => (
-                        <DotMatrixDigit key={`${digit}-${index}`} digit={digit} />
-                    ))}
+                    <div
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold"
+                        style={{
+                            color: '#0066FF',
+                            textShadow: '0 0 20px rgba(0, 102, 255, 0.8)',
+                            fontFamily: 'var(--font-montserrat)',
+                        }}
+                    >
+                        {value.toString().padStart(2, '0')}
+                    </div>
                 </div>
-
-                {/* Label */}
                 <div
-                    className="text-xs sm:text-sm uppercase tracking-widest font-bold"
+                    className="text-xs sm:text-sm text-gray-300 mt-2 uppercase tracking-wider"
                     style={{
-                        color: '#0066FF',
                         fontFamily: 'var(--font-montserrat)',
-                        textShadow: '0 0 10px rgba(0, 102, 255, 0.5)',
                     }}
                 >
                     {label}
                 </div>
             </div>
         );
-    });
-
-    TimeUnit.displayName = 'TimeUnit';
+    };
 
     return (
-        <div className="flex gap-4 sm:gap-6 md:gap-8 justify-center flex-wrap">
+        <div className="flex gap-3 sm:gap-4 md:gap-6 justify-center">
             <TimeUnit value={timeLeft.days} label="Days" />
             <TimeUnit value={timeLeft.hours} label="Hours" />
             <TimeUnit value={timeLeft.minutes} label="Minutes" />

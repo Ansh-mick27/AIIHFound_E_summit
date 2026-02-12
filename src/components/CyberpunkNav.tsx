@@ -11,7 +11,13 @@ export default function CyberpunkNav() {
         >
             <div className="px-6 py-3">
                 <div className="flex items-center justify-between">
+                    {/* Logos on Left */}
                     <Link href="/" className="flex items-center gap-3">
+                        <img
+                            src="/images/ACRO-LOGO.png"
+                            alt="ACRO Logo"
+                            className="h-12 w-auto hover:scale-105 transition-transform duration-300"
+                        />
                         <img
                             src="/images/AIIH-LOGO.png"
                             alt="AIIH Logo"
@@ -24,8 +30,8 @@ export default function CyberpunkNav() {
                         />
                     </Link>
 
-                    {/* Nav Links - Positioned to align About with first 2 in 2026 */}
-                    <div className="hidden md:flex items-center gap-8 flex-1 justify-center" style={{ marginLeft: '-15rem' }}>
+                    {/* Nav Links - Moved to Right */}
+                    <div className="hidden md:flex items-center gap-8">
                         <Link href="#about" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             About
                         </Link>
@@ -39,13 +45,6 @@ export default function CyberpunkNav() {
                             Partners
                         </Link>
                     </div>
-
-                    {/* Register Button */}
-                    <Link href="#register">
-                        <button className="hidden md:block px-6 py-2 bg-accent text-white rounded hover:scale-105 transition-transform">
-                            Register
-                        </button>
-                    </Link>
                 </div>
             </div>
         </motion.nav>
