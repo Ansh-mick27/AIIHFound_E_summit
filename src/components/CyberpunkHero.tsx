@@ -47,8 +47,8 @@ export default function CyberpunkHero() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-7xl md:text-9xl font-black mb-8"
                     style={{
-                        color: '#00F0FF',
-                        textShadow: '0 0 20px #00F0FF, 0 0 40px #00F0FF'
+                        color: '#0066FF',
+                        textShadow: '0 0 20px #0066FF, 0 0 40px #0066FF'
                     }}
                 >
                     2026
@@ -74,8 +74,8 @@ export default function CyberpunkHero() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="border-l-4 pl-6 mb-12"
                     style={{
-                        borderColor: '#00F0FF',
-                        boxShadow: '-4px 0 20px rgba(0, 240, 255, 0.3)'
+                        borderColor: '#0066FF',
+                        boxShadow: '-4px 0 20px rgba(0, 102, 255, 0.3)'
                     }}
                 >
                     <p className="text-base md:text-lg leading-relaxed">
@@ -104,9 +104,9 @@ export default function CyberpunkHero() {
                         <button
                             className="px-8 py-3 font-bold uppercase text-sm tracking-wider transition-all hover:scale-105"
                             style={{
-                                backgroundColor: '#00F0FF',
-                                color: '#000',
-                                boxShadow: '0 0 20px #00F0FF, 0 0 40px #00F0FF'
+                                backgroundColor: '#0066FF',
+                                color: '#FFF',
+                                boxShadow: '0 0 20px #0066FF, 0 0 40px #0066FF'
                             }}
                         >
                             AGENDA
@@ -116,9 +116,9 @@ export default function CyberpunkHero() {
                         <button
                             className="px-8 py-3 font-bold uppercase text-sm tracking-wider transition-all hover:scale-105"
                             style={{
-                                backgroundColor: '#00F0FF',
-                                color: '#000',
-                                boxShadow: '0 0 20px #00F0FF, 0 0 40px #00F0FF'
+                                backgroundColor: '#0066FF',
+                                color: '#FFF',
+                                boxShadow: '0 0 20px #0066FF, 0 0 40px #0066FF'
                             }}
                         >
                             REGISTER
