@@ -73,8 +73,8 @@ export default function CyberpunkHero() {
                         margin: '0 auto 2rem auto'
                     }}
                 >
-                    A room full of people who refuse to play safe.<br />
-                    Stories that sound like yours.
+                    A room full of people who refuse to play safe<br />
+                    Stories that sound like yours
                 </motion.div>
 
                 {/* E-SUMMIT Logo - Increased Size */}
