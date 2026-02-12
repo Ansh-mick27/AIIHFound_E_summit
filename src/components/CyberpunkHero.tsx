@@ -45,127 +45,135 @@ export default function CyberpunkHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="font-black uppercase leading-none mb-6"
-                >
-                    <img
-                        src="/images/esummit-logo.png"
-                        alt="E-Summit 2026"
-                        style={{
-                            height: '8rem',
-                            width: 'auto',
-                            filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
-                        }}
-                    />
-                </motion.div>
-
-                {/* Secondary Text - Medium Size */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="font-semibold mb-8"
                     style={{
-                        fontSize: '2rem',
-                        lineHeight: '1.4',
-                        color: '#ffffff',
+                        fontSize: '8rem',
+                        letterSpacing: '0.05em',
                         fontFamily: 'var(--font-montserrat)',
-                        maxWidth: '900px',
-                        margin: '0 auto 2rem auto'
+                        background: 'linear-gradient(to right, #0066FF, #00BFFF)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
                     }}
-                >
-                    A room full of people who refuse to play safe.<br />
-                    Stories that sound like yours.
-                </motion.div>
-
-                {/* E-SUMMIT Logo - Reduced Size */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="flex justify-center mb-6"
-                >
                     <img
-                        src="/images/esummit-logo.png"
-                        alt="E-Summit 2026"
-                        style={{
-                            height: '5rem',
-                            width: 'auto',
-                            filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
-                        }}
-                    />
-                </motion.div>
-
-                {/* Starting Line Text - Smaller */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="font-medium mb-8"
+                    src="/images/esummit-logo.png"
+                    alt="E-Summit 2026"
                     style={{
-                        fontSize: '1.5rem',
-                        color: '#00BFFF',
-                        fontFamily: 'var(--font-montserrat)',
-                        textShadow: '0 0 10px rgba(0, 191, 255, 0.5)'
+                        height: '8rem',
+                        width: 'auto',
+                        filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
                     }}
-                >
-                    This could be your starting line
-                </motion.div>
+                />
+            </motion.div>
 
-                {/* Date */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
-                >
-                    18th - 20th March 2026
-                </motion.div>
+            {/* Secondary Text - Medium Size */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="font-semibold mb-8"
+                style={{
+                    fontSize: '2rem',
+                    lineHeight: '1.4',
+                    color: '#ffffff',
+                    fontFamily: 'var(--font-montserrat)',
+                    maxWidth: '900px',
+                    margin: '0 auto 2rem auto'
+                }}
+            >
+                A room full of people who refuse to play safe.<br />
+                Stories that sound like yours.
+            </motion.div>
 
-                {/* Action Buttons */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4"
-                >
-                    <Link href="#agenda">
-                        <button
-                            className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
-                            style={{
-                                backgroundColor: '#0066FF',
-                                color: '#FFF',
-                                boxShadow: '0 0 30px rgba(0, 102, 255, 0.5)',
-                                minWidth: '150px'
-                            }}
-                        >
-                            AGENDA
-                        </button>
-                    </Link>
-                    <Link href="#register">
-                        <button
-                            className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
-                            style={{
-                                backgroundColor: '#c61a0b',
-                                color: '#FFF',
-                                boxShadow: '0 0 30px rgba(198, 26, 11, 0.5)',
-                                minWidth: '150px'
-                            }}
-                        >
-                            REGISTER
-                        </button>
-                    </Link>
-                </motion.div>
+            {/* E-SUMMIT Logo - Reduced Size */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex justify-center mb-6"
+            >
+                <img
+                    src="/images/esummit-logo.png"
+                    alt="E-Summit 2026"
+                    style={{
+                        height: '5rem',
+                        width: 'auto',
+                        filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
+                    }}
+                />
+            </motion.div>
 
-                {/* Countdown Timer */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="mt-12"
-                >
-                    <CountdownTimer />
-                </motion.div>
-            </div>
-        </section>
+            {/* Starting Line Text - Smaller */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="font-medium mb-8"
+                style={{
+                    fontSize: '1.5rem',
+                    color: '#00BFFF',
+                    fontFamily: 'var(--font-montserrat)',
+                    textShadow: '0 0 10px rgba(0, 191, 255, 0.5)'
+                }}
+            >
+                This could be your starting line
+            </motion.div>
+
+            {/* Date */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
+                style={{ fontFamily: 'var(--font-montserrat)' }}
+            >
+                18th - 20th March 2026
+            </motion.div>
+
+            {/* Action Buttons */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+                <Link href="#agenda">
+                    <button
+                        className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
+                        style={{
+                            backgroundColor: '#0066FF',
+                            color: '#FFF',
+                            boxShadow: '0 0 30px rgba(0, 102, 255, 0.5)',
+                            minWidth: '150px'
+                        }}
+                    >
+                        AGENDA
+                    </button>
+                </Link>
+                <Link href="#register">
+                    <button
+                        className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
+                        style={{
+                            backgroundColor: '#c61a0b',
+                            color: '#FFF',
+                            boxShadow: '0 0 30px rgba(198, 26, 11, 0.5)',
+                            minWidth: '150px'
+                        }}
+                    >
+                        REGISTER
+                    </button>
+                </Link>
+            </motion.div>
+
+            {/* Countdown Timer */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mt-12"
+            >
+                <CountdownTimer />
+            </motion.div>
+        </div>
+        </section >
     );
 }
