@@ -9,7 +9,7 @@ export default function CyberpunkNav() {
             animate={{ y: 0 }}
             className="fixed top-0 left-0 right-0 z-50 border-b border-border-primary bg-bg-primary/80 backdrop-blur-lg"
         >
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto pl-2 pr-6 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
                     <img
