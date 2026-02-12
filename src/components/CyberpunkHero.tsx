@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CyberpunkHero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-8 pt-8 bg-black text-white overflow-hidden">
+        <section className="relative min-h-screen flex items-start justify-center px-8 pt-32 bg-black text-white overflow-hidden">
             {/* Spiral Staircase Background - Right Side */}
             <div
                 className="absolute top-0 right-0 bottom-0 w-[30vw] -z-0 pointer-events-none"
@@ -89,7 +89,8 @@ export default function CyberpunkHero() {
                     className="text-xl md:text-2xl lg:text-3xl font-bold uppercase mb-2"
                     style={{
                         letterSpacing: '0.1em',
-                        fontFamily: 'var(--font-montserrat)'
+                        fontFamily: 'var(--font-montserrat)',
+                        marginTop: '-2rem'
                     }}
                 >
                     FROM WHAT IF TO <span style={{
