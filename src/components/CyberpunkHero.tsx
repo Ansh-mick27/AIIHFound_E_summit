@@ -43,8 +43,9 @@ export default function CyberpunkHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none mb-4"
+                    className="font-black uppercase leading-none mb-4"
                     style={{
+                        fontSize: '12rem',
                         letterSpacing: '0.05em',
                         fontFamily: 'var(--font-montserrat)'
                     }}
@@ -67,8 +68,9 @@ export default function CyberpunkHero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-6xl md:text-8xl lg:text-9xl font-black"
+                        className="font-black"
                         style={{
+                            fontSize: '12rem',
                             color: '#0066FF',
                             textShadow: '0 0 40px rgba(0, 102, 255, 0.8), 0 0 80px rgba(0, 102, 255, 0.5)',
                             letterSpacing: '0.1em',
