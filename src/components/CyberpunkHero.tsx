@@ -57,51 +57,58 @@ export default function CyberpunkHero() {
                     />
                 </motion.div>
 
-                {/* 2026 in Blue with Glow Background */}
-                <div className="relative inline-block mb-0" style={{ marginTop: '-3rem' }}>
-                    {/* Bluish Glow Background Behind 2026 - More Prominent */}
-                    <div
-                        className="absolute inset-0 blur-3xl -z-10"
-                        style={{
-                            background: 'radial-gradient(ellipse, rgba(0, 102, 255, 0.7) 0%, rgba(0, 102, 255, 0.4) 50%, transparent 80%)',
-                            transform: 'scale(2)'
-                        }}
-                    />
+                {/* Secondary Text - Medium Size */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="font-semibold mb-8"
+                    style={{
+                        fontSize: '2rem',
+                        lineHeight: '1.4',
+                        color: '#ffffff',
+                        fontFamily: 'var(--font-montserrat)',
+                        maxWidth: '900px',
+                        margin: '0 auto 2rem auto'
+                    }}
+                >
+                    A room full of people who refuse to play safe.<br />
+                    Stories that sound like yours.
+                </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="font-black"
-                        style={{
-                            fontSize: '8rem',
-                            color: '#0066FF',
-                            textShadow: '0 0 40px rgba(0, 102, 255, 0.8), 0 0 80px rgba(0, 102, 255, 0.5)',
-                            letterSpacing: '0.1em',
-                            fontFamily: 'var(--font-montserrat)'
-                        }}
-                    >
-                        2026
-                    </motion.div>
-                </div>
-
-                {/* Tagline */}
-                <motion.h2
+                {/* E-SUMMIT Logo - Reduced Size */}
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-xl md:text-2xl lg:text-3xl font-bold uppercase mb-2"
+                    className="flex justify-center mb-6"
+                >
+                    <img
+                        src="/images/esummit-logo.png"
+                        alt="E-Summit 2026"
+                        style={{
+                            height: '5rem',
+                            width: 'auto',
+                            filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
+                        }}
+                    />
+                </motion.div>
+
+                {/* Starting Line Text - Smaller */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="font-medium mb-8"
                     style={{
-                        letterSpacing: '0.1em',
+                        fontSize: '1.5rem',
+                        color: '#00BFFF',
                         fontFamily: 'var(--font-montserrat)',
-                        marginTop: '-2rem'
+                        textShadow: '0 0 10px rgba(0, 191, 255, 0.5)'
                     }}
                 >
-                    FROM WHAT IF TO <span style={{
-                        color: '#FF0040',
-                        textShadow: '0 0 20px rgba(255, 0, 64, 0.5)'
-                    }}>WHY NOT</span>
-                </motion.h2>
+                    This could be your starting line
+                </motion.div>
 
                 {/* Date */}
                 <motion.div
