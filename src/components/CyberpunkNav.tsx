@@ -11,13 +11,12 @@ export default function CyberpunkNav() {
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center">
-                        <span className="text-white font-black text-lg">AI</span>
-                    </div>
-                    <span className="text-xl font-black uppercase tracking-tight">
-                        E-SUMMIT <span className="text-accent">2026</span>
-                    </span>
+                <Link href="/" className="flex items-center">
+                    <img
+                        src="/images/ecell-logo.png"
+                        alt="E-Cell Logo"
+                        className="h-12 w-auto hover:scale-105 transition-transform duration-300"
+                    />
                 </Link>
 
                 {/* Nav Links */}
