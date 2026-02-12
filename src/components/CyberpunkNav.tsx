@@ -46,6 +46,7 @@ export default function CyberpunkNav() {
                         </span>
                     </button>
                 </div>
+            </div>
         </motion.nav>
     );
 }
