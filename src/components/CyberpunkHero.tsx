@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CyberpunkHero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-start px-8 md:px-16 pt-20 bg-black text-white overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center px-8 pt-20 bg-black text-white overflow-hidden">
             {/* Spiral Staircase Background - Right Side */}
             <div
                 className="absolute top-0 right-0 bottom-0 w-[30vw] -z-0 pointer-events-none"
@@ -15,6 +15,14 @@ export default function CyberpunkHero() {
                     backgroundSize: 'contain',
                     opacity: 0.5,
                     animation: 'spiralScroll 20s linear infinite'
+                }}
+            />
+
+            {/* Blue Glow Background Effect */}
+            <div
+                className="absolute inset-0 -z-10 pointer-events-none"
+                style={{
+                    background: 'radial-gradient(ellipse at center, rgba(0, 102, 255, 0.15) 0%, transparent 70%)'
                 }}
             />
 
@@ -29,26 +37,28 @@ export default function CyberpunkHero() {
                 }
             `}</style>
 
-            <div className="relative z-10 max-w-4xl">
+            <div className="relative z-10 text-center max-w-6xl">
                 {/* E-SUMMIT Title */}
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-7xl md:text-9xl font-black uppercase leading-none mb-4"
+                    className="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none mb-4"
+                    style={{ letterSpacing: '0.05em' }}
                 >
                     E-SUMMIT
                 </motion.h1>
 
-                {/* 2026 in Neon Cyan */}
+                {/* 2026 in Blue */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-7xl md:text-9xl font-black mb-8"
+                    className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-8"
                     style={{
                         color: '#0066FF',
-                        textShadow: '0 0 20px #0066FF, 0 0 40px #0066FF'
+                        textShadow: '0 0 40px rgba(0, 102, 255, 0.6), 0 0 80px rgba(0, 102, 255, 0.3)',
+                        letterSpacing: '0.1em'
                     }}
                 >
                     2026
@@ -59,54 +69,40 @@ export default function CyberpunkHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-2xl md:text-3xl font-bold uppercase mb-8"
+                    className="text-xl md:text-2xl lg:text-3xl font-bold uppercase mb-8"
+                    style={{ letterSpacing: '0.1em' }}
                 >
                     FROM WHAT IF TO <span style={{
-                        color: '#FF006E',
-                        textShadow: '0 0 20px #FF006E, 0 0 40px #FF006E'
+                        color: '#FF0040',
+                        textShadow: '0 0 20px rgba(255, 0, 64, 0.5)'
                     }}>WHY NOT</span>
                 </motion.h2>
-
-                {/* Description with Neon Cyan Border */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="border-l-4 pl-6 mb-12"
-                    style={{
-                        borderColor: '#0066FF',
-                        boxShadow: '-4px 0 20px rgba(0, 102, 255, 0.3)'
-                    }}
-                >
-                    <p className="text-base md:text-lg leading-relaxed">
-                        Enter a new era of innovation with E-Summit'26, uniting ambitious minds and bold strategists. Each level is a new challenge to overcome in every battlefield of games.
-                    </p>
-                </motion.div>
 
                 {/* Date */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-xl md:text-2xl font-semibold mb-6"
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-lg md:text-xl lg:text-2xl font-medium mb-12"
                 >
                     18th - 20th March 2025
                 </motion.div>
 
-                {/* Action Buttons with Neon Glow */}
+                {/* Action Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="flex gap-4"
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
                     <Link href="#agenda">
                         <button
-                            className="px-8 py-3 font-bold uppercase text-sm tracking-wider transition-all hover:scale-105"
+                            className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
                             style={{
                                 backgroundColor: '#0066FF',
                                 color: '#FFF',
-                                boxShadow: '0 0 20px #0066FF, 0 0 40px #0066FF'
+                                boxShadow: '0 0 30px rgba(0, 102, 255, 0.5)',
+                                minWidth: '150px'
                             }}
                         >
                             AGENDA
@@ -114,11 +110,12 @@ export default function CyberpunkHero() {
                     </Link>
                     <Link href="#register">
                         <button
-                            className="px-8 py-3 font-bold uppercase text-sm tracking-wider transition-all hover:scale-105"
+                            className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
                             style={{
-                                backgroundColor: '#0066FF',
+                                backgroundColor: '#FF4500',
                                 color: '#FFF',
-                                boxShadow: '0 0 20px #0066FF, 0 0 40px #0066FF'
+                                boxShadow: '0 0 30px rgba(255, 69, 0, 0.5)',
+                                minWidth: '150px'
                             }}
                         >
                             REGISTER
