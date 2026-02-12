@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CyberpunkHero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-8 pt-20 bg-black text-white overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center px-8 pt-8 bg-black text-white overflow-hidden">
             {/* Spiral Staircase Background - Right Side */}
             <div
                 className="absolute top-0 right-0 bottom-0 w-[30vw] -z-0 pointer-events-none"
@@ -54,7 +54,7 @@ export default function CyberpunkHero() {
                 </motion.h1>
 
                 {/* 2026 in Blue with Glow Background */}
-                <div className="relative inline-block mb-2" style={{ marginTop: '-3rem' }}>
+                <div className="relative inline-block mb-0" style={{ marginTop: '-3rem' }}>
                     {/* Bluish Glow Background Behind 2026 - More Prominent */}
                     <div
                         className="absolute inset-0 blur-3xl -z-10"
