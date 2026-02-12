@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, memo } from 'react';
-import { motion } from 'framer-motion';
 
 interface TimeLeft {
     days: number;
@@ -91,30 +90,23 @@ const DotMatrixDigit = memo(({ digit }: { digit: string }) => {
     return (
         <div className="grid grid-cols-3 gap-1.5">
             {pattern.map((isActive, index) => (
-                <motion.div
-                    key={`${digit}-${index}`}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{
-                        scale: isActive ? 1 : 0,
-                        opacity: isActive ? 1 : 0.1
-                    }}
-                    transition={{
-                        duration: 0.3,
-                        delay: index * 0.02,
-                        ease: "easeOut"
-                    }}
-                    className="w-3 h-3 sm:w-4 sm:h-4 rounded-sm"
+                <div
+                    key={index}
+                    className="w-3 h-3 sm:w-4 sm:h-4 rounded-sm transition-all duration-300"
                     style={{
                         backgroundColor: isActive ? '#0066FF' : 'transparent',
                         boxShadow: isActive
                             ? '0 0 10px rgba(0, 102, 255, 0.8), 0 0 20px rgba(0, 102, 255, 0.4)'
                             : 'none',
+                        opacity: isActive ? 1 : 0.1,
                     }}
                 />
             ))}
         </div>
     );
 });
+
+DotMatrixDigit.displayName = 'DotMatrixDigit';
 
 export default function CountdownTimer() {
     const targetDate = new Date('2026-03-19T00:00:00').getTime();
@@ -147,7 +139,7 @@ export default function CountdownTimer() {
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    const TimeUnit = ({ value, label }: { value: number; label: string }) => {
+    const TimeUnit = memo(({ value, label }: { value: number; label: string }) => {
         const digits = value.toString().padStart(2, '0').split('');
 
         return (
@@ -163,32 +155,26 @@ export default function CountdownTimer() {
                     }}
                 >
                     {digits.map((digit, index) => (
-                        <DotMatrixDigit key={`${value}-${index}`} digit={digit} />
+                        <DotMatrixDigit key={`${digit}-${index}`} digit={digit} />
                     ))}
                 </div>
 
                 {/* Label */}
-                <motion.div
+                <div
                     className="text-xs sm:text-sm uppercase tracking-widest font-bold"
                     style={{
                         color: '#0066FF',
                         fontFamily: 'var(--font-montserrat)',
                         textShadow: '0 0 10px rgba(0, 102, 255, 0.5)',
                     }}
-                    animate={{
-                        opacity: [0.7, 1, 0.7],
-                    }}
-                    transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
                 >
                     {label}
-                </motion.div>
+                </div>
             </div>
         );
-    };
+    });
+
+    TimeUnit.displayName = 'TimeUnit';
 
     return (
         <div className="flex gap-4 sm:gap-6 md:gap-8 justify-center flex-wrap">
