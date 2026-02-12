@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* Custom Scrollbar - Cobalt Blue */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0066FF;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0052cc;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0066FF #000000;
+}
+
 :root {
   /* Cyberpunk Color Palette */
   --bg-primary: #000000;
