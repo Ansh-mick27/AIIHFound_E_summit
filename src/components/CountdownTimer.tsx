@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { motion } from 'framer-motion';
 
 interface TimeLeft {
@@ -84,14 +84,15 @@ const digitPatterns: { [key: string]: boolean[] } = {
     ],
 };
 
-const DotMatrixDigit = ({ digit }: { digit: string }) => {
+// Memoized component - only re-renders when digit changes
+const DotMatrixDigit = memo(({ digit }: { digit: string }) => {
     const pattern = digitPatterns[digit] || digitPatterns['0'];
 
     return (
         <div className="grid grid-cols-3 gap-1.5">
             {pattern.map((isActive, index) => (
                 <motion.div
-                    key={index}
+                    key={`${digit}-${index}`}
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{
                         scale: isActive ? 1 : 0,
@@ -113,7 +114,7 @@ const DotMatrixDigit = ({ digit }: { digit: string }) => {
             ))}
         </div>
     );
-};
+});
 
 export default function CountdownTimer() {
     const targetDate = new Date('2026-03-19T00:00:00').getTime();
@@ -162,7 +163,7 @@ export default function CountdownTimer() {
                     }}
                 >
                     {digits.map((digit, index) => (
-                        <DotMatrixDigit key={`${label}-${index}-${digit}`} digit={digit} />
+                        <DotMatrixDigit key={`${value}-${index}`} digit={digit} />
                     ))}
                 </div>
 
