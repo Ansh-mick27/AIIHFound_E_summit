@@ -77,7 +77,7 @@ export default function CyberpunkHero() {
                     Stories that sound like yours.
                 </motion.div>
 
-                {/* E-SUMMIT Logo - Reduced Size */}
+                {/* E-SUMMIT Logo - Increased Size */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export default function CyberpunkHero() {
                         src="/images/esummit-logo.png"
                         alt="E-Summit 2026"
                         style={{
-                            height: '5rem',
+                            height: '7rem',
                             width: 'auto',
                             filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
                         }}
