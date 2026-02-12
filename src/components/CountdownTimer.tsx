@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface TimeLeft {
     days: number;
@@ -9,6 +9,111 @@ interface TimeLeft {
     minutes: number;
     seconds: number;
 }
+
+// 3x5 grid patterns for digits 0-9
+const digitPatterns: { [key: string]: boolean[] } = {
+    '0': [
+        true, true, true,
+        true, false, true,
+        true, false, true,
+        true, false, true,
+        true, true, true
+    ],
+    '1': [
+        false, true, false,
+        true, true, false,
+        false, true, false,
+        false, true, false,
+        true, true, true
+    ],
+    '2': [
+        true, true, true,
+        false, false, true,
+        true, true, true,
+        true, false, false,
+        true, true, true
+    ],
+    '3': [
+        true, true, true,
+        false, false, true,
+        true, true, true,
+        false, false, true,
+        true, true, true
+    ],
+    '4': [
+        true, false, true,
+        true, false, true,
+        true, true, true,
+        false, false, true,
+        false, false, true
+    ],
+    '5': [
+        true, true, true,
+        true, false, false,
+        true, true, true,
+        false, false, true,
+        true, true, true
+    ],
+    '6': [
+        true, true, true,
+        true, false, false,
+        true, true, true,
+        true, false, true,
+        true, true, true
+    ],
+    '7': [
+        true, true, true,
+        false, false, true,
+        false, true, false,
+        false, true, false,
+        false, true, false
+    ],
+    '8': [
+        true, true, true,
+        true, false, true,
+        true, true, true,
+        true, false, true,
+        true, true, true
+    ],
+    '9': [
+        true, true, true,
+        true, false, true,
+        true, true, true,
+        false, false, true,
+        true, true, true
+    ],
+};
+
+const DotMatrixDigit = ({ digit }: { digit: string }) => {
+    const pattern = digitPatterns[digit] || digitPatterns['0'];
+
+    return (
+        <div className="grid grid-cols-3 gap-1.5">
+            {pattern.map((isActive, index) => (
+                <motion.div
+                    key={index}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{
+                        scale: isActive ? 1 : 0,
+                        opacity: isActive ? 1 : 0.1
+                    }}
+                    transition={{
+                        duration: 0.3,
+                        delay: index * 0.02,
+                        ease: "easeOut"
+                    }}
+                    className="w-3 h-3 sm:w-4 sm:h-4 rounded-sm"
+                    style={{
+                        backgroundColor: isActive ? '#0066FF' : 'transparent',
+                        boxShadow: isActive
+                            ? '0 0 10px rgba(0, 102, 255, 0.8), 0 0 20px rgba(0, 102, 255, 0.4)'
+                            : 'none',
+                    }}
+                />
+            ))}
+        </div>
+    );
+};
 
 export default function CountdownTimer() {
     const targetDate = new Date('2026-03-19T00:00:00').getTime();
@@ -41,61 +146,29 @@ export default function CountdownTimer() {
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    const AnimatedDigit = ({ value }: { value: string }) => (
-        <AnimatePresence mode="popLayout">
-            <motion.div
-                key={value}
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="inline-block"
-                style={{
-                    fontFamily: 'var(--font-montserrat)',
-                    fontWeight: 900
-                }}
-            >
-                {value}
-            </motion.div>
-        </AnimatePresence>
-    );
-
     const TimeUnit = ({ value, label }: { value: number; label: string }) => {
         const digits = value.toString().padStart(2, '0').split('');
 
         return (
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-3">
+                {/* Digits Container */}
                 <div
-                    className="relative px-6 py-4 min-w-[100px] sm:min-w-[120px] rounded-lg overflow-hidden"
+                    className="relative px-4 py-5 rounded-lg flex gap-3"
                     style={{
-                        background: 'rgba(0, 102, 255, 0.1)',
-                        border: '1px solid rgba(0, 102, 255, 0.3)',
+                        background: 'rgba(0, 102, 255, 0.05)',
+                        border: '1px solid rgba(0, 102, 255, 0.2)',
                         backdropFilter: 'blur(10px)',
-                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.2), inset 0 0 20px rgba(0, 102, 255, 0.1)',
+                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.15)',
                     }}
                 >
-                    {/* Glow effect overlay */}
-                    <div
-                        className="absolute inset-0 opacity-30 pointer-events-none"
-                        style={{
-                            background: 'radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.3) 0%, transparent 70%)',
-                        }}
-                    />
-
-                    <div
-                        className="relative text-4xl sm:text-5xl md:text-6xl font-black flex justify-center gap-1"
-                        style={{
-                            color: '#0066FF',
-                            textShadow: '0 0 20px rgba(0, 102, 255, 0.8), 0 0 40px rgba(0, 102, 255, 0.4)',
-                        }}
-                    >
-                        {digits.map((digit, index) => (
-                            <AnimatedDigit key={`${label}-${index}`} value={digit} />
-                        ))}
-                    </div>
+                    {digits.map((digit, index) => (
+                        <DotMatrixDigit key={`${label}-${index}-${digit}`} digit={digit} />
+                    ))}
                 </div>
+
+                {/* Label */}
                 <motion.div
-                    className="text-xs sm:text-sm mt-3 uppercase tracking-widest font-bold"
+                    className="text-xs sm:text-sm uppercase tracking-widest font-bold"
                     style={{
                         color: '#0066FF',
                         fontFamily: 'var(--font-montserrat)',
@@ -117,7 +190,7 @@ export default function CountdownTimer() {
     };
 
     return (
-        <div className="flex gap-3 sm:gap-4 md:gap-6 justify-center">
+        <div className="flex gap-4 sm:gap-6 md:gap-8 justify-center flex-wrap">
             <TimeUnit value={timeLeft.days} label="Days" />
             <TimeUnit value={timeLeft.hours} label="Hours" />
             <TimeUnit value={timeLeft.minutes} label="Minutes" />
