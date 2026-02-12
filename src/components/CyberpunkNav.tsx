@@ -28,11 +28,14 @@ export default function CyberpunkNav() {
                         <Link href="#events" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Events
                         </Link>
-                        <Link href="#timeline" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
-                            Timeline
+                        <Link href="#agenda" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                            Agenda
                         </Link>
                         <Link href="#partners" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Partners
+                        </Link>
+                        <Link href="#register" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                            Register
                         </Link>
                     </div>
                 </div>
