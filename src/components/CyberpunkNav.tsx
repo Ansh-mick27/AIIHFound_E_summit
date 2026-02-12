@@ -9,13 +9,17 @@ export default function CyberpunkNav() {
             animate={{ y: 0 }}
             className="fixed top-0 left-0 right-0 z-50 border-b border-border-primary bg-bg-primary/80 backdrop-blur-lg"
         >
-            <div className="w-full px-4 py-4">
+            <div className="px-6 py-3">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center gap-3">
                         <img
-                            src="/images/ecell-logo.png"
-                            alt="E-Cell Logo"
+                            src="/images/AIIH-LOGO.png"
+                            alt="AIIH Logo"
+                            className="h-12 w-auto hover:scale-105 transition-transform duration-300"
+                        />
+                        <img
+                            src="/images/EDC-LOGO.png"
+                            alt="EDC Logo"
                             className="h-12 w-auto hover:scale-105 transition-transform duration-300"
                         />
                     </Link>
