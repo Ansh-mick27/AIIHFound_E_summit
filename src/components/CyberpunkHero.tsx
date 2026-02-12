@@ -14,7 +14,7 @@ export default function CyberpunkHero() {
                     backgroundRepeat: 'repeat-y',
                     backgroundPosition: 'right center',
                     backgroundSize: 'contain',
-                    opacity: 0.5,
+                    opacity: 1.0,
                     animation: 'spiralScroll 20s linear infinite'
                 }}
             />
