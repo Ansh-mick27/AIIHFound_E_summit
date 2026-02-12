@@ -39,12 +39,12 @@ export default function CyberpunkHero() {
             `}</style>
 
             <div className="relative z-10 text-center max-w-6xl">
-                {/* E-SUMMIT Logo */}
-                <motion.div
+                {/* Main Tagline - FROM WHAT IF TO WHY NOT - Largest */}
+                <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="flex justify-center mb-1"
+                    className="font-black uppercase leading-none mb-6"
                 >
                     <img
                         src="/images/esummit-logo.png"
