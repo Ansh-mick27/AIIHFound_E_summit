@@ -49,20 +49,31 @@ export default function CyberpunkHero() {
                     E-SUMMIT
                 </motion.h1>
 
-                {/* 2026 in Blue */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-8"
-                    style={{
-                        color: '#0066FF',
-                        textShadow: '0 0 40px rgba(0, 102, 255, 0.6), 0 0 80px rgba(0, 102, 255, 0.3)',
-                        letterSpacing: '0.1em'
-                    }}
-                >
-                    2026
-                </motion.div>
+                {/* 2026 in Blue with Glow Background */}
+                <div className="relative inline-block">
+                    {/* Bluish Glow Background Behind 2026 */}
+                    <div
+                        className="absolute inset-0 blur-3xl -z-10"
+                        style={{
+                            background: 'radial-gradient(ellipse, rgba(0, 102, 255, 0.4) 0%, rgba(0, 102, 255, 0.2) 40%, transparent 70%)',
+                            transform: 'scale(1.5)'
+                        }}
+                    />
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className="text-6xl md:text-7xl lg:text-8xl font-black"
+                        style={{
+                            color: '#0066FF',
+                            textShadow: '0 0 40px rgba(0, 102, 255, 0.6), 0 0 80px rgba(0, 102, 255, 0.3)',
+                            letterSpacing: '0.1em'
+                        }}
+                    >
+                        2026
+                    </motion.div>
+                </div>
 
                 {/* Tagline */}
                 <motion.h2
