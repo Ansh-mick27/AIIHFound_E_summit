@@ -30,10 +30,10 @@ export default function CyberpunkHero() {
             <style jsx>{`
                 @keyframes spiralScroll {
                     0% {
-                        background-position: right 0%;
+                        background-position: right 100%;
                     }
                     100% {
-                        background-position: right 100%;
+                        background-position: right 0%;
                     }
                 }
             `}</style>
