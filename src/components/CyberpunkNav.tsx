@@ -25,7 +25,7 @@ export default function CyberpunkNav() {
                     </Link>
 
                     {/* Nav Links - Positioned to align About with 2 in 2026 */}
-                    <div className="hidden md:flex items-center gap-8" style={{ marginLeft: 'auto', marginRight: 'auto', paddingLeft: '12rem' }}>
+                    <div className="hidden md:flex items-center gap-8" style={{ marginLeft: 'auto', marginRight: 'auto', paddingLeft: '2rem' }}>
                         <Link href="#about" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             About
                         </Link>
