@@ -54,16 +54,9 @@ export default function CyberpunkHero() {
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
                     }}
-                    <img
-                    src="/images/esummit-logo.png"
-                    alt="E-Summit 2026"
-                    style={{
-                        height: '8rem',
-                        width: 'auto',
-                        filter: 'drop-shadow(0 0 20px rgba(0, 102, 255, 0.3))'
-                    }}
-                />
-
+                >
+                    FROM WHAT IF TO WHY NOT
+                </motion.h1>
 
                 {/* Secondary Text - Medium Size */}
                 <motion.div
@@ -122,7 +115,7 @@ export default function CyberpunkHero() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
@@ -133,8 +126,8 @@ export default function CyberpunkHero() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
                 >
                     <Link href="#agenda">
                         <button
@@ -168,12 +161,11 @@ export default function CyberpunkHero() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="mt-12"
+                    transition={{ duration: 0.6, delay: 0.6 }}
                 >
                     <CountdownTimer />
                 </motion.div>
             </div>
-        </section >
+        </section>
     );
 }
