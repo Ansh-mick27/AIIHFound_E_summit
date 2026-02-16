@@ -14,7 +14,7 @@ export default function CyberpunkHero() {
                 }}
             />
 
-            <div className="relative z-10 text-center max-w-6xl">
+            <div className="relative z-20 text-center max-w-6xl">
                 {/* Main Tagline - FROM WHAT IF TO WHY NOT - Largest */}
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}

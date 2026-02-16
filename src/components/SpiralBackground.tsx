@@ -18,9 +18,9 @@ export default function SpiralBackground() {
           backgroundRepeat: 'repeat-y',
           backgroundPosition: 'right center',
           backgroundSize: '100% auto',
-          opacity: 0.6,
+          opacity: 0.7,
           animation: 'spiralScroll 30s linear infinite',
-          zIndex: -10
+          zIndex: 0
         }}
       />
     </>
