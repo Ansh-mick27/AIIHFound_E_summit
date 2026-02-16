@@ -3,7 +3,31 @@ import { motion } from 'framer-motion';
 
 export default function AboutESummit() {
     return (
-        <section className="relative bg-black text-white py-20 px-8">
+        <section className="relative bg-black text-white py-20 px-8 overflow-hidden">
+            {/* Spiral Staircase Background - Right Side */}
+            <div
+                className="absolute top-0 right-0 bottom-0 w-[30vw] -z-0 pointer-events-none"
+                style={{
+                    backgroundImage: 'url(/images/spiral-stairs.png)',
+                    backgroundRepeat: 'repeat-y',
+                    backgroundPosition: 'right center',
+                    backgroundSize: 'contain',
+                    opacity: 1.0,
+                    animation: 'spiralScroll 20s linear infinite'
+                }}
+            />
+
+            <style jsx>{`
+                @keyframes spiralScroll {
+                    0% {
+                        background-position: right 100%;
+                    }
+                    100% {
+                        background-position: right 0%;
+                    }
+                }
+            `}</style>
+
             {/* Background glow effect */}
             <div
                 className="absolute inset-0 -z-10 pointer-events-none"
