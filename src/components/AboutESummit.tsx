@@ -6,14 +6,15 @@ export default function AboutESummit() {
         <section className="relative bg-black text-white py-20 px-8 overflow-hidden">
             {/* Spiral Staircase Background - Right Side */}
             <div
-                className="absolute top-0 right-0 bottom-0 w-[30vw] -z-20 pointer-events-none"
+                className="absolute top-0 right-0 bottom-0 w-[30vw] pointer-events-none"
                 style={{
                     backgroundImage: 'url(/images/spiral-stairs.png)',
                     backgroundRepeat: 'repeat-y',
                     backgroundPosition: 'right center',
                     backgroundSize: '100% auto',
-                    opacity: 1.0,
-                    animation: 'spiralScroll 20s linear infinite'
+                    opacity: 0.8,
+                    animation: 'spiralScroll 20s linear infinite',
+                    zIndex: 1
                 }}
             />
 
@@ -36,7 +37,7 @@ export default function AboutESummit() {
                 }}
             />
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto relative z-20">
                 {/* Title */}
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
