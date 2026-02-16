@@ -1,6 +1,7 @@
 'use client';
 import { motion } from "framer-motion";
 import CyberpunkCard from "./CyberpunkCard";
+import Link from "next/link";
 import { Rocket, Briefcase, Settings, Palette, Trophy, TrendingUp, Mic, Lightbulb } from "lucide-react";
 
 export default function EventsGrid() {
@@ -93,13 +94,15 @@ export default function EventsGrid() {
                 <div className="flex flex-wrap justify-center gap-6">
                     {events.map((event, index) => (
                         <div key={event.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] min-h-[340px]">
-                            <CyberpunkCard
-                                category={event.category}
-                                title={event.title}
-                                description={event.description}
-                                icon={event.icon}
-                                delay={index * 0.1}
-                            />
+                            <Link href={`/events/${event.slug}`} className="block h-full">
+                                <CyberpunkCard
+                                    category={event.category}
+                                    title={event.title}
+                                    description={event.description}
+                                    icon={event.icon}
+                                    delay={index * 0.1}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
