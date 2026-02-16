@@ -6,19 +6,6 @@ import CountdownTimer from "./CountdownTimer";
 export default function CyberpunkHero() {
     return (
         <section className="relative min-h-screen flex items-start justify-center px-8 pt-32 bg-black text-white overflow-hidden">
-            {/* Spiral Staircase Background - Right Side */}
-            <div
-                className="absolute top-0 right-0 bottom-0 w-[30vw] -z-0 pointer-events-none"
-                style={{
-                    backgroundImage: 'url(/images/spiral-stairs.png)',
-                    backgroundRepeat: 'repeat-y',
-                    backgroundPosition: 'right center',
-                    backgroundSize: 'contain',
-                    opacity: 1.0,
-                    animation: 'spiralScroll 20s linear infinite'
-                }}
-            />
-
             {/* Blue Glow Background Effect */}
             <div
                 className="absolute inset-0 -z-10 pointer-events-none"
@@ -26,17 +13,6 @@ export default function CyberpunkHero() {
                     background: 'radial-gradient(ellipse at center, rgba(0, 102, 255, 0.15) 0%, transparent 70%)'
                 }}
             />
-
-            <style jsx>{`
-                @keyframes spiralScroll {
-                    0% {
-                        background-position: right 100%;
-                    }
-                    100% {
-                        background-position: right 0%;
-                    }
-                }
-            `}</style>
 
             <div className="relative z-10 text-center max-w-6xl">
                 {/* Main Tagline - FROM WHAT IF TO WHY NOT - Largest */}
