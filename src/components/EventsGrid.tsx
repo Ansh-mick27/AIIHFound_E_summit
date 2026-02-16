@@ -6,44 +6,44 @@ import { Rocket, Briefcase, Settings, Palette, Trophy, TrendingUp, Mic, Lightbul
 export default function EventsGrid() {
     const events = [
         {
-            category: "EXHIBITION",
-            title: "STARTUP EXPO",
-            description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
+            category: "SPEAKER",
+            title: "FOUNDERS TALK", // Renamed from STARTUP EXPO
+            description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.", // Description might need update too? Keeping as is for now as user only asked to rename title.
             icon: Rocket
         },
         {
             category: "COMPETITION",
-            title: "BUSINESS PLAN",
+            title: "SOLVEX", // Renamed from BUSINESS PLAN
             description: "Business Plan Competition is an exclusive event for students to compete and showcase their entrepreneurial skills through innovative business proposals.",
             icon: Briefcase
         },
         {
             category: "LOGIC",
-            title: "CASE STUDY",
+            title: "PITCHBIZ 5.0", // Renamed from CASE STUDY
             description: "The Case Study competition is a game of strategy that forces participants to challenge conventions and think outside the box to solve real-world problems.",
             icon: Settings
         },
         {
             category: "CREATIVE",
-            title: "CREATOR'S CAMP",
+            title: "CREATORS CONNECT 2.0", // Renamed from CREATOR'S CAMP
             description: "The Creator's Camp hosts a variety of influential creators and artists who share their journey to success and insights on building a creative career.",
             icon: Palette
         },
         {
             category: "STRATEGY",
-            title: "IPL AUCTION",
+            title: "AMA", // Renamed from IPL AUCTION
             description: "Experience the thrill of sports business in our IPL Auction simulation where strategy meets excitement in building the perfect team within budget constraints.",
             icon: Trophy
         },
         {
             category: "SIMULATION",
-            title: "STOCK TRADING",
+            title: "MASTERCLASS", // Renamed from STOCK TRADING
             description: "Test your market skills in a high-stakes stock trading simulation where quick decisions and market analysis determine your success in the virtual market.",
             icon: TrendingUp
         },
         {
             category: "SPEAKER",
-            title: "KEYNOTE SESSION",
+            title: "SPEED MENTORING", // Renamed from KEYNOTE SESSION
             description: "Hear from industry veterans and successful entrepreneurs as they share their insights, experiences, and lessons learned on the path to innovation.",
             icon: Mic
         },
@@ -64,9 +64,14 @@ export default function EventsGrid() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-secondary bg-accent-secondary/10 mb-6"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-accent-secondary bg-accent-secondary/10 mb-6" // Increased padding for "a little" larger size perception
                     >
-                        <span className="text-sm uppercase font-mono-terminal text-accent-secondary">JOIN EVENTS</span>
+                        <span
+                            className="text-lg uppercase text-accent-secondary" // Increased text size from text-sm to text-lg
+                            style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 600 }} // Added Montserrat font and bold weight
+                        >
+                            JOIN EVENTS
+                        </span>
                     </motion.div>
 
                     <motion.h2
@@ -76,7 +81,7 @@ export default function EventsGrid() {
                         transition={{ delay: 0.1 }}
                         className="text-5xl md:text-7xl font-black uppercase mb-6"
                     >
-                        WHAT'S IN THE <span className="text-glow-purple">BOX?</span>
+                        WHAT'S WAITING <span className="text-glow-purple">FOR YOU?</span> {/* Changed text */}
                     </motion.h2>
 
                     <motion.p
