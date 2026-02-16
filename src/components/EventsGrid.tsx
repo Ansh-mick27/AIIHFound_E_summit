@@ -6,44 +6,44 @@ import { Rocket, Briefcase, Settings, Palette, Trophy, TrendingUp, Mic, Lightbul
 export default function EventsGrid() {
     const events = [
         {
-            category: "SPEAKER",
-            title: "FOUNDERS TALK", // Renamed from STARTUP EXPO
-            description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.", // Description might need update too? Keeping as is for now as user only asked to rename title.
+            category: "SESSION", // Renamed from SPEAKER
+            title: "FOUNDERS TALK",
+            description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
             icon: Rocket
         },
         {
             category: "COMPETITION",
-            title: "SOLVEX", // Renamed from BUSINESS PLAN
+            title: "SOLVEX",
             description: "Business Plan Competition is an exclusive event for students to compete and showcase their entrepreneurial skills through innovative business proposals.",
             icon: Briefcase
         },
         {
-            category: "LOGIC",
-            title: "PITCHBIZ 5.0", // Renamed from CASE STUDY
+            category: "INVESTMENT", // Renamed from LOGIC
+            title: "PITCHBIZ 5.0",
             description: "The Case Study competition is a game of strategy that forces participants to challenge conventions and think outside the box to solve real-world problems.",
             icon: Settings
         },
         {
-            category: "CREATIVE",
-            title: "CREATORS CONNECT 2.0", // Renamed from CREATOR'S CAMP
+            category: "PANEL", // Renamed from CREATIVE
+            title: "CREATORS CONNECT 2.0",
             description: "The Creator's Camp hosts a variety of influential creators and artists who share their journey to success and insights on building a creative career.",
             icon: Palette
         },
         {
-            category: "STRATEGY",
-            title: "AMA", // Renamed from IPL AUCTION
+            category: "PANEL", // Renamed from STRATEGY
+            title: "AMA",
             description: "Experience the thrill of sports business in our IPL Auction simulation where strategy meets excitement in building the perfect team within budget constraints.",
             icon: Trophy
         },
         {
-            category: "SIMULATION",
-            title: "MASTERCLASS", // Renamed from STOCK TRADING
+            category: "SESSION", // Renamed from SIMULATION
+            title: "MASTERCLASS",
             description: "Test your market skills in a high-stakes stock trading simulation where quick decisions and market analysis determine your success in the virtual market.",
             icon: TrendingUp
         },
         {
-            category: "SPEAKER",
-            title: "SPEED MENTORING", // Renamed from KEYNOTE SESSION
+            category: "MENTORSHIP", // Renamed from SPEAKER (Speed Mentoring)
+            title: "SPEED MENTORING",
             description: "Hear from industry veterans and successful entrepreneurs as they share their insights, experiences, and lessons learned on the path to innovation.",
             icon: Mic
         }
