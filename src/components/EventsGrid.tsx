@@ -5,44 +5,59 @@ import Link from "next/link";
 import { Rocket, Briefcase, Settings, Palette, Trophy, TrendingUp, Mic, Lightbulb } from "lucide-react";
 
 export default function EventsGrid() {
-    const events = [
+    interface EventItem {
+        slug: string;
+        category: string;
+        title: string;
+        description: string;
+        icon: any;
+    }
+
+    const events: EventItem[] = [
         {
+            slug: "founders-talk",
             category: "SESSION", // Renamed from SPEAKER
             title: "FOUNDERS TALK",
             description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
             icon: Rocket
         },
         {
+            slug: "solvex",
             category: "COMPETITION",
             title: "SOLVEX",
             description: "Business Plan Competition is an exclusive event for students to compete and showcase their entrepreneurial skills through innovative business proposals.",
             icon: Briefcase
         },
         {
+            slug: "pitchbiz",
             category: "INVESTMENT", // Renamed from LOGIC
             title: "PITCHBIZ 5.0",
             description: "The Case Study competition is a game of strategy that forces participants to challenge conventions and think outside the box to solve real-world problems.",
             icon: Settings
         },
         {
+            slug: "creators-connect",
             category: "PANEL", // Renamed from CREATIVE
             title: "CREATORS CONNECT 2.0",
             description: "The Creator's Camp hosts a variety of influential creators and artists who share their journey to success and insights on building a creative career.",
             icon: Palette
         },
         {
+            slug: "ama",
             category: "PANEL", // Renamed from STRATEGY
             title: "AMA",
             description: "Experience the thrill of sports business in our IPL Auction simulation where strategy meets excitement in building the perfect team within budget constraints.",
             icon: Trophy
         },
         {
+            slug: "masterclass",
             category: "SESSION", // Renamed from SIMULATION
             title: "MASTERCLASS",
             description: "Test your market skills in a high-stakes stock trading simulation where quick decisions and market analysis determine your success in the virtual market.",
             icon: TrendingUp
         },
         {
+            slug: "speed-mentoring",
             category: "MENTORSHIP", // Renamed from SPEAKER (Speed Mentoring)
             title: "SPEED MENTORING",
             description: "Hear from industry veterans and successful entrepreneurs as they share their insights, experiences, and lessons learned on the path to innovation.",
