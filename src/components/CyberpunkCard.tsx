@@ -18,7 +18,7 @@ export default function CyberpunkCard({ category, title, description, icon: Icon
             viewport={{ once: true }}
             transition={{ delay, duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
-            className="group relative p-6 rounded-lg glow-border-purple glass-card hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="group relative p-6 rounded-lg glow-border-purple glass-card hover:scale-105 transition-all duration-300 cursor-pointer h-full flex flex-col"
         >
             {/* Category Tag */}
             <div className="flex items-start justify-between mb-4">
@@ -36,12 +36,12 @@ export default function CyberpunkCard({ category, title, description, icon: Icon
             </h3>
 
             {/* Description */}
-            <p className="text-text-secondary text-sm leading-relaxed mb-6">
+            <p className="text-text-secondary text-sm leading-relaxed mb-6 flex-grow">
                 {description}
             </p>
 
             {/* Expand Details Link */}
-            <div className="flex items-center gap-2 text-xs font-mono-terminal text-text-muted group-hover:text-accent transition-colors">
+            <div className="flex items-center gap-2 text-xs font-mono-terminal text-text-muted group-hover:text-accent transition-colors mt-auto">
                 <span>// EXPAND_DETAILS</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

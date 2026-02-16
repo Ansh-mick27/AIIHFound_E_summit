@@ -92,7 +92,7 @@ export default function EventsGrid() {
                 {/* Events Grid - Changed to Flexbox for centering last row of 3 */}
                 <div className="flex flex-wrap justify-center gap-6">
                     {events.map((event, index) => (
-                        <div key={event.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
+                        <div key={event.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] min-h-[340px]">
                             <CyberpunkCard
                                 category={event.category}
                                 title={event.title}
