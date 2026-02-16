@@ -29,7 +29,25 @@ export default function EnhancedFooter() {
                         <h3 className="text-3xl font-black uppercase mb-6">
                             E-CELL <span className="text-glow-purple">ACROPOLIS</span>
                         </h3>
-                        {/* ... content ... */}
+                        <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
+                            <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
+                            <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
+                            <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
+                        </div>
+                        <div className="space-y-3 font-mono-terminal text-sm">
+                            <div>
+                                <span className="text-accent-primary">LOC:</span>
+                                <span className="text-white ml-2">Acropolis Institute, Indore (M.P.)</span>
+                            </div>
+                            <div>
+                                <span className="text-accent-primary">MAIL:</span>
+                                <span className="text-white ml-2">ecell@acropolis.in</span>
+                            </div>
+                            <div>
+                                <span className="text-accent-primary">PH:</span>
+                                <span className="text-white ml-2">+91 731 4303900</span>
+                            </div>
+                        </div>
                     </motion.div>
 
                     {/* Right: Secure Transmission Form */}

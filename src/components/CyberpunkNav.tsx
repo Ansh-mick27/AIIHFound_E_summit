@@ -7,7 +7,7 @@ export default function CyberpunkNav() {
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className="fixed top-0 left-0 right-0 z-50 border-b border-border-primary bg-bg-primary/80 backdrop-blur-lg"
+            className="fixed top-0 left-0 right-0 z-[100] border-b border-border-primary bg-bg-primary/80 backdrop-blur-lg"
         >
             <div className="px-6 py-3">
                 <div className="flex items-center justify-between">
