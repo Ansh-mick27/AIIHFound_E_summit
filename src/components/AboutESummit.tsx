@@ -11,7 +11,7 @@ export default function AboutESummit() {
                     backgroundImage: 'url(/images/spiral-stairs.png)',
                     backgroundRepeat: 'repeat-y',
                     backgroundPosition: 'right center',
-                    backgroundSize: 'contain',
+                    backgroundSize: '100% auto',
                     opacity: 1.0,
                     animation: 'spiralScroll 20s linear infinite'
                 }}
