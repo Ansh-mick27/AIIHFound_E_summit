@@ -9,7 +9,7 @@ export default function PoweredBySection() {
     ];
 
     return (
-        <section className="py-24 px-6 bg-bg-primary border-t border-white/10">
+        <section className="relative z-50 py-24 bg-black text-white overflow-hidden border-t border-white/10">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
