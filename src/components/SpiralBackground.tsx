@@ -12,7 +12,7 @@ export default function SpiralBackground() {
         }
       `}</style>
       <div
-        className="absolute top-0 right-0 h-full w-[25vw] pointer-events-none"
+        className="fixed top-0 right-0 bottom-0 w-[25vw] pointer-events-none"
         style={{
           backgroundImage: 'url(/images/spiral-stairs.png)',
           backgroundRepeat: 'repeat-y',
