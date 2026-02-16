@@ -57,7 +57,41 @@ export default function EnhancedFooter() {
                         viewport={{ once: true }}
                         className="glass-card glow-border-cyan p-8 rounded-lg"
                     >
-                        {/* ... form content ... */}
+                        <div className="flex items-center gap-2 mb-6">
+                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <h4 className="text-sm uppercase font-mono-terminal text-green-500">
+                                SECURE TRANSMISSION
+                            </h4>
+                        </div>
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <input
+                                type="text"
+                                placeholder="ID / Name"
+                                value={formData.name}
+                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none"
+                            />
+                            <input
+                                type="email"
+                                placeholder="Signal (Email)"
+                                value={formData.email}
+                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none"
+                            />
+                            <textarea
+                                placeholder="Data Packet..."
+                                value={formData.message}
+                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                rows={4}
+                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none resize-none"
+                            />
+                            <button
+                                type="submit"
+                                className="w-full bg-transparent border border-accent-secondary text-accent-secondary py-3 rounded font-mono-terminal uppercase text-sm hover:bg-accent-secondary/10 transition-colors"
+                            >
+                                INITIATE UPLINK
+                            </button>
+                        </form>
                     </motion.div>
                 </div>
             </div>
