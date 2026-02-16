@@ -56,7 +56,7 @@ export default function EventsGrid() {
     ];
 
     return (
-        <section id="events" className="py-32 px-6 bg-bg-primary relative">
+        <section id="events" className="relative z-50 py-32 px-6 bg-bg-primary">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16">
