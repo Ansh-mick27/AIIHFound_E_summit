@@ -85,7 +85,7 @@ export default function EventsGrid() {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-text-secondary max-w-3xl mx-auto"
                     >
-                        Build real skills, earn real rewards, and gain practical experience. Choose an event to get started.
+                        Turn effort into achievement. Select an event and take the first step.
                     </motion.p>
                 </div>
 
