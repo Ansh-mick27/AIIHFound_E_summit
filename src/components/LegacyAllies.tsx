@@ -17,7 +17,7 @@ export default function LegacyAllies() {
     const createInfiniteArray = (arr: string[]) => [...arr, ...arr, ...arr];
 
     return (
-        <section className="py-24 px-6 bg-bg-secondary border-t border-white/10 overflow-hidden">
+        <section className="relative z-50 bg-black text-white py-24 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
