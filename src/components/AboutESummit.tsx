@@ -47,44 +47,68 @@ export default function AboutESummit() {
                     the next generation to disrupt markets and lead with confidence.
                 </motion.p>
 
-                {/* Grid Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6"
-                >
-                    {/* Top row - 4 boxes */}
-                    {[1, 2, 3, 4].map((index) => (
+                {/* Animated Rows Section */}
+                <div className="flex flex-col gap-8 overflow-hidden py-8">
+                    {/* Top Row - Scroll Right */}
+                    <div className="flex overflow-hidden relative w-full">
                         <motion.div
-                            key={`top-${index}`}
-                            whileHover={{ scale: 1.05 }}
-                            className="aspect-square rounded-lg"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
-                                border: '1px solid rgba(0, 102, 255, 0.3)',
-                                backdropFilter: 'blur(10px)',
-                                boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
+                            className="flex gap-6 whitespace-nowrap"
+                            animate={{ x: ["-50%", "0%"] }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 20,
+                                    ease: "linear",
+                                }
                             }}
-                        />
-                    ))}
+                            style={{ width: "max-content" }}
+                        >
+                            {[...Array(10)].map((_, index) => (
+                                <div
+                                    key={`top-${index}`}
+                                    className="w-48 h-48 rounded-lg flex-shrink-0"
+                                    style={{
+                                        background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
+                                        border: '1px solid rgba(0, 102, 255, 0.3)',
+                                        backdropFilter: 'blur(10px)',
+                                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
+                                    }}
+                                />
+                            ))}
+                        </motion.div>
+                    </div>
 
-                    {/* Bottom row - 5 boxes */}
-                    {[1, 2, 3, 4, 5].map((index) => (
+                    {/* Bottom Row - Scroll Left */}
+                    <div className="flex overflow-hidden relative w-full">
                         <motion.div
-                            key={`bottom-${index}`}
-                            whileHover={{ scale: 1.05 }}
-                            className="aspect-square rounded-lg"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
-                                border: '1px solid rgba(0, 102, 255, 0.3)',
-                                backdropFilter: 'blur(10px)',
-                                boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
+                            className="flex gap-6 whitespace-nowrap"
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 20,
+                                    ease: "linear",
+                                }
                             }}
-                        />
-                    ))}
-                </motion.div>
+                            style={{ width: "max-content" }}
+                        >
+                            {[...Array(10)].map((_, index) => (
+                                <div
+                                    key={`bottom-${index}`}
+                                    className="w-48 h-48 rounded-lg flex-shrink-0"
+                                    style={{
+                                        background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
+                                        border: '1px solid rgba(0, 102, 255, 0.3)',
+                                        backdropFilter: 'blur(10px)',
+                                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
+                                    }}
+                                />
+                            ))}
+                        </motion.div>
+                    </div>
+                </div>
             </div>
         </section>
     );
