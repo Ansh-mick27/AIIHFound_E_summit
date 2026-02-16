@@ -18,8 +18,8 @@ export default function OfficialPartners() {
     ];
 
     return (
-        <section className="relative z-50 bg-black text-white py-24 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <section className="relative bg-black text-white py-24 overflow-hidden">
+            <div className="max-w-7xl mx-auto relative z-50">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

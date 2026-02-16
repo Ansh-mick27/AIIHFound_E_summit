@@ -9,8 +9,8 @@ export default function PoweredBySection() {
     ];
 
     return (
-        <section className="relative z-50 py-24 bg-black text-white overflow-hidden border-t border-white/10">
-            <div className="max-w-7xl mx-auto">
+        <section className="relative py-24 bg-black text-white overflow-hidden border-t border-white/10">
+            <div className="max-w-7xl mx-auto relative z-50">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
