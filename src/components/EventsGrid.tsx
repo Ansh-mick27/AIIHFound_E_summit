@@ -46,12 +46,6 @@ export default function EventsGrid() {
             title: "SPEED MENTORING", // Renamed from KEYNOTE SESSION
             description: "Hear from industry veterans and successful entrepreneurs as they share their insights, experiences, and lessons learned on the path to innovation.",
             icon: Mic
-        },
-        {
-            category: "INDUSTRY",
-            title: "INNOVATION CONCLAVE",
-            description: "Join the Innovation Conclave to explore cutting-edge technologies, disruptive business models, and the future of entrepreneurship with industry experts.",
-            icon: Lightbulb
         }
     ];
 
@@ -95,17 +89,18 @@ export default function EventsGrid() {
                     </motion.p>
                 </div>
 
-                {/* Events Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Events Grid - Changed to Flexbox for centering last row of 3 */}
+                <div className="flex flex-wrap justify-center gap-6">
                     {events.map((event, index) => (
-                        <CyberpunkCard
-                            key={event.title}
-                            category={event.category}
-                            title={event.title}
-                            description={event.description}
-                            icon={event.icon}
-                            delay={index * 0.1}
-                        />
+                        <div key={event.title} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
+                            <CyberpunkCard
+                                category={event.category}
+                                title={event.title}
+                                description={event.description}
+                                icon={event.icon}
+                                delay={index * 0.1}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>
