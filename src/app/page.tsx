@@ -2,6 +2,7 @@
 
 import CyberpunkNav from "@/components/CyberpunkNav";
 import CyberpunkHero from "@/components/CyberpunkHero";
+import AboutESummit from "@/components/AboutESummit";
 import EventsGrid from "@/components/EventsGrid";
 import PoweredBySection from "@/components/PoweredBySection";
 import LegacyAllies from "@/components/LegacyAllies";
@@ -15,6 +16,7 @@ export default function Home() {
       <SpiralBackground />
       <CyberpunkNav />
       <CyberpunkHero />
+      <AboutESummit />
       <EventsGrid />
       <PoweredBySection />
       <LegacyAllies />
