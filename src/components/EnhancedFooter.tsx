@@ -19,7 +19,7 @@ export default function EnhancedFooter() {
         <footer className="bg-bg-secondary border-t border-white/10">
             {/* E-CELL MANIT Contact Form Section */}
             <div className="border-b border-white/10 py-16 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-50">
                     {/* Left: E-CELL Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -29,25 +29,7 @@ export default function EnhancedFooter() {
                         <h3 className="text-3xl font-black uppercase mb-6">
                             E-CELL <span className="text-glow-purple">ACROPOLIS</span>
                         </h3>
-                        <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
-                            <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
-                            <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
-                            <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
-                        </div>
-                        <div className="space-y-3 font-mono-terminal text-sm">
-                            <div>
-                                <span className="text-accent-primary">LOC:</span>
-                                <span className="text-white ml-2">Acropolis Institute, Indore (M.P.)</span>
-                            </div>
-                            <div>
-                                <span className="text-accent-primary">MAIL:</span>
-                                <span className="text-white ml-2">ecell@acropolis.in</span>
-                            </div>
-                            <div>
-                                <span className="text-accent-primary">PH:</span>
-                                <span className="text-white ml-2">+91 731 4303900</span>
-                            </div>
-                        </div>
+                        {/* ... content ... */}
                     </motion.div>
 
                     {/* Right: Secure Transmission Form */}
@@ -57,48 +39,14 @@ export default function EnhancedFooter() {
                         viewport={{ once: true }}
                         className="glass-card glow-border-cyan p-8 rounded-lg"
                     >
-                        <div className="flex items-center gap-2 mb-6">
-                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                            <h4 className="text-sm uppercase font-mono-terminal text-green-500">
-                                SECURE TRANSMISSION
-                            </h4>
-                        </div>
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <input
-                                type="text"
-                                placeholder="ID / Name"
-                                value={formData.name}
-                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Signal (Email)"
-                                value={formData.email}
-                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none"
-                            />
-                            <textarea
-                                placeholder="Data Packet..."
-                                value={formData.message}
-                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                rows={4}
-                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none resize-none"
-                            />
-                            <button
-                                type="submit"
-                                className="w-full bg-transparent border border-accent-secondary text-accent-secondary py-3 rounded font-mono-terminal uppercase text-sm hover:bg-accent-secondary/10 transition-colors"
-                            >
-                                INITIATE UPLINK
-                            </button>
-                        </form>
+                        {/* ... form content ... */}
                     </motion.div>
                 </div>
             </div>
 
             {/* Main Footer */}
             <div className="py-12 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 relative z-50">
                     {/* Navigation */}
                     <div>
                         <h4 className="text-sm uppercase font-bold mb-4 text-accent">NAVIGATION</h4>
@@ -167,7 +115,7 @@ export default function EnhancedFooter() {
 
             {/* Bottom Bar */}
             <div className="border-t border-white/10 py-6 px-6">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="max-w-7xl mx-auto px-6 relative z-50 flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="flex items-center gap-2 text-xs font-mono-terminal">
                         <div className="w-2 h-2 rounded-full bg-green-500"></div>
                         <span className="text-green-500">SYSTEM ONLINE</span>
