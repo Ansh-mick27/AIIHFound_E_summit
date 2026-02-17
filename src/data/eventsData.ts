@@ -47,12 +47,13 @@ export const eventsData = {
         title: "CREATOR'S CONNECT 2.0",
         category: "PANEL",
         description: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands.",
-        longDescription: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands. Meet your favorite influencers, learn the secrets of viral content, and understand the business behind the art. Whether you're a vlogger, artist, or writer, this panel is for you.",
+        longDescription: "Creators Connect 2.0 convenes leading influencers, digital creators, and emerging voices to decode the business of content and the discipline behind building powerful personal brands. It explores how creativity evolves into structured growth, monetization, and long-term relevance.\n\nThrough insightful conversations and real-world experiences, creators unpack strategies around audience building, brand collaborations, content positioning, and sustainable scaling. Blending creativity with entrepreneurship, the session transforms influence into intentional strategy and opportunity.",
         icon: Palette,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Open Air Theatre" },
+            { label: "Date", value: "18th March 2026" },
+            { label: "Time", value: "12:00 PM – 1:00 PM" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Event SPOCs", value: "Aditya Upadhyay\nKavyansh Rajput" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
