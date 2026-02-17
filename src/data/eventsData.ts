@@ -57,8 +57,8 @@ export const eventsData = {
     "ama": {
         title: "AMA",
         category: "PANEL",
-        description: "Experience the thrill of sports business in our IPL Auction simulation where strategy meets excitement in building the perfect team within budget constraints.",
-        longDescription: "Ask Me Anything! A no-holds-barred session where you can ask industry leaders questions directly. From career advice to industry trends, get honest answers and unparalleled access to the minds shaping the future.",
+        description: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers.",
+        longDescription: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers. From career advice to industry trends, get honest answers and unparalleled access to the minds shaping the future.",
         icon: Trophy,
         details: [
             { label: "Date", value: "TBA" },

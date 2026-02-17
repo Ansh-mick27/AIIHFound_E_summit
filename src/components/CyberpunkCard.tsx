@@ -42,7 +42,7 @@ export default function CyberpunkCard({ category, title, description, icon: Icon
 
             {/* Expand Details Link */}
             <div className="flex items-center gap-2 text-xs font-mono-terminal text-text-muted group-hover:text-[var(--accent-cobalt)] transition-colors mt-auto">
-                <span>// EXPAND_DETAILS</span>
+                <span>Know More...</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

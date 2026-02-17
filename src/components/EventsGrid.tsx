@@ -46,7 +46,7 @@ export default function EventsGrid() {
             slug: "ama",
             category: "PANEL", // Renamed from STRATEGY
             title: "AMA",
-            description: "Experience the thrill of sports business in our IPL Auction simulation where strategy meets excitement in building the perfect team within budget constraints.",
+            description: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers.",
             icon: Trophy
         },
         {
