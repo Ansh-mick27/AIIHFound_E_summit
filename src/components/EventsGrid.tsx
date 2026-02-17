@@ -60,7 +60,7 @@ export default function EventsGrid() {
             slug: "speed-mentoring",
             category: "MENTORSHIP", // Renamed from SPEAKER (Speed Mentoring)
             title: "SPEED MENTORING",
-            description: "Hear from industry veterans and successful entrepreneurs as they share their insights, experiences, and lessons learned on the path to innovation.",
+            description: "Speed Mentoring is a curated advisory platform where participants gain strategic clarity on product, scalability, and growth from industry leaders.",
             icon: Mic
         }
     ];

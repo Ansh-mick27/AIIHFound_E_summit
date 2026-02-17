@@ -83,8 +83,8 @@ export const eventsData = {
     "speed-mentoring": {
         title: "SPEED MENTORING",
         category: "MENTORSHIP",
-        description: "Hear from industry veterans and successful entrepreneurs as they share their insights, experiences, and lessons learned on the path to innovation.",
-        longDescription: "Fast-paced, high-impact mentorship. Rotate through a series of brief, focused sessions with different mentors. Get diverse perspectives on your challenges and build a network of advisors in record time.",
+        description: "Speed Mentoring is a curated advisory platform where participants gain strategic clarity on product, scalability, and growth from industry leaders.",
+        longDescription: "Speed Mentoring is a curated advisory platform where participants gain strategic clarity on product, scalability, and growth from industry leaders. Rotate through a series of brief, focused sessions with different mentors. Get diverse perspectives on your challenges and build a network of advisors in record time.",
         icon: Mic,
         details: [
             { label: "Date", value: "TBA" },
