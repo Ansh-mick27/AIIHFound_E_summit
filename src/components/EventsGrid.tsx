@@ -52,8 +52,8 @@ export default function EventsGrid() {
         {
             slug: "masterclass",
             category: "SESSION", // Renamed from SIMULATION
-            title: "MASTERCLASS",
-            description: "Test your market skills in a high-stakes stock trading simulation where quick decisions and market analysis determine your success in the virtual market.",
+            title: "MASTER CLASS",
+            description: "A Masterclass is an interactive event where experts share practical insights, real-world experience, and actionable learning beyond theory.",
             icon: TrendingUp
         },
         {

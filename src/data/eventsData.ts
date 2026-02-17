@@ -68,10 +68,10 @@ export const eventsData = {
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
     "masterclass": {
-        title: "MASTERCLASS",
+        title: "MASTER CLASS",
         category: "SESSION",
-        description: "Test your market skills in a high-stakes stock trading simulation where quick decisions and market analysis determine your success in the virtual market.",
-        longDescription: "Deep dive into specialized topics with our Masterclass series. Led by domain experts, these intensive sessions provide practical knowledge and hands-on skills that you can apply immediately. Elevate your expertise.",
+        description: "A Masterclass is an interactive event where experts share practical insights, real-world experience, and actionable learning beyond theory.",
+        longDescription: "A Masterclass is an interactive event where experts share practical insights, real-world experience, and actionable learning beyond theory. Led by domain experts, these intensive sessions provide practical knowledge and hands-on skills that you can apply immediately. Elevate your expertise.",
         icon: TrendingUp,
         details: [
             { label: "Date", value: "TBA" },
