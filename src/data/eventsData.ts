@@ -20,12 +20,13 @@ export const eventsData = {
         title: "SolveX",
         category: "COMPETITION",
         description: "SolveX is a national platform empowering innovators to transform bold ideas into structured ventures through competition and real-world validation.",
-        longDescription: "SolveX is a national platform empowering innovators to transform bold ideas into structured ventures through competition and real-world validation. Present your business models to a panel of expert judges, refine your strategies, and compete for funding and mentorship. Do you have what it takes to solve real-world problems?",
+        longDescription: "SolveX 2026 is a National Innovation and Business Model Competition designed for innovators, founders, and problem-solvers ready to turn ideas into impact. It is where bold concepts are transformed into structured prototypes and scalable ventures.\n\nParticipants can choose between two tracks — the Innovation Challenge, focused on building working prototypes with measurable real-world impact, and the Business Model Competition, where ideas are refined, validated, and shaped for market viability and scale. With mentorship, incubation opportunities, and national visibility, SolveX empowers builders to execute with direction and compete for a ₹1.2 Lakh prize pool.",
         icon: Briefcase,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Conference Hall A" },
+            { label: "Date", value: "19th, 20th March'26" },
+            { label: "Time", value: "2:00 PM – 4:00 PM" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Event SPOCs", value: "Aadya Singh\nIshaan Dadoo" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
