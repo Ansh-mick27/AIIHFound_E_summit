@@ -38,8 +38,8 @@ export default function EventsGrid() {
         {
             slug: "creators-connect",
             category: "PANEL", // Renamed from CREATIVE
-            title: "CREATORS CONNECT 2.0",
-            description: "The Creator's Camp hosts a variety of influential creators and artists who share their journey to success and insights on building a creative career.",
+            title: "CREATOR'S CONNECT 2.0",
+            description: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands.",
             icon: Palette
         },
         {

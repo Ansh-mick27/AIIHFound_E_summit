@@ -42,10 +42,10 @@ export const eventsData = {
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
     "creators-connect": {
-        title: "CREATORS CONNECT 2.0",
+        title: "CREATOR'S CONNECT 2.0",
         category: "PANEL",
-        description: "The Creator's Camp hosts a variety of influential creators and artists who share their journey to success and insights on building a creative career.",
-        longDescription: "Join the revolution of digital creation at Creators Connect 2.0. Meet your favorite influencers, learn the secrets of viral content, and understand the business behind the art. Whether you're a vlogger, artist, or writer, this panel is for you.",
+        description: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands.",
+        longDescription: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands. Meet your favorite influencers, learn the secrets of viral content, and understand the business behind the art. Whether you're a vlogger, artist, or writer, this panel is for you.",
         icon: Palette,
         details: [
             { label: "Date", value: "TBA" },
