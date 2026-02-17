@@ -3,10 +3,10 @@ import { Rocket, Briefcase, Settings, Palette, Trophy, TrendingUp, Mic, Lightbul
 
 export const eventsData = {
     "founders-talk": {
-        title: "FOUNDERS TALK",
+        title: "FOUNDER'S TALK",
         category: "SESSION",
         description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
-        longDescription: "Connect with visionary founders and industry pioneers in this exclusive session. Gain insights into the startup ecosystem, learn from their journeys, and discover what it takes to build a successful venture from scratch. This is your opportunity to network with the best in the business.",
+        longDescription: "Founder's Talk is the defining highlight of E-Summit, where visionary entrepreneurs share the real stories behind their success. Powerful and transformative, it is more than a session; it is the spark that turns ambition into action.",
         icon: Rocket,
         details: [
             { label: "Date", value: "TBA" },
