@@ -34,12 +34,13 @@ export const eventsData = {
         title: "PITCHBIZ 5.0",
         category: "PITCH",
         description: "PitchBiz 5.0 is a curated founder–investor platform where high-potential startups pitch live, enabling strategic growth opportunities.",
-        longDescription: "PitchBiz 5.0 is a curated founder–investor platform where high-potential startups pitch live, enabling strategic growth opportunities. Analyze complex business scenarios, propose innovative solutions, and defend your ideas against scrutiny. It's not just about the idea, it's about the execution.",
+        longDescription: "PITCHBIZ 5.0 is a curated founder–investor platform where high-potential startups pitch live to active investors in a setting designed to mirror a real fundraising environment. It enables structured capital conversations, strategic feedback, and meaningful investor connections.\n\nThe platform operates in two distinct phases — the Angel Stage, tailored for early-stage startups seeking validation and seed capital, and the Growth Stage, designed for scaling ventures ready to engage with larger investment opportunities. Each phase ensures founders present within the right capital context, increasing the relevance and depth of investor engagement.\n\nMore than a pitch session, PITCHBIZ is where credible ventures step forward with clarity, confidence, and the ambition to secure strategic growth.",
         icon: Settings,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Seminar Room 1" },
+            { label: "Date", value: "19th, 20th March 2026" },
+            { label: "Time", value: "12:00 PM – 1:00 PM" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Event SPOCs", value: "Ashmi Jain\nMohd. Ayaan Khan\nDanish Khan" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
