@@ -6,12 +6,13 @@ export const eventsData = {
         title: "FOUNDER'S TALK",
         category: "SESSION",
         description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
-        longDescription: "Founder's Talk is the highlight of E-Summit, where visionary entrepreneurs share real stories of success, inspiring ambition and turning ideas into action.",
+        longDescription: "Founder's Talk is the defining highlight of E-Summit, where visionary entrepreneurs share the real stories behind their success. More than a session, it is a catalyst that transforms ambition into action.\n\nThrough candid conversations, founders reveal their journeys — the risks, failures, breakthroughs, and lessons that shaped their ventures. The session offers powerful insights into resilience, leadership, and the mindset required to build and scale meaningful ideas.",
         icon: Rocket,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Main Auditorium" },
+            { label: "Date", value: "18th, 19th, 20th March'26" },
+            { label: "Time", value: "11:00 am - 12:00 pm" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Event SPOCs", value: "Pradhyumn Mehta\nKeshav Banger\nAditi Vyas" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },

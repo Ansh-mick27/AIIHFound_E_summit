@@ -80,13 +80,13 @@ export default function EventPage() {
                     {/* Key Details */}
                     <div className="glass-card p-8 rounded-xl border border-white/10 h-fit">
                         <h3 className="text-xl font-bold mb-6 text-white border-b border-white/10 pb-2">
-                            TRANSMISSION DATA
+                            EVENT DETAILS
                         </h3>
                         <div className="space-y-4">
                             {event.details.map((detail, index) => (
-                                <div key={index} className="flex justify-between items-center">
+                                <div key={index} className="flex justify-between items-start">
                                     <span className="text-text-muted font-mono-terminal text-sm">{detail.label}:</span>
-                                    <span className="text-white font-medium">{detail.value}</span>
+                                    <span className="text-white font-medium text-right whitespace-pre-line">{detail.value}</span>
                                 </div>
                             ))}
                         </div>
