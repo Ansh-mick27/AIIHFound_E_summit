@@ -6,7 +6,7 @@ export const eventsData = {
         title: "FOUNDER'S TALK",
         category: "SESSION",
         description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
-        longDescription: "Founder's Talk is the defining highlight of E-Summit, where visionary entrepreneurs share the real stories behind their success. Powerful and transformative, it is more than a session; it is the spark that turns ambition into action.",
+        longDescription: "Founder's Talk is the highlight of E-Summit, where visionary entrepreneurs share real stories of success, inspiring ambition and turning ideas into action.",
         icon: Rocket,
         details: [
             { label: "Date", value: "TBA" },
