@@ -17,8 +17,8 @@ export default function EventsGrid() {
         {
             slug: "founders-talk",
             category: "SESSION", // Renamed from SPEAKER
-            title: "FOUNDERS TALK",
-            description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
+            title: "FOUNDER'S TALK",
+            description: "Founder's Talk is the defining highlight of E-Summit, where visionary entrepreneurs share the real stories behind their success. Powerful and transformative, it is more than a session; it is the spark that turns ambition into action.",
             icon: Rocket
         },
         {
