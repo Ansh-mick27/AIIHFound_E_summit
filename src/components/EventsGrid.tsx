@@ -25,7 +25,7 @@ export default function EventsGrid() {
             slug: "solvex",
             category: "COMPETITION",
             title: "SolveX",
-            description: "SolveX is a national platform that transforms bold ideas into structured, execution-ready ventures.",
+            description: "SolveX is a national platform empowering innovators to transform bold ideas into structured ventures through competition and real-world validation.",
             icon: Briefcase
         },
         {

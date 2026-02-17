@@ -18,8 +18,8 @@ export const eventsData = {
     "solvex": {
         title: "SolveX",
         category: "COMPETITION",
-        description: "SolveX is a national platform that transforms bold ideas into structured, execution-ready ventures.",
-        longDescription: "SolveX is a national platform that transforms bold ideas into structured, execution-ready ventures. Present your business models to a panel of expert judges, refine your strategies, and compete for funding and mentorship. Do you have what it takes to solve real-world problems?",
+        description: "SolveX is a national platform empowering innovators to transform bold ideas into structured ventures through competition and real-world validation.",
+        longDescription: "SolveX is a national platform empowering innovators to transform bold ideas into structured ventures through competition and real-world validation. Present your business models to a panel of expert judges, refine your strategies, and compete for funding and mentorship. Do you have what it takes to solve real-world problems?",
         icon: Briefcase,
         details: [
             { label: "Date", value: "TBA" },
