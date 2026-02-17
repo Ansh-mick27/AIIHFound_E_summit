@@ -30,7 +30,7 @@ export default function EventsGrid() {
         },
         {
             slug: "pitchbiz",
-            category: "INVESTMENT", // Renamed from LOGIC
+            category: "PITCH", // Renamed from LOGIC
             title: "PITCHBIZ 5.0",
             description: "PitchBiz 5.0 is a curated founder–investor platform where high-potential startups pitch live, enabling strategic growth opportunities.",
             icon: Settings

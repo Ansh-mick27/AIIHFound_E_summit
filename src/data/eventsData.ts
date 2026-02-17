@@ -30,7 +30,7 @@ export const eventsData = {
     },
     "pitchbiz": {
         title: "PITCHBIZ 5.0",
-        category: "INVESTMENT",
+        category: "PITCH",
         description: "PitchBiz 5.0 is a curated founder–investor platform where high-potential startups pitch live, enabling strategic growth opportunities.",
         longDescription: "PitchBiz 5.0 is a curated founder–investor platform where high-potential startups pitch live, enabling strategic growth opportunities. Analyze complex business scenarios, propose innovative solutions, and defend your ideas against scrutiny. It's not just about the idea, it's about the execution.",
         icon: Settings,
