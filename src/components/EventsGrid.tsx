@@ -24,8 +24,8 @@ export default function EventsGrid() {
         {
             slug: "solvex",
             category: "COMPETITION",
-            title: "SOLVEX",
-            description: "Business Plan Competition is an exclusive event for students to compete and showcase their entrepreneurial skills through innovative business proposals.",
+            title: "SolveX",
+            description: "SolveX is a national platform that transforms bold ideas into structured, execution-ready ventures.",
             icon: Briefcase
         },
         {

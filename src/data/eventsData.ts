@@ -16,10 +16,10 @@ export const eventsData = {
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
     "solvex": {
-        title: "SOLVEX",
+        title: "SolveX",
         category: "COMPETITION",
-        description: "Business Plan Competition is an exclusive event for students to compete and showcase their entrepreneurial skills through innovative business proposals.",
-        longDescription: "Solvex is the ultimate battleground for budding entrepreneurs. Present your business models to a panel of expert judges, refine your strategies, and compete for funding and mentorship. Do you have what it takes to solve real-world problems?",
+        description: "SolveX is a national platform that transforms bold ideas into structured, execution-ready ventures.",
+        longDescription: "SolveX is a national platform that transforms bold ideas into structured, execution-ready ventures. Present your business models to a panel of expert judges, refine your strategies, and compete for funding and mentorship. Do you have what it takes to solve real-world problems?",
         icon: Briefcase,
         details: [
             { label: "Date", value: "TBA" },
