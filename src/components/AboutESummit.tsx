@@ -1,7 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function AboutESummit() {
+    // Images for the top row boxes — index maps to image path, undefined = gradient placeholder
+    const topRowImages: Record<number, string> = {
+        0: '/images/speakers/dhruv-rathod.png',
+    };
+
     return (
         <section className="relative bg-black text-white py-20 px-8 overflow-hidden">
             {/* Background glow effect */}
@@ -67,14 +73,24 @@ export default function AboutESummit() {
                             {[...Array(10)].map((_, index) => (
                                 <div
                                     key={`top-${index}`}
-                                    className="w-48 h-48 rounded-lg flex-shrink-0"
+                                    className="w-48 h-48 rounded-lg flex-shrink-0 overflow-hidden"
                                     style={{
-                                        background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
+                                        background: topRowImages[index] ? 'transparent' : 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
                                         border: '1px solid rgba(0, 102, 255, 0.3)',
                                         backdropFilter: 'blur(10px)',
                                         boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
                                     }}
-                                />
+                                >
+                                    {topRowImages[index] && (
+                                        <Image
+                                            src={topRowImages[index]}
+                                            alt="Speaker"
+                                            width={192}
+                                            height={192}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    )}
+                                </div>
                             ))}
                         </motion.div>
                     </div>
