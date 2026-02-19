@@ -3,41 +3,53 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function AboutESummit() {
-    // Images for the top row boxes — index maps to image path, undefined = gradient placeholder
-    const topRowImages: Record<number, string> = {
-        0: '/images/speakers/dhruv-rathod.png',
-    };
+    // Row 1 — 10 speaker images
+    const topRowImages = [
+        '/images/speakers/dhruv-rathod.png',
+        '/images/speakers/anshu-jain.png',
+        '/images/speakers/ashish-gangrade.png',
+        '/images/speakers/farheen-rangwala.png',
+        '/images/speakers/jignesh-kenia.png',
+        '/images/speakers/manish-johari.png',
+        '/images/speakers/raja-koppala.png',
+        '/images/speakers/sanjeevv-khanna.png',
+        '/images/speakers/suraj-doshi.png',
+        '/images/speakers/tushar-pal.png',
+    ];
 
-    // Base set of items for each row (will be duplicated for seamless loop)
-    const topRowCount = 8;
-    const bottomRowCount = 8;
+    // Row 2 — 10 speaker images
+    const bottomRowImages = [
+        '/images/speakers/aaditya-jain.png',
+        '/images/speakers/abhishek-kakkar.png',
+        '/images/speakers/dravisha-katoch.png',
+        '/images/speakers/lavanya-manmotra.png',
+        '/images/speakers/ravi-eshwarapu.png',
+        '/images/speakers/siddharth-rajhans.png',
+        '/images/speakers/sushanto-mitra.png',
+        '/images/speakers/utpal-doshi.png',
+        '/images/speakers/vibhuti-aggarwal.png',
+        '/images/speakers/yagnesh-sanghrajka.png',
+    ];
 
-    const renderBox = (key: string, imageMap: Record<number, string>, baseIndex: number) => {
-        const hasImage = !!imageMap[baseIndex];
-        return (
-            <div
-                key={key}
-                className={`h-48 rounded-lg flex-shrink-0 overflow-hidden`}
-                style={{
-                    width: hasImage ? '314px' : '192px',
-                    background: hasImage ? 'transparent' : 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
-                    border: '1px solid rgba(0, 102, 255, 0.3)',
-                    backdropFilter: 'blur(10px)',
-                    boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
-                }}
-            >
-                {hasImage && (
-                    <Image
-                        src={imageMap[baseIndex]}
-                        alt="Speaker"
-                        width={653}
-                        height={400}
-                        className="w-full h-full object-cover"
-                    />
-                )}
-            </div>
-        );
-    };
+    const renderImageBox = (key: string, src: string) => (
+        <div
+            key={key}
+            className="h-48 rounded-lg flex-shrink-0 overflow-hidden"
+            style={{
+                width: '314px',
+                border: '1px solid rgba(0, 102, 255, 0.3)',
+                boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
+            }}
+        >
+            <Image
+                src={src}
+                alt="Speaker"
+                width={655}
+                height={400}
+                className="w-full h-full object-cover"
+            />
+        </div>
+    );
 
     return (
         <section className="relative bg-black text-white py-20 px-8 overflow-hidden">
@@ -108,12 +120,12 @@ export default function AboutESummit() {
                             }}
                         >
                             {/* Set 1 */}
-                            {[...Array(topRowCount)].map((_, i) =>
-                                renderBox(`top-a-${i}`, topRowImages, i)
+                            {topRowImages.map((src, i) =>
+                                renderImageBox(`top-a-${i}`, src)
                             )}
                             {/* Set 2 (duplicate for seamless loop) */}
-                            {[...Array(topRowCount)].map((_, i) =>
-                                renderBox(`top-b-${i}`, topRowImages, i)
+                            {topRowImages.map((src, i) =>
+                                renderImageBox(`top-b-${i}`, src)
                             )}
                         </div>
                     </div>
@@ -128,12 +140,12 @@ export default function AboutESummit() {
                             }}
                         >
                             {/* Set 1 */}
-                            {[...Array(bottomRowCount)].map((_, i) =>
-                                renderBox(`bottom-a-${i}`, {}, i)
+                            {bottomRowImages.map((src, i) =>
+                                renderImageBox(`bottom-a-${i}`, src)
                             )}
                             {/* Set 2 (duplicate for seamless loop) */}
-                            {[...Array(bottomRowCount)].map((_, i) =>
-                                renderBox(`bottom-b-${i}`, {}, i)
+                            {bottomRowImages.map((src, i) =>
+                                renderImageBox(`bottom-b-${i}`, src)
                             )}
                         </div>
                     </div>
