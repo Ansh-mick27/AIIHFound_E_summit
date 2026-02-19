@@ -8,8 +8,47 @@ export default function AboutESummit() {
         0: '/images/speakers/dhruv-rathod.png',
     };
 
+    // Base set of items for each row (will be duplicated for seamless loop)
+    const topRowCount = 8;
+    const bottomRowCount = 8;
+
+    const renderBox = (key: string, imageMap: Record<number, string>, baseIndex: number) => (
+        <div
+            key={key}
+            className="w-48 h-48 rounded-lg flex-shrink-0 overflow-hidden"
+            style={{
+                background: imageMap[baseIndex] ? 'transparent' : 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
+                border: '1px solid rgba(0, 102, 255, 0.3)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
+            }}
+        >
+            {imageMap[baseIndex] && (
+                <Image
+                    src={imageMap[baseIndex]}
+                    alt="Speaker"
+                    width={192}
+                    height={192}
+                    className="w-full h-full object-cover"
+                />
+            )}
+        </div>
+    );
+
     return (
         <section className="relative bg-black text-white py-20 px-8 overflow-hidden">
+            {/* Seamless marquee keyframes */}
+            <style jsx>{`
+                @keyframes scrollRight {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0%); }
+                }
+                @keyframes scrollLeft {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-50%); }
+                }
+            `}</style>
+
             {/* Background glow effect */}
             <div
                 className="absolute inset-0 -z-10 pointer-events-none"
@@ -55,77 +94,48 @@ export default function AboutESummit() {
 
                 {/* Animated Rows Section */}
                 <div className="flex flex-col gap-8 overflow-hidden py-8">
-                    {/* Top Row - Scroll Right */}
+                    {/* Top Row - Seamless Scroll Right */}
                     <div className="flex overflow-hidden relative w-full">
-                        <motion.div
-                            className="flex gap-6 whitespace-nowrap"
-                            animate={{ x: ["-50%", "0%"] }}
-                            transition={{
-                                x: {
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    duration: 20,
-                                    ease: "linear",
-                                }
+                        <div
+                            className="flex gap-6"
+                            style={{
+                                width: 'max-content',
+                                animation: 'scrollRight 30s linear infinite',
                             }}
-                            style={{ width: "max-content" }}
                         >
-                            {[...Array(10)].map((_, index) => (
-                                <div
-                                    key={`top-${index}`}
-                                    className="w-48 h-48 rounded-lg flex-shrink-0 overflow-hidden"
-                                    style={{
-                                        background: topRowImages[index] ? 'transparent' : 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
-                                        border: '1px solid rgba(0, 102, 255, 0.3)',
-                                        backdropFilter: 'blur(10px)',
-                                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
-                                    }}
-                                >
-                                    {topRowImages[index] && (
-                                        <Image
-                                            src={topRowImages[index]}
-                                            alt="Speaker"
-                                            width={192}
-                                            height={192}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    )}
-                                </div>
-                            ))}
-                        </motion.div>
+                            {/* Set 1 */}
+                            {[...Array(topRowCount)].map((_, i) =>
+                                renderBox(`top-a-${i}`, topRowImages, i)
+                            )}
+                            {/* Set 2 (duplicate for seamless loop) */}
+                            {[...Array(topRowCount)].map((_, i) =>
+                                renderBox(`top-b-${i}`, topRowImages, i)
+                            )}
+                        </div>
                     </div>
 
-                    {/* Bottom Row - Scroll Left */}
+                    {/* Bottom Row - Seamless Scroll Left */}
                     <div className="flex overflow-hidden relative w-full">
-                        <motion.div
-                            className="flex gap-6 whitespace-nowrap"
-                            animate={{ x: ["0%", "-50%"] }}
-                            transition={{
-                                x: {
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    duration: 20,
-                                    ease: "linear",
-                                }
+                        <div
+                            className="flex gap-6"
+                            style={{
+                                width: 'max-content',
+                                animation: 'scrollLeft 30s linear infinite',
                             }}
-                            style={{ width: "max-content" }}
                         >
-                            {[...Array(10)].map((_, index) => (
-                                <div
-                                    key={`bottom-${index}`}
-                                    className="w-48 h-48 rounded-lg flex-shrink-0"
-                                    style={{
-                                        background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
-                                        border: '1px solid rgba(0, 102, 255, 0.3)',
-                                        backdropFilter: 'blur(10px)',
-                                        boxShadow: '0 0 20px rgba(0, 102, 255, 0.2)'
-                                    }}
-                                />
-                            ))}
-                        </motion.div>
+                            {/* Set 1 */}
+                            {[...Array(bottomRowCount)].map((_, i) =>
+                                renderBox(`bottom-a-${i}`, {}, i)
+                            )}
+                            {/* Set 2 (duplicate for seamless loop) */}
+                            {[...Array(bottomRowCount)].map((_, i) =>
+                                renderBox(`bottom-b-${i}`, {}, i)
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     );
 }
+
