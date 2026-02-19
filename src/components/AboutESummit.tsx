@@ -17,8 +17,9 @@ export default function AboutESummit() {
         return (
             <div
                 key={key}
-                className={`${hasImage ? 'w-80 h-48' : 'w-48 h-48'} rounded-lg flex-shrink-0 overflow-hidden`}
+                className={`h-48 rounded-lg flex-shrink-0 overflow-hidden`}
                 style={{
+                    width: hasImage ? '314px' : '192px',
                     background: hasImage ? 'transparent' : 'linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 102, 255, 0.05))',
                     border: '1px solid rgba(0, 102, 255, 0.3)',
                     backdropFilter: 'blur(10px)',
@@ -31,7 +32,7 @@ export default function AboutESummit() {
                         alt="Speaker"
                         width={653}
                         height={400}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                     />
                 )}
             </div>
