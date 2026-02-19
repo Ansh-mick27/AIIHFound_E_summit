@@ -1,7 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
-import Image from "next/image";
 
 interface CyberpunkCardProps {
     category: string;
@@ -9,62 +8,9 @@ interface CyberpunkCardProps {
     description: string;
     icon: LucideIcon;
     delay?: number;
-    image?: string;
 }
 
-export default function CyberpunkCard({ category, title, description, icon: Icon, delay = 0, image }: CyberpunkCardProps) {
-    // Image variant: full-bleed image card with overlay text
-    if (image) {
-        return (
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                className="group relative rounded-lg glow-border-cobalt glass-card hover:scale-105 transition-all duration-300 cursor-pointer h-full flex flex-col overflow-hidden"
-            >
-                {/* Full-bleed Image */}
-                <div className="relative w-full h-full min-h-[340px]">
-                    <Image
-                        src={image}
-                        alt={title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        priority
-                    />
-                    {/* Gradient overlay for text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-
-                    {/* Category Tag - positioned top-left */}
-                    <div className="absolute top-4 left-4 z-10">
-                        <span className="font-mono-terminal text-xs text-[var(--accent-cobalt)] border border-[var(--accent-cobalt)] px-2 py-1 rounded bg-black/60 backdrop-blur-sm">
-                            [{category.toUpperCase()}]
-                        </span>
-                    </div>
-
-                    {/* Bottom overlay content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                        <h3 className="text-xl font-bold uppercase mb-2 text-white group-hover:text-glow-cobalt transition-all">
-                            {title}
-                        </h3>
-                        <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
-                            {description}
-                        </p>
-                        <div className="flex items-center gap-2 text-xs font-mono-terminal text-text-muted group-hover:text-[var(--accent-cobalt)] transition-colors">
-                            <span>Know More...</span>
-                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-        );
-    }
-
-    // Default variant: icon + text card
+export default function CyberpunkCard({ category, title, description, icon: Icon, delay = 0 }: CyberpunkCardProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -11,7 +11,6 @@ export default function EventsGrid() {
         title: string;
         description: string;
         icon: any;
-        image?: string;
     }
 
     const events: EventItem[] = [
@@ -20,8 +19,7 @@ export default function EventsGrid() {
             category: "SESSION", // Renamed from SPEAKER
             title: "FOUNDER'S TALK",
             description: "Founder's Talk is the highlight of E-Summit, where visionary entrepreneurs share real stories of success, inspiring ambition and turning ideas into action.",
-            icon: Rocket,
-            image: "/images/speakers/dhruv-rathod.png"
+            icon: Rocket
         },
         {
             slug: "solvex",
@@ -118,7 +116,6 @@ export default function EventsGrid() {
                                     description={event.description}
                                     icon={event.icon}
                                     delay={index * 0.1}
-                                    image={event.image}
                                 />
                             </Link>
                         </div>
