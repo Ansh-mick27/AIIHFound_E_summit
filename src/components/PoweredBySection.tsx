@@ -8,6 +8,15 @@ export default function PoweredBySection() {
         { name: "AIC-RNTU", type: "DIAMOND SPONSOR", logo: "/logos/aic.png" }
     ];
 
+    const secondRowSponsors = [
+        { name: "Sponsor 4", type: "SPONSOR" },
+        { name: "Sponsor 5", type: "SPONSOR" },
+        { name: "Sponsor 6", type: "SPONSOR" },
+        { name: "Sponsor 7", type: "SPONSOR" },
+        { name: "Sponsor 8", type: "SPONSOR" },
+        { name: "Sponsor 9", type: "SPONSOR" },
+    ];
+
     return (
         <section className="relative pt-24 pb-8 bg-black text-white overflow-hidden border-t border-white/10">
             <div className="max-w-7xl mx-auto relative z-50">
@@ -59,6 +68,27 @@ export default function PoweredBySection() {
                             <div className="bg-white rounded-lg p-6 mb-4 h-32 flex items-center justify-center">
                                 {/* Placeholder for logo - replace with actual logos */}
                                 <span className="text-2xl font-bold text-gray-800">{sponsor.name}</span>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Second Row - 6 Sponsor Cards */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-8">
+                    {secondRowSponsors.map((sponsor, index) => (
+                        <motion.div
+                            key={sponsor.name}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="glass-card glow-border-cobalt p-6 rounded-lg hover-scale text-center"
+                        >
+                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-3">
+                                {sponsor.type}
+                            </p>
+                            <div className="bg-white rounded-lg p-4 mb-3 h-24 flex items-center justify-center">
+                                <span className="text-lg font-bold text-gray-800">{sponsor.name}</span>
                             </div>
                         </motion.div>
                     ))}
