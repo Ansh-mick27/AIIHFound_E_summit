@@ -19,7 +19,7 @@ export default function LegacyAllies() {
     );
 
     return (
-        <section className="relative bg-black text-white py-24 overflow-hidden">
+        <section className="relative bg-black text-white pt-8 pb-24 overflow-hidden">
             {/* Seamless marquee keyframes */}
             <style jsx>{`
                 @keyframes alliesScroll {
