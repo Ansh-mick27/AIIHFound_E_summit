@@ -50,7 +50,7 @@ export default function LegacyAllies() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-lg font-black uppercase mb-4">
-                        OUR <span className="text-glow-purple">PARTNERS</span>
+                        OUR <span className="text-glow-cobalt">PARTNERS</span>
                     </h2>
                 </motion.div>
 
