@@ -9,8 +9,21 @@ export default function LegacyAllies() {
     const renderCard = (key: string, name: string) => (
         <div
             key={key}
-            className="glass-card border border-white/10 p-4 rounded-lg flex-shrink-0"
-            style={{ width: '160px', height: '120px' }}
+            className="glass-card border border-white/10 p-4 rounded-lg flex-shrink-0 cursor-pointer"
+            style={{
+                width: '160px',
+                height: '120px',
+                transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
+                boxShadow: '0 0 10px rgba(0, 102, 255, 0.15)',
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05) translateY(-6px)';
+                e.currentTarget.style.boxShadow = '0 0 25px rgba(0, 102, 255, 0.5), 0 0 50px rgba(0, 102, 255, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1) translateY(0)';
+                e.currentTarget.style.boxShadow = '0 0 10px rgba(0, 102, 255, 0.15)';
+            }}
         >
             <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
                 <span className="text-xs font-bold text-gray-800">{name}</span>
