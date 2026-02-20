@@ -22,13 +22,9 @@ export default function LegacyAllies() {
         <section className="relative bg-black text-white py-24 overflow-hidden">
             {/* Seamless marquee keyframes */}
             <style jsx>{`
-                @keyframes alliesScrollLeft {
+                @keyframes alliesScroll {
                     0% { transform: translateX(0%); }
                     100% { transform: translateX(-50%); }
-                }
-                @keyframes alliesScrollRight {
-                    0% { transform: translateX(-50%); }
-                    100% { transform: translateX(0%); }
                 }
             `}</style>
 
@@ -56,7 +52,7 @@ export default function LegacyAllies() {
                             className="flex gap-4"
                             style={{
                                 width: 'max-content',
-                                animation: 'alliesScrollLeft 25s linear infinite',
+                                animation: 'alliesScroll 25s linear infinite',
                             }}
                         >
                             {row1.map((ally, i) => renderCard(`r1a-${i}`, ally))}
@@ -70,7 +66,8 @@ export default function LegacyAllies() {
                             className="flex gap-4"
                             style={{
                                 width: 'max-content',
-                                animation: 'alliesScrollRight 25s linear infinite',
+                                animation: 'alliesScroll 25s linear infinite',
+                                animationDirection: 'reverse',
                             }}
                         >
                             {row2.map((ally, i) => renderCard(`r2a-${i}`, ally))}
@@ -84,7 +81,7 @@ export default function LegacyAllies() {
                             className="flex gap-4"
                             style={{
                                 width: 'max-content',
-                                animation: 'alliesScrollLeft 25s linear infinite',
+                                animation: 'alliesScroll 25s linear infinite',
                             }}
                         >
                             {row3.map((ally, i) => renderCard(`r3a-${i}`, ally))}
