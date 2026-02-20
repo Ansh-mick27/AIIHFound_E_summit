@@ -11,6 +11,21 @@ export default function PoweredBySection() {
     return (
         <section className="relative py-24 bg-black text-white overflow-hidden border-t border-white/10">
             <div className="max-w-7xl mx-auto relative z-50">
+                {/* Section Title */}
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-4xl md:text-5xl font-black text-center mb-16 uppercase"
+                    style={{
+                        fontFamily: 'var(--font-montserrat)',
+                        letterSpacing: '0.05em'
+                    }}
+                >
+                    In Alliance With
+                </motion.h2>
+
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
