@@ -1,23 +1,37 @@
 'use client';
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 export default function LegacyAllies() {
-    // Split allies into 3 rows
     const row1 = ["Starbucks", "SBI", "SIDBI", "Bank of Baroda", "PVR", "Chromepet", "JioSaavn"];
     const row2 = ["CoinGape", "The Print", "ICCT", "Hyundai", "Unstop", "Wadhwani", "Rightships"];
     const row3 = ["Seekbook", "Utho", "Interview Buddy", "GreenSaja", "Fashor", "The Product Folks", "SOS"];
 
-    // Hover states for each row
-    const [isRow1Hovered, setIsRow1Hovered] = useState(false);
-    const [isRow2Hovered, setIsRow2Hovered] = useState(false);
-    const [isRow3Hovered, setIsRow3Hovered] = useState(false);
-
-    // Duplicate items for infinite scroll effect
-    const createInfiniteArray = (arr: string[]) => [...arr, ...arr, ...arr];
+    const renderCard = (key: string, name: string) => (
+        <div
+            key={key}
+            className="glass-card border border-white/10 p-4 rounded-lg flex-shrink-0"
+            style={{ width: '160px', height: '120px' }}
+        >
+            <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
+                <span className="text-xs font-bold text-gray-800">{name}</span>
+            </div>
+        </div>
+    );
 
     return (
         <section className="relative bg-black text-white py-24 overflow-hidden">
+            {/* Seamless marquee keyframes */}
+            <style jsx>{`
+                @keyframes alliesScrollLeft {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-50%); }
+                }
+                @keyframes alliesScrollRight {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0%); }
+                }
+            `}</style>
+
             <div className="max-w-7xl mx-auto relative z-50">
                 {/* Header */}
                 <motion.div
@@ -34,111 +48,52 @@ export default function LegacyAllies() {
                     </p>
                 </motion.div>
 
-                {/* Scrolling Rows */}
-                <div className="space-y-40">
+                {/* Scrolling Rows — reduced spacing */}
+                <div className="space-y-6">
                     {/* Row 1 - Scroll Left */}
-                    <div
-                        className="relative overflow-hidden"
-                        onMouseEnter={() => setIsRow1Hovered(true)}
-                        onMouseLeave={() => setIsRow1Hovered(false)}
-                    >
-                        <motion.div
+                    <div className="overflow-hidden">
+                        <div
                             className="flex gap-4"
-                            animate={{
-                                x: isRow1Hovered ? undefined : [0, -1920]
-                            }}
-                            transition={{
-                                x: {
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    duration: 20,
-                                    ease: "linear"
-                                }
+                            style={{
+                                width: 'max-content',
+                                animation: 'alliesScrollLeft 25s linear infinite',
                             }}
                         >
-                            {createInfiniteArray(row1).map((ally, index) => (
-                                <div
-                                    key={`row1-${index}`}
-                                    className="glass-card border border-white/10 p-4 rounded-lg hover-scale flex-shrink-0"
-                                    style={{ width: '160px', height: '120px' }}
-                                >
-                                    <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
-                                        <span className="text-xs font-bold text-gray-800">{ally}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </motion.div>
+                            {row1.map((ally, i) => renderCard(`r1a-${i}`, ally))}
+                            {row1.map((ally, i) => renderCard(`r1b-${i}`, ally))}
+                        </div>
                     </div>
 
                     {/* Row 2 - Scroll Right */}
-                    <div
-                        className="relative overflow-hidden"
-                        onMouseEnter={() => setIsRow2Hovered(true)}
-                        onMouseLeave={() => setIsRow2Hovered(false)}
-                    >
-                        <motion.div
+                    <div className="overflow-hidden">
+                        <div
                             className="flex gap-4"
-                            animate={{
-                                x: isRow2Hovered ? undefined : [-1920, 0]
-                            }}
-                            transition={{
-                                x: {
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    duration: 20,
-                                    ease: "linear"
-                                }
+                            style={{
+                                width: 'max-content',
+                                animation: 'alliesScrollRight 25s linear infinite',
                             }}
                         >
-                            {createInfiniteArray(row2).map((ally, index) => (
-                                <div
-                                    key={`row2-${index}`}
-                                    className="glass-card border border-white/10 p-4 rounded-lg hover-scale flex-shrink-0"
-                                    style={{ width: '160px', height: '120px' }}
-                                >
-                                    <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
-                                        <span className="text-xs font-bold text-gray-800">{ally}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </motion.div>
+                            {row2.map((ally, i) => renderCard(`r2a-${i}`, ally))}
+                            {row2.map((ally, i) => renderCard(`r2b-${i}`, ally))}
+                        </div>
                     </div>
 
                     {/* Row 3 - Scroll Left */}
-                    <div
-                        className="relative overflow-hidden"
-                        onMouseEnter={() => setIsRow3Hovered(true)}
-                        onMouseLeave={() => setIsRow3Hovered(false)}
-                    >
-                        <motion.div
+                    <div className="overflow-hidden">
+                        <div
                             className="flex gap-4"
-                            animate={{
-                                x: isRow3Hovered ? undefined : [0, -1920]
-                            }}
-                            transition={{
-                                x: {
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    duration: 20,
-                                    ease: "linear"
-                                }
+                            style={{
+                                width: 'max-content',
+                                animation: 'alliesScrollLeft 25s linear infinite',
                             }}
                         >
-                            {createInfiniteArray(row3).map((ally, index) => (
-                                <div
-                                    key={`row3-${index}`}
-                                    className="glass-card border border-white/10 p-4 rounded-lg hover-scale flex-shrink-0"
-                                    style={{ width: '160px', height: '120px' }}
-                                >
-                                    <div className="bg-white rounded p-3 w-full h-full flex items-center justify-center">
-                                        <span className="text-xs font-bold text-gray-800">{ally}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </motion.div>
+                            {row3.map((ally, i) => renderCard(`r3a-${i}`, ally))}
+                            {row3.map((ally, i) => renderCard(`r3b-${i}`, ally))}
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     );
 }
+
