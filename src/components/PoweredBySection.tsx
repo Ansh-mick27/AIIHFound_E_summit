@@ -23,7 +23,7 @@ export default function PoweredBySection() {
                         letterSpacing: '0.05em'
                     }}
                 >
-                    In Alliance With
+                    In Alliance <span className="text-glow-cobalt">With</span>
                 </motion.h2>
 
                 {/* Header */}
