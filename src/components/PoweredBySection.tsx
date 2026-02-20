@@ -60,12 +60,12 @@ export default function PoweredBySection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-card glow-border-cobalt p-8 rounded-lg hover-scale text-center"
+                            className="glass-card glow-border-cobalt p-6 rounded-lg hover-scale text-center"
                         >
-                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-4">
+                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-3">
                                 {sponsor.type}
                             </p>
-                            <div className="bg-white rounded-lg p-6 mb-4 h-32 flex items-center justify-center">
+                            <div className="bg-white rounded-lg p-5 mb-3 h-28 flex items-center justify-center">
                                 {/* Placeholder for logo - replace with actual logos */}
                                 <span className="text-2xl font-bold text-gray-800">{sponsor.name}</span>
                             </div>
@@ -82,12 +82,12 @@ export default function PoweredBySection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-card glow-border-cobalt p-6 rounded-lg hover-scale text-center"
+                            className="glass-card glow-border-cobalt p-5 rounded-lg hover-scale text-center"
                         >
-                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-3">
+                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-2">
                                 {sponsor.type}
                             </p>
-                            <div className="bg-white rounded-lg p-4 mb-3 h-24 flex items-center justify-center">
+                            <div className="bg-white rounded-lg p-3 mb-2 h-20 flex items-center justify-center">
                                 <span className="text-lg font-bold text-gray-800">{sponsor.name}</span>
                             </div>
                         </motion.div>
