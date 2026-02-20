@@ -108,6 +108,21 @@ export default function AboutESummit() {
                     the next generation to disrupt markets and lead with confidence.
                 </motion.p>
 
+                {/* Esteemed Guest Heading */}
+                <motion.h3
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-4xl md:text-5xl font-black text-center mb-12 uppercase"
+                    style={{
+                        fontFamily: 'var(--font-montserrat)',
+                        letterSpacing: '0.05em'
+                    }}
+                >
+                    ESTEEMED <span className="text-glow-cobalt">GUEST</span>
+                </motion.h3>
+
                 {/* Animated Rows Section */}
                 <div className="flex flex-col gap-8 overflow-hidden py-8">
                     {/* Top Row - Seamless Scroll Right */}
