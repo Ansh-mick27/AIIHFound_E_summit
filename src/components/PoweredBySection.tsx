@@ -51,7 +51,7 @@ export default function PoweredBySection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-card glow-border-purple p-8 rounded-lg hover-scale text-center"
+                            className="glass-card glow-border-cobalt p-8 rounded-lg hover-scale text-center"
                         >
                             <p className="text-xs uppercase font-mono-terminal text-text-muted mb-4">
                                 {sponsor.type}
