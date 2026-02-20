@@ -39,9 +39,6 @@ export default function LegacyAllies() {
                     <h2 className="text-lg font-black uppercase mb-4">
                         OUR <span className="text-glow-purple">PARTNERS</span>
                     </h2>
-                    <p className="text-text-muted font-mono-terminal text-sm">
-                        // TRUSTED_COLLABORATORS_ARCHIVE
-                    </p>
                 </motion.div>
 
                 {/* Scrolling Rows — reduced spacing */}
