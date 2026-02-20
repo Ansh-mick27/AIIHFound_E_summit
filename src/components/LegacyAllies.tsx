@@ -36,8 +36,8 @@ export default function LegacyAllies() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">
-                        LEGACY & PAST <span className="text-glow-purple">ALLIES</span>
+                    <h2 className="text-lg font-black uppercase mb-4">
+                        OUR <span className="text-glow-purple">PARTNERS</span>
                     </h2>
                     <p className="text-text-muted font-mono-terminal text-sm">
                         // TRUSTED_COLLABORATORS_ARCHIVE
