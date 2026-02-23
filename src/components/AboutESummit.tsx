@@ -51,7 +51,7 @@ export default function AboutESummit() {
     );
 
     return (
-        <section className="relative bg-black text-white py-20 px-8 overflow-hidden">
+        <section id="about" className="relative bg-black text-white py-20 px-8 overflow-hidden">
             {/* Seamless marquee keyframes */}
             <style jsx>{`
                 @keyframes scrollRight {

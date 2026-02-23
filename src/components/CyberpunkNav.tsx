@@ -22,9 +22,16 @@ export default function CyberpunkNav() {
 
                     {/* Nav Links - Moved to Right */}
                     <div className="hidden md:flex items-center gap-8">
-                        <Link href="#about" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                        <a
+                            href="#about"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="text-sm uppercase tracking-wide hover:text-accent transition-colors cursor-pointer"
+                        >
                             About
-                        </Link>
+                        </a>
                         <Link href="#events" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Events
                         </Link>
