@@ -78,9 +78,9 @@ export const eventsData = {
         longDescription: "A Masterclass is an interactive event where experts share practical insights, real-world experience, and actionable learning beyond theory. Led by domain experts, these intensive sessions provide practical knowledge and hands-on skills that you can apply immediately. Elevate your expertise.",
         icon: TrendingUp,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Workshop Hall" },
+            { label: "Date", value: "19th March 2026" },
+            { label: "Time", value: "3:00 PM – 4:00 PM" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
