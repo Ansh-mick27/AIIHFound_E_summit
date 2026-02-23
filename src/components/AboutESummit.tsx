@@ -11,13 +11,13 @@ export default function AboutESummit() {
         '/images/speakers/farheen-rangwala.png',
         '/images/speakers/jignesh-kenia.png',
         '/images/speakers/manish-johari.png',
-        '/images/speakers/raja-koppala.png',
         '/images/speakers/sanjeevv-khanna.png',
         '/images/speakers/suraj-doshi.png',
         '/images/speakers/tushar-pal.png',
+        '/images/speakers/yagnesh-sanghrajka.png',
     ];
 
-    // Row 2 — 10 speaker images
+    // Row 2 — 9 speaker images
     const bottomRowImages = [
         '/images/speakers/aaditya-jain.png',
         '/images/speakers/abhishek-kakkar.png',
@@ -28,7 +28,6 @@ export default function AboutESummit() {
         '/images/speakers/sushanto-mitra.png',
         '/images/speakers/utpal-doshi.png',
         '/images/speakers/vibhuti-aggarwal.png',
-        '/images/speakers/yagnesh-sanghrajka.png',
     ];
 
     const renderImageBox = (key: string, src: string) => (
