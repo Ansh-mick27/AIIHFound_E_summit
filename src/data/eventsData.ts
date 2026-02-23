@@ -62,12 +62,12 @@ export const eventsData = {
         title: "AMA",
         category: "PANEL",
         description: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers.",
-        longDescription: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers. From career advice to industry trends, get honest answers and unparalleled access to the minds shaping the future.",
+        longDescription: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers. From career advice to industry trends, get honest answers and unparalleled access to the minds shaping the future.\n\nDive deeper into the realities of fundraising, market positioning, and strategic growth while building meaningful connections that can shape your entrepreneurial journey.",
         icon: Trophy,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Main Auditorium" },
+            { label: "Date", value: "20th March 2026" },
+            { label: "Time", value: "3:00 PM – 4:00 PM" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },

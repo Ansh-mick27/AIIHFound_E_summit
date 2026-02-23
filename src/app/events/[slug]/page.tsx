@@ -72,9 +72,11 @@ export default function EventPage() {
                             <span className="w-2 h-8 bg-accent-cobalt rounded-sm"></span>
                             ABOUT THE EVENT
                         </h3>
-                        <p className="text-lg text-text-secondary leading-relaxed">
-                            {event.longDescription}
-                        </p>
+                        {event.longDescription.split('\n\n').map((para, i) => (
+                            <p key={i} className="text-lg text-text-secondary leading-relaxed mb-4 last:mb-0">
+                                {para}
+                            </p>
+                        ))}
                     </div>
 
                     {/* Key Details */}
