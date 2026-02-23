@@ -18,7 +18,7 @@ export default function PoweredBySection() {
     ];
 
     return (
-        <section className="relative pt-24 pb-8 bg-black text-white overflow-hidden border-t border-white/10">
+        <section id="partners" className="relative pt-24 pb-8 bg-black text-white overflow-hidden border-t border-white/10">
             <div className="max-w-7xl mx-auto relative z-50">
                 {/* Section Title */}
                 <motion.h2

@@ -38,9 +38,16 @@ export default function CyberpunkNav() {
                         <Link href="#agenda" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Agenda
                         </Link>
-                        <Link href="#partners" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                        <a
+                            href="#partners"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById('partners')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="text-sm uppercase tracking-wide hover:text-accent transition-colors cursor-pointer"
+                        >
                             Partners
-                        </Link>
+                        </a>
                         <Link href="https://forms.gle/nqHj9CqaVEudivcdA" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Register
                         </Link>
