@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { eventsData } from '@/data/eventsData';
 import SpiralBackground from '@/components/SpiralBackground';
 import CyberpunkNav from '@/components/CyberpunkNav';
-import EnhancedFooter from '@/components/EnhancedFooter';
+
 import Link from 'next/link';
 
 export default function EventPage() {
@@ -124,7 +124,6 @@ export default function EventPage() {
                 </motion.div>
             </div>
 
-            <EnhancedFooter />
         </main>
     );
 }
