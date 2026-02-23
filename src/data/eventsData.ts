@@ -91,9 +91,9 @@ export const eventsData = {
         longDescription: "Speed Mentoring is a curated advisory platform where participants gain strategic clarity on product, scalability, and growth from industry leaders. Rotate through a series of brief, focused sessions with different mentors. Get diverse perspectives on your challenges and build a network of advisors in record time.",
         icon: Mic,
         details: [
-            { label: "Date", value: "TBA" },
-            { label: "Time", value: "TBA" },
-            { label: "Venue", value: "Networking Lounge" },
+            { label: "Date", value: "19th March 2026" },
+            { label: "Time", value: "4:00 PM – 5:00 PM" },
+            { label: "Venue", value: "Acropolis Group of Institutions" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     }
