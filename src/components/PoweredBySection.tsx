@@ -51,7 +51,7 @@ export default function PoweredBySection() {
                     </div>
                 </motion.div>
 
-                {/* Sponsor Cards */}
+                {/* Sponsor Cards - Row 1 */}
                 <div className="grid md:grid-cols-3 gap-8">
                     {sponsors.map((sponsor, index) => (
                         <motion.div
@@ -60,36 +60,63 @@ export default function PoweredBySection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-card glow-border-cobalt p-6 rounded-lg hover-scale text-center"
+                            className="rounded-xl text-center cursor-pointer"
+                            style={{
+                                background: 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
+                                padding: '2rem 1.5rem',
+                                boxShadow: '0 2px 12px rgba(0, 0, 0, 0.08)',
+                                transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.04) translateY(-4px)';
+                                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.1)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = 'scale(1) translateY(0)';
+                                e.currentTarget.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.08)';
+                            }}
                         >
-                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-3">
-                                {sponsor.type}
-                            </p>
-                            <div className="bg-white rounded-lg p-5 mb-3 h-28 flex items-center justify-center">
-                                {/* Placeholder for logo - replace with actual logos */}
+                            <div className="h-28 flex items-center justify-center mb-4">
                                 <span className="text-2xl font-bold text-gray-800">{sponsor.name}</span>
                             </div>
+                            <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
+                                {sponsor.type}
+                            </p>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* Second Row - 6 Sponsor Cards */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-8">
+                {/* Sponsor Cards - Row 2 */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-8">
                     {secondRowSponsors.map((sponsor, index) => (
                         <motion.div
                             key={sponsor.name}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="glass-card glow-border-cobalt p-5 rounded-lg hover-scale text-center"
+                            transition={{ delay: index * 0.08 }}
+                            className="rounded-xl text-center cursor-pointer"
+                            style={{
+                                background: 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
+                                padding: '1.25rem 1rem',
+                                boxShadow: '0 2px 12px rgba(0, 0, 0, 0.08)',
+                                transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.04) translateY(-4px)';
+                                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.1)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = 'scale(1) translateY(0)';
+                                e.currentTarget.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.08)';
+                            }}
                         >
-                            <p className="text-xs uppercase font-mono-terminal text-text-muted mb-2">
+                            <div className="h-16 flex items-center justify-center mb-3">
+                                <span className="text-base font-bold text-gray-800">{sponsor.name}</span>
+                            </div>
+                            <p className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">
                                 {sponsor.type}
                             </p>
-                            <div className="bg-white rounded-lg p-3 mb-2 h-20 flex items-center justify-center">
-                                <span className="text-lg font-bold text-gray-800">{sponsor.name}</span>
-                            </div>
                         </motion.div>
                     ))}
                 </div>
