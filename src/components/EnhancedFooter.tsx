@@ -23,9 +23,6 @@ export default function EnhancedFooter() {
                             <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
                             <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
                         </div>
-                        <h3 className="text-3xl font-black uppercase mb-6">
-                            <span className="text-glow-purple">AIIH</span>
-                        </h3>
                         <div className="space-y-3 font-mono-terminal text-sm">
                             <div>
                                 <span className="text-accent-primary">LOC:</span>
