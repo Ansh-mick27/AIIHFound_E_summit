@@ -18,7 +18,7 @@ export default function PoweredBySection() {
     ];
 
     return (
-        <section id="partners" className="relative pt-24 pb-8 bg-black text-white overflow-hidden border-t border-white/10">
+        <section id="partners" className="relative pt-24 pb-8 bg-black text-white border-t border-white/10">
             <div className="max-w-7xl mx-auto relative z-50">
                 {/* Section Title */}
                 <motion.h2
@@ -68,8 +68,8 @@ export default function PoweredBySection() {
                                 transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
                             }}
                             onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'scale(1.04) translateY(-4px)';
-                                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.1)';
+                                e.currentTarget.style.transform = 'scale(1.04) translateY(-6px)';
+                                e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.6), 0 0 40px rgba(255,255,255,0.4)';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'scale(1) translateY(0)';
@@ -103,8 +103,8 @@ export default function PoweredBySection() {
                                 transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
                             }}
                             onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'scale(1.04) translateY(-4px)';
-                                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.1)';
+                                e.currentTarget.style.transform = 'scale(1.04) translateY(-6px)';
+                                e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.6), 0 0 40px rgba(255,255,255,0.4)';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'scale(1) translateY(0)';
