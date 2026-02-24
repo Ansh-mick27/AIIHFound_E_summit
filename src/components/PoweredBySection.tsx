@@ -69,7 +69,7 @@ export default function PoweredBySection() {
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'scale(1.04) translateY(-6px)';
-                                e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.6), 0 0 40px rgba(255,255,255,0.4)';
+                                e.currentTarget.style.boxShadow = '0 0 20px rgba(0,71,171,0.6), 0 0 40px rgba(0,71,171,0.4)';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'scale(1) translateY(0)';
@@ -104,7 +104,7 @@ export default function PoweredBySection() {
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'scale(1.04) translateY(-6px)';
-                                e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.6), 0 0 40px rgba(255,255,255,0.4)';
+                                e.currentTarget.style.boxShadow = '0 0 20px rgba(0,71,171,0.6), 0 0 40px rgba(0,71,171,0.4)';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'scale(1) translateY(0)';
