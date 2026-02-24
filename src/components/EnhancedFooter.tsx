@@ -33,8 +33,12 @@ export default function EnhancedFooter() {
                                 <span className="text-white ml-2">ecell@acropolis.in</span>
                             </div>
                             <div>
-                                <span className="text-accent-primary">PH:</span>
-                                <span className="text-white ml-2">+91 731 4303900</span>
+                                <span className="text-accent-primary">Student Coordinators:</span>
+                                <span className="text-white ml-2">Keshav Banger (9399148486)</span>
+                            </div>
+                            <div>
+                                <span className="text-accent-primary"></span>
+                                <span className="text-white ml-2">Pradhyumn Mehta (8770527096)</span>
                             </div>
                         </div>
                     </motion.div>
