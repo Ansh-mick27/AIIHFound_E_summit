@@ -1,26 +1,15 @@
 'use client';
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Instagram, Linkedin, Twitter, Youtube, ArrowUp } from "lucide-react";
-import { useState } from "react";
 
 export default function EnhancedFooter() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: ""
-    });
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Form submitted:", formData);
-    };
 
     return (
         <footer className="bg-bg-secondary border-t border-white/10">
             {/* E-CELL MANIT Contact Form Section */}
             <div className="border-b border-white/10 py-16 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-50">
-                    {/* Left: E-CELL Info */}
+                <div className="max-w-7xl mx-auto relative z-50">
+                    {/* E-CELL Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -34,6 +23,9 @@ export default function EnhancedFooter() {
                             <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
                             <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
                         </div>
+                        <h3 className="text-3xl font-black uppercase mb-6">
+                            <span className="text-glow-purple">AIIH</span>
+                        </h3>
                         <div className="space-y-3 font-mono-terminal text-sm">
                             <div>
                                 <span className="text-accent-primary">LOC:</span>
@@ -48,50 +40,6 @@ export default function EnhancedFooter() {
                                 <span className="text-white ml-2">+91 731 4303900</span>
                             </div>
                         </div>
-                    </motion.div>
-
-                    {/* Right: Secure Transmission Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="glass-card glow-border-cyan p-8 rounded-lg"
-                    >
-                        <div className="flex items-center gap-2 mb-6">
-                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                            <h4 className="text-sm uppercase font-mono-terminal text-green-500">
-                                SECURE TRANSMISSION
-                            </h4>
-                        </div>
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <input
-                                type="text"
-                                placeholder="ID / Name"
-                                value={formData.name}
-                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Signal (Email)"
-                                value={formData.email}
-                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none"
-                            />
-                            <textarea
-                                placeholder="Data Packet..."
-                                value={formData.message}
-                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                rows={4}
-                                className="w-full bg-black/50 border border-white/20 rounded px-4 py-3 text-sm font-mono-terminal text-white placeholder:text-text-muted focus:border-accent-secondary focus:outline-none resize-none"
-                            />
-                            <button
-                                type="submit"
-                                className="w-full bg-transparent border border-accent-secondary text-accent-secondary py-3 rounded font-mono-terminal uppercase text-sm hover:bg-accent-secondary/10 transition-colors"
-                            >
-                                INITIATE UPLINK
-                            </button>
-                        </form>
                     </motion.div>
                 </div>
             </div>
