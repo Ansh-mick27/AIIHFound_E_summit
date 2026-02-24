@@ -62,7 +62,7 @@ export default function PoweredBySection() {
                             transition={{ delay: index * 0.1 }}
                             className="rounded-xl text-center cursor-pointer"
                             style={{
-                                background: 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
+                                background: 'linear-gradient(145deg, #1a1a2e, #16213e)',
                                 padding: '2rem 1.5rem',
                                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.08)',
                                 transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
@@ -77,9 +77,9 @@ export default function PoweredBySection() {
                             }}
                         >
                             <div className="h-28 flex items-center justify-center mb-4">
-                                <span className="text-2xl font-bold text-gray-800">{sponsor.name}</span>
+                                <span className="text-2xl font-bold text-white">{sponsor.name}</span>
                             </div>
-                            <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
+                            <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold">
                                 {sponsor.type}
                             </p>
                         </motion.div>
@@ -97,7 +97,7 @@ export default function PoweredBySection() {
                             transition={{ delay: index * 0.08 }}
                             className="rounded-xl text-center cursor-pointer"
                             style={{
-                                background: 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
+                                background: 'linear-gradient(145deg, #1a1a2e, #16213e)',
                                 padding: '1.25rem 1rem',
                                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.08)',
                                 transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
@@ -112,9 +112,9 @@ export default function PoweredBySection() {
                             }}
                         >
                             <div className="h-16 flex items-center justify-center mb-3">
-                                <span className="text-base font-bold text-gray-800">{sponsor.name}</span>
+                                <span className="text-base font-bold text-white">{sponsor.name}</span>
                             </div>
-                            <p className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">
+                            <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
                                 {sponsor.type}
                             </p>
                         </motion.div>
