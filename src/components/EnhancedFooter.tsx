@@ -48,35 +48,7 @@ export default function EnhancedFooter() {
 
             {/* Main Footer */}
             <div className="py-12 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 relative z-50">
-                    {/* Navigation */}
-                    <div>
-                        <h4 className="text-sm uppercase font-bold mb-4 text-accent">NAVIGATION</h4>
-                        <ul className="space-y-2 font-mono-terminal text-sm text-text-secondary">
-                            <li className="hover:text-white transition cursor-pointer">+ HOME</li>
-                            <li className="hover:text-white transition cursor-pointer">+ EVENTS</li>
-                            <li className="hover:text-white transition cursor-pointer">+ GALLERY</li>
-                            <li className="hover:text-white transition cursor-pointer">+ TEAM</li>
-                            <li className="hover:text-white transition cursor-pointer">+ SPONSOR US</li>
-                            <li className="hover:text-white transition cursor-pointer">+ CONTACT</li>
-                        </ul>
-                    </div>
-
-                    {/* System Directives */}
-                    <div>
-                        <h4 className="text-sm uppercase font-bold mb-4 text-accent-secondary">SYSTEM DIRECTIVES</h4>
-                        <div className="font-mono-terminal text-sm text-text-secondary space-y-2">
-                            <p className="text-green-500">root@ecell:~$ ./innovate.sh</p>
-                            <p className="text-text-muted">1. DISRUPT MARKETS</p>
-                            <p className="text-text-muted">2. BUILD SCALABLE</p>
-                            <p className="text-text-muted">3. DEPLOY FAST</p>
-                            <p className="text-green-500 flex items-center gap-2">
-                                <span className="animate-pulse">█</span>
-                                AWAITING INPUT...
-                            </p>
-                        </div>
-                    </div>
-
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 relative z-50">
                     {/* Quick Links */}
                     <div>
                         <h4 className="text-sm uppercase font-bold mb-4 text-accent">QUICK LINKS</h4>
