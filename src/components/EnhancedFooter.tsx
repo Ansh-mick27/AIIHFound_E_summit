@@ -48,35 +48,11 @@ export default function EnhancedFooter() {
 
             {/* Main Footer */}
             <div className="py-12 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 relative z-50">
+                <div className="max-w-7xl mx-auto relative z-50">
                     {/* Quick Links */}
                     <div>
                         <h4 className="text-sm uppercase font-bold mb-4 text-accent">QUICK LINKS</h4>
-                        <ul className="space-y-2 font-mono-terminal text-sm text-text-secondary">
-                            <li className="hover:text-white transition cursor-pointer">▸ E-CELL</li>
-                            <li className="hover:text-white transition cursor-pointer">▸ Startup Expo</li>
-                            <li className="hover:text-white transition cursor-pointer">▸ Campus Ambassadors</li>
-                            <li className="hover:text-white transition cursor-pointer">▸ Freshers' Representative</li>
-                        </ul>
-                    </div>
-
-                    {/* Connect */}
-                    <div>
-                        <h4 className="text-sm uppercase font-bold mb-4 text-accent-secondary">CONNECT</h4>
-                        <div className="flex gap-3 mb-6">
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-primary/20 hover:text-accent transition">
-                                <Instagram className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-secondary/20 hover:text-accent-secondary transition">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-primary/20 hover:text-accent transition">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-secondary/20 hover:text-accent-secondary transition">
-                                <Youtube className="w-5 h-5" />
-                            </a>
-                        </div>
+                        <p className="font-mono-terminal text-sm text-text-secondary hover:text-white transition cursor-pointer">Website</p>
                     </div>
                 </div>
             </div>
