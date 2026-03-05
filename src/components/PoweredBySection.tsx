@@ -76,12 +76,14 @@ export default function PoweredBySection() {
                                 e.currentTarget.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.08)';
                             }}
                         >
-                            <div className="h-28 flex items-center justify-center mb-4">
+                            <div className={`h-28 flex items-center justify-center${sponsor.type === "DIAMOND SPONSOR" ? " mb-4" : ""}`}>
                                 <span className="text-2xl font-bold text-gray-800">{sponsor.name}</span>
                             </div>
-                            <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
-                                {sponsor.type}
-                            </p>
+                            {sponsor.type === "DIAMOND SPONSOR" && (
+                                <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
+                                    {sponsor.type}
+                                </p>
+                            )}
                         </motion.div>
                     ))}
                 </div>
