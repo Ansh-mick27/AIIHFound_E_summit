@@ -77,12 +77,6 @@ export default function EnhancedFooter() {
                                 <Youtube className="w-5 h-5" />
                             </a>
                         </div>
-                        <div className="font-mono-terminal text-xs space-y-1">
-                            <p className="text-text-muted">SERVER:</p>
-                            <p className="text-green-500">ONLINE</p>
-                            <p className="text-text-muted">LATENCY:</p>
-                            <p className="text-green-500">42ms</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -90,10 +84,6 @@ export default function EnhancedFooter() {
             {/* Bottom Bar */}
             <div className="border-t border-white/10 py-6 px-6">
                 <div className="max-w-7xl mx-auto px-6 relative z-50 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2 text-xs font-mono-terminal">
-                        <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                        <span className="text-green-500">SYSTEM ONLINE</span>
-                    </div>
                     <p className="text-text-muted text-xs font-mono-terminal text-center">
                         © 2026 E-Cell ACROPOLIS • All Rights Reserved
                     </p>
