@@ -35,21 +35,6 @@ export default function PoweredBySection() {
                     In Alliance <span className="text-glow-cobalt">With</span>
                 </motion.h2>
 
-                {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
-                    <div className="flex items-center justify-center gap-4 mb-6">
-                        <div className="h-px flex-1 bg-gradient-to-r from-transparent to-accent-secondary"></div>
-                        <h2 className="text-sm uppercase font-mono-terminal text-accent-secondary tracking-widest">
-                            POWERED & CO-POWERED BY
-                        </h2>
-                        <div className="h-px flex-1 bg-gradient-to-l from-transparent to-accent-secondary"></div>
-                    </div>
-                </motion.div>
 
                 {/* Sponsor Cards - Row 1 */}
                 <div className="grid md:grid-cols-3 gap-8">
