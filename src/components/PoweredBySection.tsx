@@ -8,14 +8,6 @@ export default function PoweredBySection() {
         { name: "AIC-RNTU", type: "DIAMOND SPONSOR", logo: "/logos/aic.png" }
     ];
 
-    const secondRowSponsors = [
-        { name: "Sponsor 4", type: "SPONSOR" },
-        { name: "Sponsor 5", type: "SPONSOR" },
-        { name: "Sponsor 6", type: "SPONSOR" },
-        { name: "Sponsor 7", type: "SPONSOR" },
-        { name: "Sponsor 8", type: "SPONSOR" },
-        { name: "Sponsor 9", type: "SPONSOR" },
-    ];
 
     return (
         <section id="partners" className="relative pt-24 pb-8 bg-black text-white border-t border-white/10">
@@ -73,40 +65,6 @@ export default function PoweredBySection() {
                     ))}
                 </div>
 
-                {/* Sponsor Cards - Row 2 */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-8">
-                    {secondRowSponsors.map((sponsor, index) => (
-                        <motion.div
-                            key={sponsor.name}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.08 }}
-                            className="rounded-xl text-center cursor-pointer"
-                            style={{
-                                background: 'linear-gradient(145deg, #f8f9fa, #e9ecef)',
-                                padding: '1.25rem 1rem',
-                                boxShadow: '0 2px 12px rgba(0, 0, 0, 0.08)',
-                                transition: 'transform 300ms ease-in-out, box-shadow 300ms ease-in-out',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'scale(1.04) translateY(-6px)';
-                                e.currentTarget.style.boxShadow = '0 0 20px rgba(0,71,171,0.6), 0 0 40px rgba(0,71,171,0.4)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.transform = 'scale(1) translateY(0)';
-                                e.currentTarget.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.08)';
-                            }}
-                        >
-                            <div className="h-16 flex items-center justify-center mb-3">
-                                <span className="text-base font-bold text-gray-800">{sponsor.name}</span>
-                            </div>
-                            <p className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">
-                                {sponsor.type}
-                            </p>
-                        </motion.div>
-                    ))}
-                </div>
             </div>
         </section>
     );
