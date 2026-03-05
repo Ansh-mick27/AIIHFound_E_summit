@@ -8,6 +8,8 @@ export default function LegacyAllies() {
         { name: "I am Startup Community", logo: "/partners/iamstartup.png" },
         { name: "Open Network", logo: "/partners/opennetwork.png" },
         { name: "ISBA", logo: "/partners/isba.png" },
+        { name: "SAAply", logo: "/partners/saaply.png" },
+        { name: "Indore Entrepreneurs Network", logo: "/partners/ien.png" },
     ];
 
     const renderCard = (key: string, partner: { name: string; logo: string }) => (
