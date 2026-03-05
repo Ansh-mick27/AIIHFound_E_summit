@@ -6,7 +6,7 @@ import AboutESummit from "@/components/AboutESummit";
 import EventsGrid from "@/components/EventsGrid";
 import PoweredBySection from "@/components/PoweredBySection";
 import LegacyAllies from "@/components/LegacyAllies";
-import OfficialPartners from "@/components/OfficialPartners";
+
 import EnhancedFooter from "@/components/EnhancedFooter";
 import SpiralBackground from "@/components/SpiralBackground";
 
@@ -20,7 +20,7 @@ export default function Home() {
       <EventsGrid />
       <PoweredBySection />
       <LegacyAllies />
-      <OfficialPartners />
+
       <EnhancedFooter />
     </main>
   );
