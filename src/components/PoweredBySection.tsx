@@ -5,7 +5,8 @@ export default function PoweredBySection() {
     const sponsors = [
         { name: "SAGE Group", type: "POWERED BY", logo: "/logos/sage.png" },
         { name: "bNEST", type: "CO-POWERED BY", logo: "/logos/bnest.png" },
-        { name: "AIC-RNTU", type: "DIAMOND SPONSOR", logo: "/logos/aic.png" }
+        { name: "AIC-RNTU", type: "DIAMOND SPONSOR", logo: "/logos/aic.png" },
+        { name: "Sponsor 4", type: "", logo: "" }
     ];
 
 
@@ -29,7 +30,7 @@ export default function PoweredBySection() {
 
 
                 {/* Sponsor Cards - Row 1 */}
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {sponsors.map((sponsor, index) => (
                         <motion.div
                             key={sponsor.name}
