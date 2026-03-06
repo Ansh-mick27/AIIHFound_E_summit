@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function PoweredBySection() {
     const sponsors = [
-        { name: "SAGE Group", type: "POWERED BY", logo: "/logos/sage.png" },
-        { name: "bNEST", type: "CO-POWERED BY", logo: "/logos/bnest.png" },
-        { name: "AIC-RNTU", type: "DIAMOND SPONSOR", logo: "/logos/aic.png" },
-        { name: "Sponsor 4", type: "", logo: "" }
+        { name: "Kimirica", logo: "/logos/kimirica.png" },
+        { name: "Tap Onn", logo: "/logos/taponn.png" },
+        { name: "Carragreen", logo: "/logos/carragreen.png" },
+        { name: "Shri Agrawal Sweets", logo: "/logos/agrawal.png" }
     ];
 
 
@@ -29,7 +29,7 @@ export default function PoweredBySection() {
                 </motion.h2>
 
 
-                {/* Sponsor Cards - Row 1 */}
+                {/* Sponsor Cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {sponsors.map((sponsor, index) => (
                         <motion.div
@@ -54,14 +54,19 @@ export default function PoweredBySection() {
                                 e.currentTarget.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.08)';
                             }}
                         >
-                            <div className={`h-28 flex items-center justify-center${sponsor.type === "DIAMOND SPONSOR" ? " mb-4" : ""}`}>
-                                <span className="text-2xl font-bold text-gray-800">{sponsor.name}</span>
+                            <div className="h-28 flex items-center justify-center p-2">
+                                <img
+                                    src={sponsor.logo}
+                                    alt={sponsor.name}
+                                    style={{
+                                        maxHeight: '70%',
+                                        maxWidth: '90%',
+                                        width: 'auto',
+                                        height: 'auto',
+                                        objectFit: 'contain',
+                                    }}
+                                />
                             </div>
-                            {sponsor.type === "DIAMOND SPONSOR" && (
-                                <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
-                                    {sponsor.type}
-                                </p>
-                            )}
                         </motion.div>
                     ))}
                 </div>
