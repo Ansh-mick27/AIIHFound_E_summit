@@ -74,17 +74,11 @@ export default function EnhancedFooter() {
                     <div>
                         <h4 className="text-sm uppercase font-bold mb-4 text-accent-secondary">CONNECT</h4>
                         <div className="flex gap-3 mb-6">
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-primary/20 hover:text-accent transition">
+                            <a href="https://www.instagram.com/aiihfoundation/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-accent-primary/20 hover:text-accent transition">
                                 <Instagram className="w-5 h-5" />
                             </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-secondary/20 hover:text-accent-secondary transition">
+                            <a href="https://www.linkedin.com/company/aiih-foundation/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-accent-secondary/20 hover:text-accent-secondary transition">
                                 <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-primary/20 hover:text-accent transition">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-lg hover:bg-accent-secondary/20 hover:text-accent-secondary transition">
-                                <Youtube className="w-5 h-5" />
                             </a>
                         </div>
                     </div>
