@@ -54,15 +54,13 @@ export default function PoweredBySection() {
                                 e.currentTarget.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.08)';
                             }}
                         >
-                            <div className="h-28 flex items-center justify-center p-2">
+                            <div className="h-28 flex items-center justify-center">
                                 <img
                                     src={sponsor.logo}
                                     alt={sponsor.name}
                                     style={{
-                                        maxHeight: '70%',
-                                        maxWidth: '90%',
-                                        width: 'auto',
-                                        height: 'auto',
+                                        width: '100%',
+                                        height: '100%',
                                         objectFit: 'contain',
                                     }}
                                 />
