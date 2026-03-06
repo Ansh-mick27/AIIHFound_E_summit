@@ -9,40 +9,53 @@ export default function EnhancedFooter() {
             {/* E-CELL MANIT Contact Form Section */}
             <div className="border-b border-white/10 py-16 px-6">
                 <div className="max-w-7xl mx-auto relative z-50">
-                    {/* E-CELL Info */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h3 className="text-3xl font-black uppercase mb-6">
-                            E-CELL <span className="text-glow-purple">ACROPOLIS</span>
-                        </h3>
-                        <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
-                            <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
-                            <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
-                            <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
-                        </div>
-                        <div className="space-y-3 font-mono-terminal text-sm">
-                            <div>
-                                <span className="text-accent-primary">LOC:</span>
-                                <span className="text-white ml-2">Acropolis Institute, Indore (M.P.)</span>
+                    <div className="grid md:grid-cols-2 gap-12">
+                        {/* E-CELL Info - Left Column */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h3 className="text-3xl font-black uppercase mb-6">
+                                E-CELL <span className="text-glow-purple">ACROPOLIS</span>
+                            </h3>
+                            <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
+                                <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
+                                <p className="text-accent-secondary">   Equipping founders and changemakers with the</p>
+                                <p className="text-accent-secondary">   dream to redefine the rules of the arena.</p>
                             </div>
-                            <div>
-                                <span className="text-accent-primary">MAIL:</span>
-                                <span className="text-white ml-2">ecell@acropolis.in</span>
+                            <div className="space-y-3 font-mono-terminal text-sm">
+                                <div>
+                                    <span className="text-accent-primary">LOC:</span>
+                                    <span className="text-white ml-2">Acropolis Institute, Indore (M.P.)</span>
+                                </div>
+                                <div>
+                                    <span className="text-accent-primary">MAIL:</span>
+                                    <span className="text-white ml-2">ecell@acropolis.in</span>
+                                </div>
                             </div>
-                            <div>
-                                <span className="text-accent-primary">Student Coordinators:</span>
+                        </motion.div>
+
+                        {/* Student Coordinators - Right Column */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col justify-center"
+                        >
+                            <div className="space-y-3 font-mono-terminal text-sm">
+                                <div>
+                                    <span style={{ color: '#0047AB' }} className="font-bold">Student Coordinators:</span>
+                                </div>
+                                <div>
+                                    <span className="text-white">Keshav Banger (9399148486)</span>
+                                </div>
+                                <div>
+                                    <span className="text-white">Pradhyumn Mehta (8770527096)</span>
+                                </div>
                             </div>
-                            <div>
-                                <span className="text-white">Keshav Banger (9399148486)</span>
-                            </div>
-                            <div>
-                                <span className="text-white">Pradhyumn Mehta (8770527096)</span>
-                            </div>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
 
