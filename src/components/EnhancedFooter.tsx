@@ -52,12 +52,9 @@ export default function EnhancedFooter() {
                     {/* Quick Links */}
                     <div>
                         <h4 className="text-sm uppercase font-bold mb-4 text-accent">QUICK LINKS</h4>
-                        <ul className="space-y-2 font-mono-terminal text-sm text-text-secondary">
-                            <li className="hover:text-white transition cursor-pointer">▸ E-CELL</li>
-                            <li className="hover:text-white transition cursor-pointer">▸ Startup Expo</li>
-                            <li className="hover:text-white transition cursor-pointer">▸ Campus Ambassadors</li>
-                            <li className="hover:text-white transition cursor-pointer">▸ Freshers' Representative</li>
-                        </ul>
+                        <a href="https://aiih.acropolis.in/" target="_blank" rel="noopener noreferrer" className="font-mono-terminal text-sm text-text-secondary hover:text-white transition cursor-pointer">
+                            AIIH – Website
+                        </a>
                     </div>
 
                     {/* Connect */}
