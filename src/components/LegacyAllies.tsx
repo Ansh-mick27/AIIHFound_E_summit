@@ -29,6 +29,7 @@ export default function LegacyAllies() {
         { name: "Think Startup", logo: "/partners/thinkstartup.png" },
         { name: "NSRCEL", logo: "/partners/nsrcel.png" },
         { name: "Savishkar", logo: "/partners/savishkar.png" },
+        { name: "GDG Indore", logo: "/partners/gdg-indore.png" },
     ];
 
     const renderCard = (key: string, partner: { name: string; logo: string }) => (
