@@ -12,13 +12,12 @@ export default function LegacyAllies() {
         { name: "Indore Entrepreneurs Network", logo: "/partners/ien.png" },
     ];
 
-    // Row 2 partners — logos to be uploaded
+    // Row 2 partners
     const partnersRow2 = [
-        { name: "Partner 1", logo: "/partners/row2-1.png" },
-        { name: "Partner 2", logo: "/partners/row2-2.png" },
-        { name: "Partner 3", logo: "/partners/row2-3.png" },
-        { name: "Partner 4", logo: "/partners/row2-4.png" },
-        { name: "Partner 5", logo: "/partners/row2-5.png" },
+        { name: "Cunomial", logo: "/partners/cunomial.png" },
+        { name: "StartupNews.fyi", logo: "/partners/startupnews.png" },
+        { name: "StartLabs", logo: "/partners/startlabs.png" },
+        { name: "WEneurs", logo: "/partners/weneurs.png" },
     ];
 
     const renderCard = (key: string, partner: { name: string; logo: string }) => (
