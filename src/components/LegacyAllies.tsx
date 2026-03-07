@@ -23,6 +23,14 @@ export default function LegacyAllies() {
         { name: "IIMB", logo: "/partners/iimb.png" },
     ];
 
+    // Row 3 partners
+    const partnersRow3 = [
+        { name: "Vadodara Innovation Council", logo: "/partners/vic.png" },
+        { name: "Think Startup", logo: "/partners/thinkstartup.png" },
+        { name: "NSRCEL", logo: "/partners/nsrcel.png" },
+        { name: "Savishkar", logo: "/partners/savishkar.png" },
+    ];
+
     const renderCard = (key: string, partner: { name: string; logo: string }) => (
         <div
             key={key}
@@ -112,6 +120,20 @@ export default function LegacyAllies() {
                         >
                             {partnersRow2.map((partner, i) => renderCard(`r2a-${i}`, partner))}
                             {partnersRow2.map((partner, i) => renderCard(`r2b-${i}`, partner))}
+                        </div>
+                    </div>
+
+                    {/* Row 3 — Scrolls Left (same as Row 1) */}
+                    <div className="overflow-hidden">
+                        <div
+                            className="flex gap-4"
+                            style={{
+                                width: 'max-content',
+                                animation: 'alliesScroll 20s linear infinite',
+                            }}
+                        >
+                            {partnersRow3.map((partner, i) => renderCard(`r3a-${i}`, partner))}
+                            {partnersRow3.map((partner, i) => renderCard(`r3b-${i}`, partner))}
                         </div>
                     </div>
                 </div>
