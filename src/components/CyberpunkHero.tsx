@@ -106,7 +106,7 @@ export default function CyberpunkHero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
                 >
-                    <Link href="#agenda">
+                    <Link href="https://drive.google.com/file/d/1FxQ-7F6mFRtC8k2x94pV7ICUIp86MjRx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <button
                             className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
                             style={{

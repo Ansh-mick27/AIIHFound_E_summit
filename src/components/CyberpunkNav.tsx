@@ -35,7 +35,7 @@ export default function CyberpunkNav() {
                         <Link href="#events" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Events
                         </Link>
-                        <Link href="#agenda" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                        <Link href="https://drive.google.com/file/d/1FxQ-7F6mFRtC8k2x94pV7ICUIp86MjRx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
                             Agenda
                         </Link>
                         <a
