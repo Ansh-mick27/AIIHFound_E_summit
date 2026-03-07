@@ -12,6 +12,15 @@ export default function LegacyAllies() {
         { name: "Indore Entrepreneurs Network", logo: "/partners/ien.png" },
     ];
 
+    // Row 2 partners — logos to be uploaded
+    const partnersRow2 = [
+        { name: "Partner 1", logo: "/partners/row2-1.png" },
+        { name: "Partner 2", logo: "/partners/row2-2.png" },
+        { name: "Partner 3", logo: "/partners/row2-3.png" },
+        { name: "Partner 4", logo: "/partners/row2-4.png" },
+        { name: "Partner 5", logo: "/partners/row2-5.png" },
+    ];
+
     const renderCard = (key: string, partner: { name: string; logo: string }) => (
         <div
             key={key}
@@ -55,6 +64,10 @@ export default function LegacyAllies() {
                     0% { transform: translateX(0%); }
                     100% { transform: translateX(-50%); }
                 }
+                @keyframes alliesScrollReverse {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0%); }
+                }
             `}</style>
 
             <div className="max-w-7xl mx-auto relative z-50">
@@ -70,8 +83,9 @@ export default function LegacyAllies() {
                     </h2>
                 </motion.div>
 
-                {/* Single Scrolling Row */}
+                {/* Scrolling Rows */}
                 <div className="space-y-6">
+                    {/* Row 1 — Scrolls Left */}
                     <div className="overflow-hidden">
                         <div
                             className="flex gap-4"
@@ -82,6 +96,20 @@ export default function LegacyAllies() {
                         >
                             {partners.map((partner, i) => renderCard(`r1a-${i}`, partner))}
                             {partners.map((partner, i) => renderCard(`r1b-${i}`, partner))}
+                        </div>
+                    </div>
+
+                    {/* Row 2 — Scrolls Right (reverse) */}
+                    <div className="overflow-hidden">
+                        <div
+                            className="flex gap-4"
+                            style={{
+                                width: 'max-content',
+                                animation: 'alliesScrollReverse 20s linear infinite',
+                            }}
+                        >
+                            {partnersRow2.map((partner, i) => renderCard(`r2a-${i}`, partner))}
+                            {partnersRow2.map((partner, i) => renderCard(`r2b-${i}`, partner))}
                         </div>
                     </div>
                 </div>
