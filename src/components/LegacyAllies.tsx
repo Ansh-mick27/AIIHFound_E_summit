@@ -18,6 +18,9 @@ export default function LegacyAllies() {
         { name: "StartupNews.fyi", logo: "/partners/startupnews.png" },
         { name: "StartLabs", logo: "/partners/startlabs.png" },
         { name: "WEneurs", logo: "/partners/weneurs.png" },
+        { name: "Campus Fund", logo: "/partners/campusfund.png" },
+        { name: "Wadhwani Foundation", logo: "/partners/wadhwani.png" },
+        { name: "IIMB", logo: "/partners/iimb.png" },
     ];
 
     const renderCard = (key: string, partner: { name: string; logo: string }) => (
