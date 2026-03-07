@@ -33,10 +33,13 @@ export default function CyberpunkNav() {
                             About
                         </a>
                         <a
-                            href="#events"
+                            href="/#events"
                             onClick={(e) => {
-                                e.preventDefault();
-                                document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+                                const el = document.getElementById('events');
+                                if (el) {
+                                    e.preventDefault();
+                                    el.scrollIntoView({ behavior: 'smooth' });
+                                }
                             }}
                             className="text-sm uppercase tracking-wide hover:text-accent transition-colors cursor-pointer"
                         >
