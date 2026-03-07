@@ -79,6 +79,10 @@ export default function LegacyAllies() {
                     0% { transform: translateX(-50%); }
                     100% { transform: translateX(0%); }
                 }
+                @keyframes alliesScrollRow3 {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-33.33%); }
+                }
             `}</style>
 
             <div className="max-w-7xl mx-auto relative z-50">
@@ -130,11 +134,12 @@ export default function LegacyAllies() {
                             className="flex gap-4"
                             style={{
                                 width: 'max-content',
-                                animation: 'alliesScroll 20s linear infinite',
+                                animation: 'alliesScrollRow3 20s linear infinite',
                             }}
                         >
                             {partnersRow3.map((partner, i) => renderCard(`r3a-${i}`, partner))}
                             {partnersRow3.map((partner, i) => renderCard(`r3b-${i}`, partner))}
+                            {partnersRow3.map((partner, i) => renderCard(`r3c-${i}`, partner))}
                         </div>
                     </div>
                 </div>
