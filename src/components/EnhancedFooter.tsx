@@ -48,10 +48,10 @@ export default function EnhancedFooter() {
                                     <span style={{ color: '#0047AB' }} className="font-bold">Student Coordinators:</span>
                                 </div>
                                 <div>
-                                    <span className="text-white">Keshav Banger (9399148486)</span>
+                                    <span className="text-white">Pradhyumn Mehta, +918770527096</span>
                                 </div>
                                 <div>
-                                    <span className="text-white">Pradhyumn Mehta (8770527096)</span>
+                                    <span className="text-white">Keshav Banger, +919399148486</span>
                                 </div>
                             </div>
                         </motion.div>
