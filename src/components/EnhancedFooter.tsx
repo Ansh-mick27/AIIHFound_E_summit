@@ -17,7 +17,7 @@ export default function EnhancedFooter() {
                             viewport={{ once: true }}
                         >
                             <h3 className="text-3xl font-black uppercase mb-6">
-                                E-CELL <span style={{ color: '#0047AB' }}>ACROPOLIS</span>
+                                E-CELL <span style={{ color: '#0047AB' }} className="text-glow-cobalt">ACROPOLIS</span>
                             </h3>
                             <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
                                 <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
