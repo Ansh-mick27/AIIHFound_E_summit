@@ -17,7 +17,7 @@ export default function EnhancedFooter() {
                             viewport={{ once: true }}
                         >
                             <h3 className="text-3xl font-black uppercase mb-6">
-                                E-CELL <span className="text-glow-purple">ACROPOLIS</span>
+                                E-CELL <span style={{ color: '#0047AB' }}>ACROPOLIS</span>
                             </h3>
                             <div className="font-mono-terminal text-sm text-text-secondary space-y-2 mb-6">
                                 <p className="text-accent-secondary">// Indore's Hub for entrepreneurial excellence.</p>
@@ -64,7 +64,7 @@ export default function EnhancedFooter() {
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 relative z-50">
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-sm uppercase font-bold mb-4 text-accent">QUICK LINKS</h4>
+                        <h4 className="text-sm uppercase font-bold mb-4" style={{ color: '#0047AB' }}>QUICK LINKS</h4>
                         <a href="https://aiih.acropolis.in/" target="_blank" rel="noopener noreferrer" className="font-mono-terminal text-sm text-text-secondary hover:text-white transition cursor-pointer">
                             AIIH – Website
                         </a>
