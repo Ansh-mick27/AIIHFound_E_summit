@@ -91,7 +91,7 @@ export default function EventsGrid() {
                         transition={{ delay: 0.1 }}
                         className="text-5xl md:text-7xl font-black uppercase mb-6"
                     >
-                        CHOOSE, <span className="text-glow-cobalt">TAKE YOUR LEAP</span>
+                        CHOOSE <span className="text-glow-cobalt">TAKE YOUR LEAP</span>
                     </motion.h2>
 
                     <motion.p
