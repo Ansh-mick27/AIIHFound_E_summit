@@ -91,7 +91,7 @@ export default function EventsGrid() {
                         transition={{ delay: 0.1 }}
                         className="text-5xl md:text-7xl font-black uppercase mb-6"
                     >
-                        WHAT'S WAITING <span className="text-glow-cobalt">FOR YOU?</span> {/* Changed text */}
+                        WHAT ARE YOU <span className="text-glow-cobalt">WAITING FOR?</span>
                     </motion.h2>
 
                     <motion.p
