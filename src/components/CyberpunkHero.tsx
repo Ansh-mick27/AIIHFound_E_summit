@@ -79,7 +79,7 @@ export default function CyberpunkHero() {
                     className="text-lg md:text-xl lg:text-2xl font-medium mb-4"
                     style={{ fontFamily: 'var(--font-montserrat)' }}
                 >
-                    18th - 20th March 2026
+                    19th - 20th March 2026
                 </motion.div>
 
                 {/* Starting Line Text - Red */}

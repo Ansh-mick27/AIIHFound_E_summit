@@ -9,7 +9,7 @@ export const eventsData = {
         longDescription: "Founder's Talk is the defining highlight of E-Summit, where visionary entrepreneurs share the real stories behind their success. More than a session, it is a catalyst that transforms ambition into action.\n\nThrough candid conversations, founders reveal their journeys — the risks, failures, breakthroughs, and lessons that shaped their ventures. The session offers powerful insights into resilience, leadership, and the mindset required to build and scale meaningful ideas.",
         icon: Rocket,
         details: [
-            { label: "Date", value: "18th, 19th, 20th March'26" },
+            { label: "Date", value: "19th, 20th March'26" },
             { label: "Time", value: "11:00 am - 12:00 pm" },
             { label: "Venue", value: "Acropolis Group of Institutions" },
             { label: "Event SPOCs", value: "Pradhyumn Mehta\nKeshav Banger\nAditi Vyas" },
@@ -51,7 +51,7 @@ export const eventsData = {
         longDescription: "Creators Connect 2.0 convenes leading influencers, digital creators, and emerging voices to decode the business of content and the discipline behind building powerful personal brands. It explores how creativity evolves into structured growth, monetization, and long-term relevance.\n\nThrough insightful conversations and real-world experiences, creators unpack strategies around audience building, brand collaborations, content positioning, and sustainable scaling. Blending creativity with entrepreneurship, the session transforms influence into intentional strategy and opportunity.",
         icon: Palette,
         details: [
-            { label: "Date", value: "18th March 2026" },
+            { label: "Date", value: "19th March 2026" },
             { label: "Time", value: "12:00 PM – 1:00 PM" },
             { label: "Venue", value: "Acropolis Group of Institutions" },
             { label: "Event SPOCs", value: "Aditya Upadhyay\nKavyansh Rajput" },
