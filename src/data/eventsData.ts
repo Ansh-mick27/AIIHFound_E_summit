@@ -2,20 +2,6 @@
 import { Rocket, Briefcase, Settings, Palette, Trophy, TrendingUp, Mic, Lightbulb } from "lucide-react";
 
 export const eventsData = {
-    "founders-talk": {
-        title: "FOUNDER'S TALK",
-        category: "SESSION",
-        description: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to investors and industry leaders.",
-        longDescription: "Founder's Talk is the defining highlight of E-Summit, where visionary entrepreneurs share the real stories behind their success. More than a session, it is a catalyst that transforms ambition into action.\n\nThrough candid conversations, founders reveal their journeys — the risks, failures, breakthroughs, and lessons that shaped their ventures. The session offers powerful insights into resilience, leadership, and the mindset required to build and scale meaningful ideas.",
-        icon: Rocket,
-        details: [
-            { label: "Date", value: "19th, 20th March'26" },
-            { label: "Time", value: "11:00 am - 12:00 pm" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
-            { label: "Event SPOCs", value: "Pradhyumn Mehta\nKeshav Banger\nAditi Vyas" },
-        ],
-        posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
-    },
     "solvex": {
         title: "SolveX",
         category: "COMPETITION",
@@ -23,10 +9,11 @@ export const eventsData = {
         longDescription: "SolveX 2026 is a National Innovation and Business Model Competition designed for innovators, founders, and problem-solvers ready to turn ideas into impact. It is where bold concepts are transformed into structured prototypes and scalable ventures.\n\nParticipants can choose between two tracks — the Innovation Challenge, focused on building working prototypes with measurable real-world impact, and the Business Model Competition, where ideas are refined, validated, and shaped for market viability and scale. With mentorship, incubation opportunities, and national visibility, SolveX empowers builders to execute with direction and compete for a ₹1.2 Lakh prize pool.",
         icon: Briefcase,
         details: [
-            { label: "Date", value: "19th, 20th March'26" },
-            { label: "Time", value: "2:00 PM – 4:00 PM" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
-            { label: "Event SPOCs", value: "Aadya Singh\nIshaan Dadoo" },
+            { label: "Date (Innovation Contest)", value: "19th March 2026" },
+            { label: "Time (Innovation Contest)", value: "2:00 PM – 4:30 PM" },
+            { label: "Date (B Plan Competition)", value: "20th March 2026" },
+            { label: "Time (B Plan Competition)", value: "2:30 PM – 4:00 PM" },
+            { label: "Venue", value: "DPA - Dhairya Prabha Auditorium, Gate 2, AFMR Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
@@ -37,24 +24,11 @@ export const eventsData = {
         longDescription: "PITCHBIZ 5.0 is a curated founder–investor platform where high-potential startups pitch live to active investors in a setting designed to mirror a real fundraising environment. It enables structured capital conversations, strategic feedback, and meaningful investor connections.\n\nThe platform operates in two distinct phases — the Angel Stage, tailored for early-stage startups seeking validation and seed capital, and the Growth Stage, designed for scaling ventures ready to engage with larger investment opportunities. Each phase ensures founders present within the right capital context, increasing the relevance and depth of investor engagement.\n\nMore than a pitch session, PITCHBIZ is where credible ventures step forward with clarity, confidence, and the ambition to secure strategic growth.",
         icon: Settings,
         details: [
-            { label: "Date", value: "19th, 20th March 2026" },
-            { label: "Time", value: "12:00 PM – 1:00 PM" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
-            { label: "Event SPOCs", value: "Ashmi Jain\nMohd. Ayaan Khan\nDanish Khan" },
-        ],
-        posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
-    },
-    "creators-connect": {
-        title: "CREATOR'S CONNECT 2.0",
-        category: "PANEL",
-        description: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands.",
-        longDescription: "Creators Connect 2.0 convenes leading influencers, digital creators, and emerging voices to decode the business of content and the discipline behind building powerful personal brands. It explores how creativity evolves into structured growth, monetization, and long-term relevance.\n\nThrough insightful conversations and real-world experiences, creators unpack strategies around audience building, brand collaborations, content positioning, and sustainable scaling. Blending creativity with entrepreneurship, the session transforms influence into intentional strategy and opportunity.",
-        icon: Palette,
-        details: [
-            { label: "Date", value: "19th March 2026" },
-            { label: "Time", value: "12:00 PM – 1:00 PM" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
-            { label: "Event SPOCs", value: "Aditya Upadhyay\nKavyansh Rajput" },
+            { label: "Date (Seed/Angel Stage)", value: "19th March 2026" },
+            { label: "Time (Seed/Angel Stage)", value: "11:00 AM – 1:00 PM & 2:00 PM – 3:00 PM" },
+            { label: "Date (Growth Stage)", value: "20th March 2026" },
+            { label: "Time (Growth Stage)", value: "10:30 AM – 1:30 PM" },
+            { label: "Venue", value: "KPA - Kamal Prabha Auditorium, Gate 1, DBA Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
@@ -66,8 +40,8 @@ export const eventsData = {
         icon: Trophy,
         details: [
             { label: "Date", value: "20th March 2026" },
-            { label: "Time", value: "3:00 PM – 4:00 PM" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Time", value: "2:30 PM – 3:30 PM" },
+            { label: "Venue", value: "KPA - Kamal Prabha Auditorium, Gate 1, DBA Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
@@ -79,8 +53,8 @@ export const eventsData = {
         icon: TrendingUp,
         details: [
             { label: "Date", value: "19th March 2026" },
-            { label: "Time", value: "3:00 PM – 4:00 PM" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Time", value: "3:00 PM – 4:30 PM" },
+            { label: "Venue", value: "KPA - Kamal Prabha Auditorium, Gate 1, DBA Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     },
@@ -92,8 +66,8 @@ export const eventsData = {
         icon: Mic,
         details: [
             { label: "Date", value: "19th March 2026" },
-            { label: "Time", value: "4:00 PM – 5:00 PM" },
-            { label: "Venue", value: "Acropolis Group of Institutions" },
+            { label: "Time", value: "5:00 PM – 6:00 PM" },
+            { label: "Venue", value: "New Board Room Area" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
     }
