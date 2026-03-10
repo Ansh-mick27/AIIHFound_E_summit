@@ -29,18 +29,18 @@ export default function EventsGrid() {
             icon: Settings
         },
         {
-            slug: "ama",
-            category: "PANEL", // Renamed from STRATEGY
-            title: "AMA",
-            description: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers.",
-            icon: Trophy
-        },
-        {
             slug: "masterclass",
             category: "SESSION", // Renamed from SIMULATION
             title: "MASTER CLASS",
             description: "A Masterclass is an interactive event where experts share practical insights, real-world experience, and actionable learning beyond theory.",
             icon: TrendingUp
+        },
+        {
+            slug: "ama",
+            category: "PANEL", // Renamed from STRATEGY
+            title: "AMA",
+            description: "Engage in a direct dialogue with leading investors, gaining candid insights and exclusive perspectives straight from the capital decision-makers.",
+            icon: Trophy
         },
         {
             slug: "speed-mentoring",
