@@ -98,30 +98,7 @@ export default function EventPage() {
                     </div>
                 </motion.div>
 
-                {/* 3. Event Posters Section */}
-                <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                >
-                    <h3 className="text-3xl font-black mb-10 text-center uppercase">
-                        EVENT <span className="text-glow-cobalt">VISUALS</span>
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {event.posters.map((poster, index) => (
-                            <div
-                                key={index}
-                                className="group relative aspect-[3/4] overflow-hidden rounded-lg border border-white/10 bg-white/5"
-                            >
-                                {/* Placeholder for Poster Image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-text-muted group-hover:text-accent-cobalt transition-colors">
-                                    <span className="font-mono-terminal text-xs">POSTER_SlOT_{index + 1}</span>
-                                </div>
-                                <div className="absolute inset-0 bg-accent-cobalt/0 group-hover:bg-accent-cobalt/10 transition-colors duration-300"></div>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
+
             </div>
 
         </main>
