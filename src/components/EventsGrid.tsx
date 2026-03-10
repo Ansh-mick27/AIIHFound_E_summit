@@ -15,13 +15,6 @@ export default function EventsGrid() {
 
     const events: EventItem[] = [
         {
-            slug: "founders-talk",
-            category: "SESSION", // Renamed from SPEAKER
-            title: "FOUNDER'S TALK",
-            description: "Founder's Talk is the highlight of E-Summit, where visionary entrepreneurs share real stories of success, inspiring ambition and turning ideas into action.",
-            icon: Rocket
-        },
-        {
             slug: "solvex",
             category: "COMPETITION",
             title: "SolveX",
@@ -34,13 +27,6 @@ export default function EventsGrid() {
             title: "PITCHBIZ 5.0",
             description: "PitchBiz 5.0 is a curated founder–investor platform where high-potential startups pitch live, enabling strategic growth opportunities.",
             icon: Settings
-        },
-        {
-            slug: "creators-connect",
-            category: "PANEL", // Renamed from CREATIVE
-            title: "CREATOR'S CONNECT 2.0",
-            description: "Creators Connect 2.0 convenes leading influencers and digital creators to decode the business of content and the discipline behind personal brands.",
-            icon: Palette
         },
         {
             slug: "ama",
