@@ -10,9 +10,7 @@ export const eventsData = {
         icon: Briefcase,
         details: [
             { label: "Date (Innovation Contest)", value: "19th March 2026" },
-            { label: "Time (Innovation Contest)", value: "2:00 PM – 4:30 PM" },
             { label: "Date (B Plan Competition)", value: "20th March 2026" },
-            { label: "Time (B Plan Competition)", value: "2:30 PM – 4:00 PM" },
             { label: "Venue", value: "Dhairya Prabha Auditorium, Gate 2, AFMR Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
@@ -25,9 +23,7 @@ export const eventsData = {
         icon: Settings,
         details: [
             { label: "Date (Seed/Angel Stage)", value: "19th March 2026" },
-            { label: "Time (Seed/Angel Stage)", value: "11:00 AM – 1:00 PM & 2:00 PM – 3:00 PM" },
             { label: "Date (Growth Stage)", value: "20th March 2026" },
-            { label: "Time (Growth Stage)", value: "10:30 AM – 1:30 PM" },
             { label: "Venue", value: "Kamal Prabha Auditorium, Gate 1, BBA Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
@@ -40,7 +36,6 @@ export const eventsData = {
         icon: Trophy,
         details: [
             { label: "Date", value: "20th March 2026" },
-            { label: "Time", value: "2:30 PM – 3:30 PM" },
             { label: "Venue", value: "Kamal Prabha Auditorium, Gate 1, BBA Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
@@ -53,7 +48,6 @@ export const eventsData = {
         icon: TrendingUp,
         details: [
             { label: "Date", value: "19th March 2026" },
-            { label: "Time", value: "3:00 PM – 4:30 PM" },
             { label: "Venue", value: "Kamal Prabha Auditorium, Gate 1, BBA Building" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
@@ -66,7 +60,6 @@ export const eventsData = {
         icon: Mic,
         details: [
             { label: "Date", value: "19th March 2026" },
-            { label: "Time", value: "5:00 PM – 6:00 PM" },
             { label: "Venue", value: "New Board Room Area" },
         ],
         posters: ["/images/placeholder-event-1.jpg", "/images/placeholder-event-2.jpg", "/images/placeholder-event-3.jpg"]
