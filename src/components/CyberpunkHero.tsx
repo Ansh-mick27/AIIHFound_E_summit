@@ -106,19 +106,7 @@ export default function CyberpunkHero() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
                 >
-                    <Link href="https://drive.google.com/file/d/18wNecSO3gVDxwUwAWWWA7nBiyrsOMcnF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        <button
-                            className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"
-                            style={{
-                                backgroundColor: '#0066FF',
-                                color: '#FFF',
-                                boxShadow: '0 0 30px rgba(0, 102, 255, 0.5)',
-                                minWidth: '150px'
-                            }}
-                        >
-                            AGENDA
-                        </button>
-                    </Link>
+
                     <Link href="https://forms.gle/nqHj9CqaVEudivcdA" target="_blank" rel="noopener noreferrer">
                         <button
                             className="px-10 py-4 font-bold uppercase text-sm md:text-base tracking-widest transition-all hover:scale-105 rounded-sm"

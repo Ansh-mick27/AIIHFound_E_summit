@@ -45,9 +45,7 @@ export default function CyberpunkNav() {
                         >
                             Events
                         </a>
-                        <Link href="https://drive.google.com/file/d/18wNecSO3gVDxwUwAWWWA7nBiyrsOMcnF/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
-                            Agenda
-                        </Link>
+
                         <a
                             href="#partners"
                             onClick={(e) => {
@@ -58,7 +56,7 @@ export default function CyberpunkNav() {
                         >
                             Partners
                         </a>
-                        <Link href="https://forms.gle/nqHj9CqaVEudivcdA" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-wide hover:text-accent transition-colors">
+                        <Link href="https://forms.gle/nqHj9CqaVEudivcdA" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-accent-cobalt hover:bg-blue-600 text-white rounded font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_15px_rgba(0,102,255,0.4)] text-sm ml-4">
                             Register
                         </Link>
                     </div>
