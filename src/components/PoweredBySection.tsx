@@ -33,7 +33,7 @@ export default function PoweredBySection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-2xl md:text-3xl font-bold text-center mb-12 uppercase text-text-muted"
+                    className="text-2xl md:text-3xl font-bold text-center mb-12 uppercase text-glow-cobalt"
                     style={{
                         fontFamily: 'var(--font-montserrat)',
                         letterSpacing: '0.05em'
