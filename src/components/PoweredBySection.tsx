@@ -28,6 +28,19 @@ export default function PoweredBySection() {
                     In Alliance <span className="text-glow-cobalt">With</span>
                 </motion.h2>
 
+                <motion.h3
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-2xl md:text-3xl font-bold text-center mb-12 uppercase text-text-muted"
+                    style={{
+                        fontFamily: 'var(--font-montserrat)',
+                        letterSpacing: '0.05em'
+                    }}
+                >
+                    SPONSORS
+                </motion.h3>
 
                 {/* Sponsor Cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
